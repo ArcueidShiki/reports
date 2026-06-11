@@ -1,0 +1,134 @@
+{
+  "cpi": {
+    "name_cn": "CPI 消费者物价指数 (同比)",
+    "value": 4.2,
+    "prev": 3.81,
+    "unit": "%",
+    "ref_period": "May 2026",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=CPIAUCNS&transformation=pc1",
+    "screenshot": "reports/sources/cpi_fred.png",
+    "issuer": "U.S. Bureau of Labor Statistics",
+    "cross_check": "BLS API May 2026=4.25% vs 截图 4.2% (✓一致)"
+  },
+  "core_cpi": {
+    "name_cn": "核心 CPI (剔除食品能源, 同比)",
+    "value": 2.9,
+    "prev": 2.75,
+    "unit": "%",
+    "ref_period": "May 2026",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=CPILFENS&transformation=pc1",
+    "screenshot": "reports/sources/core_cpi_fred.png",
+    "issuer": "U.S. Bureau of Labor Statistics",
+    "cross_check": "BLS API May 2026=2.85% vs 截图 2.9% (✓一致)"
+  },
+  "ppi": {
+    "name_cn": "PPI 生产者物价指数 (同比)",
+    "value": 6.0,
+    "prev": 4.27,
+    "unit": "%",
+    "ref_period": "Apr 2026",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=PPIFIS&transformation=pc1",
+    "screenshot": "reports/sources/ppi_fred.png",
+    "issuer": "U.S. Bureau of Labor Statistics",
+    "cross_check": "BLS API Apr 2026=5.99% vs 截图 6.0% (✓一致)"
+  },
+  "nonfarm_payrolls": {
+    "name_cn": "非农就业人数 (月度新增, 千人)",
+    "value": 172.0,
+    "prev": 179,
+    "unit": "K",
+    "ref_period": "May 2026",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=PAYEMS&transformation=chg",
+    "screenshot": "reports/sources/nonfarm_payrolls_fred.png",
+    "issuer": "U.S. Bureau of Labor Statistics",
+    "cross_check": ""
+  },
+  "unemployment_rate": {
+    "name_cn": "失业率",
+    "value": 4.3,
+    "prev": 4.3,
+    "unit": "%",
+    "ref_period": "May 2026",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=UNRATE&transformation=lin",
+    "screenshot": "reports/sources/unemployment_rate_fred.png",
+    "issuer": "U.S. Bureau of Labor Statistics",
+    "cross_check": ""
+  },
+  "initial_claims": {
+    "name_cn": "初请失业金人数 (周)",
+    "value": 225000.0,
+    "prev": null,
+    "unit": "",
+    "ref_period": "2026-05-30",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=ICSA&transformation=lin",
+    "screenshot": "reports/sources/initial_claims_fred.png",
+    "issuer": "U.S. Employment and Training Administration (DOL)",
+    "cross_check": ""
+  },
+  "continued_claims": {
+    "name_cn": "续请失业金人数 (周)",
+    "value": 1777000.0,
+    "prev": null,
+    "unit": "",
+    "ref_period": "2026-05-23",
+    "source_url": "https://fred.stlouisfed.org/graph/?id=CCSA&transformation=lin",
+    "screenshot": "reports/sources/continued_claims_fred.png",
+    "issuer": "U.S. Employment and Training Administration (DOL)",
+    "cross_check": ""
+  },
+  "fed_funds_rate": {
+    "name_cn": "联邦基金有效利率",
+    "value": 3.62,
+    "prev": 3.62,
+    "unit": "%",
+    "ref_period": "2026 Jun 8",
+    "source_url": "https://www.federalreserve.gov/releases/h15/",
+    "screenshot": "reports/sources/rates_h15.png",
+    "issuer": "Federal Reserve Board (H.15)",
+    "cross_check": ""
+  },
+  "treasury_10y": {
+    "name_cn": "10 年期美债收益率",
+    "value": 4.56,
+    "prev": 4.55,
+    "unit": "%",
+    "ref_period": "2026 Jun 8",
+    "source_url": "https://www.federalreserve.gov/releases/h15/",
+    "screenshot": "reports/sources/rates_h15.png",
+    "issuer": "Federal Reserve Board (H.15)",
+    "cross_check": ""
+  },
+  "treasury_2y": {
+    "name_cn": "2 年期美债收益率",
+    "value": 4.15,
+    "prev": 4.17,
+    "unit": "%",
+    "ref_period": "2026 Jun 8",
+    "source_url": "https://www.federalreserve.gov/releases/h15/",
+    "screenshot": "reports/sources/rates_h15.png",
+    "issuer": "Federal Reserve Board (H.15)",
+    "cross_check": ""
+  },
+  "wti_oil": {
+    "name_cn": "WTI 原油价格",
+    "value": 95.96,
+    "prev": 91.16,
+    "unit": "$",
+    "ref_period": "06/01/26",
+    "source_url": "https://www.eia.gov/dnav/pet/pet_pri_spt_s1_d.htm",
+    "screenshot": "reports/sources/wti_eia.png",
+    "issuer": "U.S. Energy Information Administration",
+    "cross_check": ""
+  },
+  "vix": {
+    "name_cn": "VIX 波动率指数",
+    "value": 20.62,
+    "prev": 19.87,
+    "unit": "",
+    "ref_period": "盘中快照 @ 2026-06-10",
+    "source_url": "https://www.cboe.com/tradable_products/vix/",
+    "screenshot": "reports/sources/vix_cboe.png",
+    "issuer": "Cboe Global Markets",
+    "cross_check": ""
+  }
+}

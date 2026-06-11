@@ -1,0 +1,60 @@
+{
+  "collected_at": "2026-06-11",
+  "method": "WebSearch summaries only. Direct web_fetch was blocked by network allowlist (cowork-egress-blocked) for all news/product domains, so per task instructions raw page scraping was skipped and WebSearch result summaries were used instead. X/Twitter, LinkedIn and Xiaohongshu were covered via public WebSearch summaries (login-walled).",
+  "sources": {
+    "hacker_news": {
+      "notes": "Front page items circulating around 2026-06-11 (via search summaries)",
+      "items": [
+        {"title": "I ran an arbitrage bot on Polymarket. Here are the real numbers", "url": "https://news.ycombinator.com/item?id=48461522", "origin_post": "https://kacho.io/polymarket-arbitrage-real-numbers", "data": "Jan–Mar 2026: 3,858 bets, net +$4,973 on ~$96k volume; pure arb +$8.3k, forced directional legs -$3.2k; min 7% edge limit orders; coded almost entirely with AI assistance"},
+        {"title": "Show HN: GentleOS – hobby OSes for vintage 32-bit and 16-bit PCs", "url": "https://news.ycombinator.com/"},
+        {"title": "FCC wants to kill burner phones by forcing telecoms to get all customers' IDs", "url": "https://news.ycombinator.com/"},
+        {"title": "Solar Energy Saves Europeans $135M a Day", "url": "https://news.ycombinator.com/"},
+        {"title": "WWDC 2026: Apple is Folding", "url": "https://news.ycombinator.com/"},
+        {"title": "Datadog veterans launch AI coding startup Niteshift (TechCrunch, 2026-06-10)", "url": "https://techcrunch.com/2026/06/10/datadog-veterans-launch-ai-coding-startup-niteshift-on-a-bet-against-big-ai-lock-in/"}
+      ]
+    },
+    "product_hunt": {
+      "notes": "From producthunt.com / hunted.space / decohack.com PH daily summaries",
+      "items": [
+        {"name": "Dreambeans by Google Labs", "url": "https://www.producthunt.com/products", "launch": "2026-06-03", "press": ["https://techcrunch.com/2026/06/03/googles-dreambeans-its-weirdest-named-ai-tool-to-date-will-turn-your-life-into-a-cartoon/", "https://blog.google/innovation-and-ai/models-and-research/google-labs/dreambeans/", "https://9to5google.com/2026/06/03/google-labs-dreambeans/"], "summary": "Personal Intelligence + Nano Banana 2; curates finite personalized daily 'stories' from Gmail/Calendar/Photos/YouTube/Search; US Google AI Ultra subscribers first; waitlist for others; top PH product of June 2026 month-to-date"},
+        {"name": "Mina Meeting Assistant", "url": "https://www.producthunt.com/products/mina-meeting-assistant", "summary": "AI teammate that responds and executes during live calls — turns live calls into tickets and CRM updates, pulls context from tools; among top June 2026 PH products"},
+        {"name": "VC Boom", "url": "https://hunted.space/top-products/latest", "launch": "2026-06-10 (PH daily)", "summary": "Scores pitch deck in <90s, identifies fastest fix, matches from 47,000+ investors with one-line fit reasons, drafts personalized cold emails sent from founder's own inbox; founders using it have raised $95M; built by an 8-year VC"},
+        {"name": "ZeroGPU", "url": "https://hunted.space/top-products/latest", "launch": "2026-06-10 (PH daily)", "summary": "AI infrastructure on small language models over a hybrid edge network reusing existing compute; claims 10x faster, 50% cheaper, offloads 70–80% of production tasks to SLMs with frontier-level accuracy"},
+        {"name": "Leni", "url": "https://www.producthunt.com/products/leni", "launch": "2026-06-05", "data": "383 upvotes, 62 comments, #3 Product of the Day; $8.5M+ raised; 21,000+ decision traces; 100M+ rows/day; expanded from CRE into broader finance", "summary": "Verifiable finance-grade AI for investors with full auditability (source links, timestamps, grounded comps)"},
+        {"name": "Vokal", "url": "https://www.producthunt.com/products/vokal-2", "summary": "Collaboration space for '10x teammates' and their AI agents (local Codex / Claude Code / Hermes or cloud) in one live workspace"},
+        {"name": "prostir zvuku", "url": "https://www.producthunt.com/products/prostir-zvuku", "launch": "2026-06-09", "site": "https://prostirzvuku.app/", "summary": "Spatial nature sound mixer for Mac — place rain/fire/ocean/wind/birds/stream sounds on a canvas to build a 'quiet room' for focus, rest, sleep"},
+        {"name": "Other June leaders (hunted.space)", "names": ["Fundraisly", "Honen", "Minimi", "Browse.sh", "Databox MCP"], "note": "vote figures reported by aggregator appeared inflated/unverifiable; excluded from deep-dive"}
+      ]
+    },
+    "google_trends": {
+      "notes": "Via search summaries of trends.google.com aggregators",
+      "items": ["NBA playoffs top trending (US: 'spurs' ~23.8M searches)", "ipl ~620M global", "hantavirus entered global top 25 (~72M)", "utility queries (maps/weather/news) stable"]
+    },
+    "a16z": {
+      "notes": "Big Ideas 2026 + recent positions",
+      "items": [
+        {"thesis": "Software alone is not enough — capital wants software attached to real infrastructure, regulated systems, network effects", "url": "https://a16z.com/newsletter/big-ideas-2026-part-1/"},
+        {"thesis": "Agent-native infrastructure: re-architect the control plane; 'thundering herd' as default state", "url": "https://a16z.com/newsletter/big-ideas-2026-part-2/"},
+        {"thesis": "System of record loses primacy; AI collapses distance between intent and execution", "url": "https://a16z.com/newsletter/big-ideas-2026-part-3/"},
+        {"deal": "Lassie AI — AI to run small businesses, a16z leading Series A (June 2026)"}
+      ]
+    },
+    "ecommerce": {
+      "amazon": "Movers & Shakers June 2026: outdoor gear, allergy-season health, sunscreen surging; AirPods Pro 3 / Apple Watch Series 11 dominate electronics; TikTok-viral items surface in BSR 2–4 weeks later",
+      "etsy": "Spring/Summer 2026 seller report: shift to expressive details, handcrafted texture, nostalgia, keepsakes; Color of the Year 'Patina Blue'; buyers reject ultra-minimalism for warmth/authenticity",
+      "urls": ["https://www.amazon.com/gp/movers-and-shakers", "https://www.etsy.com/seller-handbook/article/1473931456647"]
+    },
+    "x_twitter": {
+      "notes": "Login-walled; via public search summaries",
+      "items": ["Niteshift seed round buzz (Greylock Jerry Chen; angels: Reid Hoffman, Olivier Pomel, Alexis Lê-Quôc, Ankur Goyal, Misha Laskin)", "xAI opened Grok image/video generation to all mobile users", "Fastest AI startups (Anysphere, Sierra, Glean) hit $100M+ ARR in <2 years"]
+    },
+    "linkedin": {
+      "notes": "Login-walled; via public search summaries + Crunchbase",
+      "items": ["Ramp closed $750M (week of June 5)", "Hark $700M Series A", "Stord $250M Series F", "RADAR $170M Series B", "Capital concentrating: selectivity and strategic bias in June 2026 funding"]
+    },
+    "xiaohongshu": {
+      "notes": "Login-walled; via public Chinese-web summaries",
+      "items": ["#观鸟 (birdwatching) >120M views in 90 days, notes +70% — '鸟门' new outdoor trend", "独居 topic >200M views, style shifting from polished vlogs to '放飞/失控' authenticity", "穿戴甲 (press-on nails) heat proves low-friction beauty innovations explode", "3000+ interest circles; >50% of traffic tilted to <1k-follower creators", "种草进入效果化时代 — ROI-measurable seeding"]
+    }
+  }
+}

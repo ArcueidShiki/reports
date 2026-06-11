@@ -1,0 +1,8 @@
+{
+  "products": "/Users/arcueidpeng/github/product-analytics/raw",
+  "market": "/Users/arcueidpeng/github/stay-in-the-market/daily-reports/2026",
+  "alpha": "/Users/arcueidpeng/github/stay-in-the-market/alpha-factors",
+  "signals": "/Users/arcueidpeng/github/signal-calendar/reports",
+  "gallery": "/Users/arcueidpeng/comfyui/output",
+  "outputDir": "public/content"
+}

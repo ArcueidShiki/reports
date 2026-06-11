@@ -1,0 +1,83 @@
+{
+  "scrape_date": "2026-06-09",
+  "note": "Raw data gathered via WebSearch + web_fetch. X/LinkedIn/Xiaohongshu pages are login-gated/client-rendered; collected via WebSearch public summaries per task instructions.",
+  "sources": {
+    "product_hunt": {
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/6/7",
+      "fetched": true,
+      "daily_featured_2026-06-07": [
+        {"rank": 1, "name": "Dreambeans by Google Labs", "tagline": "Daily AI stories personalised from your Google apps", "topics": ["Android","iOS","Artificial Intelligence"], "upvotes": 144, "comments": 3, "url": "https://www.producthunt.com/products/google-labs"},
+        {"rank": 2, "name": "Wave", "tagline": "Turn your voice into text — local or cloud, your choice", "topics": ["Productivity","GitHub","Audio"], "upvotes": 138, "comments": 8, "url": "https://www.producthunt.com/products/wave-16"},
+        {"rank": 3, "name": "CabinLink", "tagline": "Flight map from cabin Wi-Fi", "topics": ["Travel"], "upvotes": 133, "comments": 10, "url": "https://www.producthunt.com/products/cabinlink"},
+        {"rank": 4, "name": "Smmall Cloud for iOS", "tagline": "Simple file sharing on your iPad or iPhone", "topics": ["Design Tools","Productivity","Developer Tools"], "upvotes": 119, "comments": 3, "url": "https://www.producthunt.com/products/smmall-cloud"},
+        {"rank": 5, "name": "Job Postings API", "tagline": "View, monitor, and analyze 1.8M+ US jobs", "topics": ["API","Artificial Intelligence","Data"], "upvotes": 117, "comments": 3, "url": "https://www.producthunt.com/products/free-job-postings-api"}
+      ],
+      "trending_products": ["Lovable","Screen Studio","bolt.new","Wispr Flow","Framer","Replit","Vapi","Granola"],
+      "top_reviewed": ["Lovable","n8n","Attio","PostHog","Vapi","Granola","Raycast","Supabase"],
+      "trending_categories": ["Vibe Coding Tools","AI Dictation Apps","AI notetakers","Code Review Tools","No-code Platforms","Figma Plugins","Static site generators"],
+      "top_forum_threads": ["Cursor or Claude Code?","Domain or product first?","YC deadline <2 weeks","Wispr Flow PMF through pivot","Best Vibe Coding tool so far?"]
+    },
+    "hacker_news": {
+      "url": "https://news.ycombinator.com/front",
+      "note": "Live front page redirected to archived front (2026-05-13); June trends captured via WebSearch.",
+      "june_2026_themes": ["AI shifting toward trust/security/governance over flashy demos","AI-assisted attacks & software supply-chain risk","coding agents & LLM product roles dominate hiring","skepticism about code-generation quality"],
+      "notable_show_hn": ["NoSuggest – YouTube without recommendation algorithm","Nightwatch – open-source read-only AI SRE","Keybench – perf tool for key-value stores","Ironwall – safety-first native language/compiler"],
+      "archived_front_top_stories_sample": [
+        {"title": "I moved my digital stack to Europe", "points": 956, "site": "monokai.com"},
+        {"title": "Linux gaming faster because Windows APIs becoming Linux kernel features", "points": 744, "site": "xda-developers.com"},
+        {"title": "The US is winning the AI race where it matters most: commercialization", "points": 203, "site": "avkcode.github.io"},
+        {"title": "Launch HN: Ardent (YC P26) – Postgres sandboxes in seconds", "points": 87, "site": "tryardent.com"}
+      ]
+    },
+    "a16z": {
+      "url": "https://a16z.com/news-content/",
+      "big_ideas_2026": [
+        "Death of the prompt box: zero visible prompting; AI observes and intervenes proactively",
+        "'Fat Startups' win: bundle software + data + hardware + human operations into full-stack",
+        "'The Year of Me': hyper-personalization replaces economies of scale",
+        "Software attached to hard consequences: infra, regulated systems, network effects",
+        "American Dynamism: defense, manufacturing, aerospace, industrial"
+      ],
+      "firm_scale": "~$90B AUM"
+    },
+    "google_trends": {
+      "url": "https://trends.google.com/trending",
+      "note": "Live Trending Now is client-rendered; specific breakout terms not retrievable via WebSearch. Captured mechanics: 'breakout' = >5000% growth; 2026 emphasis on velocity/early-spike capture.",
+      "ecommerce_signal": "Beauty trends on TikTok/Instagram surface in Amazon BSR 2-4 weeks later"
+    },
+    "amazon_movers_shakers": {
+      "url": "https://www.amazon.com/gp/movers-and-shakers",
+      "trending_2026": ["AirPods Pro 3","Apple Watch Series 11","outdoor gear","allergy-season health","sunscreen"],
+      "hot_beauty_subniches": ["K-beauty","men's grooming","skincare tools"],
+      "insight": "Social signals lead beauty BSR more than any other category"
+    },
+    "xiaohongshu": {
+      "url": "https://www.xiaohongshu.com",
+      "note": "Login-gated; captured via WebSearch summaries of public trend reports.",
+      "2026_trends": [
+        "种草进入'效果化时代' (planting-grass marketing enters 'performance era')",
+        "细分/小众赛道获精准流量；50%+流量倾斜给千粉以下素人",
+        "'活人感'内容更受信任",
+        "全域经营闭环：种草+直播+私域复购"
+      ],
+      "birdwatching_niche": {
+        "hashtag": "#观鸟",
+        "views_90d": "120M+",
+        "post_growth": "70%+",
+        "entry_gear": "8x42 binoculars, entry handheld scope < 100 RMB",
+        "context": "young people 'light fitness' + nature escape; brands (hotels, autos) launching birdwatching-themed experiences"
+      },
+      "other_rising": ["拼豆 (perler beads)","轻运动 (light exercise)","减脂/养生美食","文旅兴趣出游 (为一场演出赴一座城)"]
+    },
+    "x_twitter": {
+      "url": "https://x.com",
+      "note": "Login-gated/client-rendered; product buzz captured indirectly via PH forums and news coverage.",
+      "signals": ["Wispr Flow 'PMF through pivot' discussion","Cursor vs Claude Code debate","vibe-coding tool comparisons"]
+    },
+    "linkedin": {
+      "url": "https://linkedin.com",
+      "note": "Login-gated; funding/launch announcements captured via news (TechCrunch/Bloomberg).",
+      "signals": ["Lovable Series B $330M / $6.6B","Granola Series C $125M / $1.5B","Wispr Flow $81M total / $700M"]
+    }
+  }
+}

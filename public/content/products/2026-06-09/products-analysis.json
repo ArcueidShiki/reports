@@ -1,0 +1,96 @@
+{
+  "scrape_date": "2026-06-09",
+  "products": [
+    {
+      "name": "Lovable",
+      "category": "AI app builder / Vibe coding",
+      "url": "https://lovable.dev",
+      "business_model": "Freemium SaaS; usage/credit-based subscriptions (free + paid tiers) + enterprise seats. Self-serve viral growth.",
+      "success_factors": ["Fastest-ever ARR ramp ($100M added in one month)","Natural-language full-app generation","Capital-efficient: $400M ARR / 146 employees","Strong investor + distribution flywheel"],
+      "core_features": ["Chat-to-app generation","Full-stack web app + DB + auth","Deploy/host","Fortune 500 enterprise use"],
+      "niche": "Non-engineers + prosumers building production web apps",
+      "audience": "Founders, indie hackers, internal-tool builders, Fortune 500 teams",
+      "design": "Friendly consumer-grade brand ('Lovable'); 'age of the builder' positioning",
+      "data": {"arr": "$400M (Feb 2026)", "arr_jan": "$300M", "valuation": "$6.6B", "raise": "$330M Series B (CapitalG, Menlo Anthology, NVentures, Salesforce, Databricks)", "daily_projects": "100,000+/day", "daily_visits": "~5M", "employees": 146},
+      "reviews": "Top-reviewed on Product Hunt; praised for speed; common critiques: complexity ceiling on large apps, debugging/edit control."
+    },
+    {
+      "name": "Dreambeans by Google Labs",
+      "category": "Consumer AI / personalized content",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-labs/dreambeans/",
+      "business_model": "Bundled into Google AI Ultra subscription (gated to Ultra subscribers in US); ecosystem retention / data moat play, not standalone monetization yet.",
+      "success_factors": ["Leverages Google Personal Intelligence (Gmail, Calendar, Photos, YouTube, Search)","Nano Banana 2 image gen for fullscreen art","Scarcity UX (10-14 stories/day)","Embodies a16z 'Year of Me' personalization thesis"],
+      "core_features": ["Proactive personalized daily story feed","AI illustrations / stories-like UI","Interactive chat to go deeper + web lookup","Privacy isolation from other Personal Intelligence settings"],
+      "niche": "Hyper-personalized ambient AI / 'zero-prompt' assistant",
+      "audience": "Google AI Ultra power users; consumers wanting proactive curation",
+      "design": "Whimsical name; cartoon/animation aesthetic ('turns your life into a cartoon'); stories-format full-screen visuals",
+      "data": {"ph_rank_2026-06-07": 1, "ph_upvotes": 144, "launch": "2026-06-03", "availability": "AI Ultra, US, Android+iOS; waitlist for others", "stories_per_day": "10-14"},
+      "reviews": "Press framed as 'weirdest-named AI tool to date' (TechCrunch); novelty + privacy questions; strong PH debut."
+    },
+    {
+      "name": "Wispr Flow",
+      "category": "AI voice dictation",
+      "url": "https://wisprflow.ai",
+      "business_model": "Freemium subscription: Free (2,000 words/wk), Pro $15/mo ($12/mo annual), Enterprise ~$25-40/seat (SSO, SOC2, HIPAA).",
+      "success_factors": ["Most-searched cloud dictation tool 2026","Writes in user's style across 100+ languages, every app","Found PMF through pivot","4.8/5 iOS across 8,500+ ratings"],
+      "core_features": ["Speak-naturally dictation","Auto-edits + command mode","Cross-platform (mac/Win/iOS/Android)","Style adaptation"],
+      "niche": "Voice-first writing / dictation for knowledge workers",
+      "audience": "Writers, developers, multilingual professionals, accessibility users",
+      "design": "Clean minimal 'Flow' brand; voice-first frictionless UX",
+      "data": {"funding_total": "$81M", "series_a": "$30M Menlo (Jun 2025)", "extension": "$25M Notable Capital (Nov 2025)", "valuation": "$700M", "ios_rating": "4.8/5 (8,500+)"},
+      "reviews": "Praised for accuracy/speed; complaints: Windows Electron app ~800MB RAM/8% CPU idle, occasional freezes, over-'improves' speech. Competitor 'Wave' (PH #2) offers local/cloud choice."
+    },
+    {
+      "name": "Granola",
+      "category": "AI meeting notetaker -> enterprise AI",
+      "url": "https://www.granola.ai",
+      "business_model": "Freemium (25-note free cap) -> paid; Enterprise $35/user/mo (Spaces, AI-training opt-out). Expanding prosumer -> enterprise.",
+      "success_factors": ["Best-in-class 'human-in-the-room' notetaking","6x valuation in <1 year ($250M->$1.5B)","Enterprise logos: Vanta, Gusto, Asana, Cursor, Lovable, Mistral","Expanding into team workspaces (Spaces)"],
+      "core_features": ["On-device meeting transcription + AI notes","Works for in-person + video","Spaces (team workspaces)","Trustworthy notes UX"],
+      "niche": "AI notes for people who attend their own meetings (not bot-joins-call)",
+      "audience": "Founders, execs, prosumers, now enterprise teams",
+      "design": "Minimal native desktop app; understated premium brand",
+      "data": {"valuation": "$1.5B", "series_c": "$125M (Index Ventures)", "total_raised": "$192M", "prev_val": "$250M (May 2025)"},
+      "reviews": "Best standalone notetaker per reviewers; gaps: weak speaker ID 3+ people, 25-note free cap, opt-out gated to enterprise; ~60% disliked a redesign."
+    },
+    {
+      "name": "a16z 'Year of Me' / Fat Startups thesis",
+      "category": "Investment / market thesis (macro trend)",
+      "url": "https://a16z.com/newsletter/big-ideas-2026-part-2/",
+      "business_model": "N/A (VC thesis). Signals where ~$90B of capital + narrative is directed.",
+      "success_factors": ["Death of prompt box -> proactive agentic AI","Fat startups: bundle SW+data+hardware+human ops","Hyper-personalization ('made for you')","Software tied to hard consequences/regulated systems"],
+      "core_features": ["Big Ideas 2026 content engine","Speedrun program ideas for indie hackers","American Dynamism focus"],
+      "niche": "Full-stack AI companies & personalization-first products",
+      "audience": "Founders, operators, LPs",
+      "design": "a16z brand = capital + narrative + distribution",
+      "data": {"aum": "~$90B", "thesis_year": 2026},
+      "reviews": "Widely cited as the 2026 founder playbook; validated by Lovable/Granola/Dreambeans patterns."
+    },
+    {
+      "name": "Birdwatching (观鸟) niche outdoor trend",
+      "category": "Consumer / China social commerce (Xiaohongshu)",
+      "url": "https://www.xiaohongshu.com",
+      "business_model": "Low-barrier hobby driving gear sales (binoculars/scopes) + experiential commerce (hotels, autos, travel) + creator 'planting-grass' funnels.",
+      "success_factors": ["#观鸟 120M+ views in 90d, +70% posts","Ultra-low entry cost (< 100 RMB scope)","'Escape the city' nature appeal for young people","Brands integrating birdwatching scenarios"],
+      "core_features": ["8x42 binoculars as standard entry gear","Immersive nature experience","Creator notes + community"],
+      "niche": "Light-outdoor / nature hobby among urban youth",
+      "audience": "Chinese Gen Z/young urbanites; 'light fitness' + nature seekers",
+      "design": "Authentic '活人感' (real-person) content beats polished ads",
+      "data": {"hashtag_views_90d": "120M+", "post_growth": "70%+", "entry_gear_price": "<100 RMB / 8x42 binoculars optimal"},
+      "reviews": "Reported across Xiaohongshu/Zhihu/media as a breakout 2026 interest niche alongside perler beads (拼豆) and light exercise."
+    },
+    {
+      "name": "Social-first K-beauty & skincare tools",
+      "category": "E-commerce / beauty (Amazon Movers & Shakers)",
+      "url": "https://www.amazon.com/gp/movers-and-shakers/beauty",
+      "business_model": "TikTok/IG virality -> Amazon BSR conversion 2-4 weeks later; impulse + repeat purchase; influencer-driven.",
+      "success_factors": ["Social signals lead beauty BSR more than any category","K-beauty + men's grooming + skincare tools are 2026's most active sub-niches","Short trend-to-shelf latency rewards velocity sellers"],
+      "core_features": ["Viral hero SKUs (devices/tools)","Routine-driven repeat purchase","Cross-platform discovery"],
+      "niche": "Trend-driven beauty: K-beauty, men's grooming, skincare devices",
+      "audience": "Gen Z/millennial beauty consumers discovering via social",
+      "design": "Packaging + naming optimized for short-form video demos",
+      "data": {"trend_lag": "2-4 weeks social->Amazon BSR", "top_subniches": ["K-beauty","men's grooming","skincare tools"], "adjacent_movers": ["AirPods Pro 3","Apple Watch Series 11","sunscreen","allergy health"]},
+      "reviews": "Movers & Shakers = biggest 24h sales-rank gainers; beauty is the most social-led category in 2026."
+    }
+  ]
+}

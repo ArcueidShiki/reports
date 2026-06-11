@@ -1,0 +1,201 @@
+{
+  "scrape_date": "2026-06-11",
+  "note": "Fresh daily gather via WebSearch + WebFetch across Product Hunt, Hacker News, a16z, Crunchbase, Amazon Movers & Shakers, Google Trends, TikTok-Shop aggregators, and Xiaohongshu public summaries. Many sources (Amazon live BSR, XHS, Google Trends /trending, X, LinkedIn) are login-gated or client-rendered; captured via public summaries and flagged. PH 2026-06-11 leaderboard not yet populated at gather time; latest populated days were 06-09 and 06-10. Metric confidence is annotated per field; vendor-stated figures are NOT independently verified.",
+  "products": [
+    {
+      "name": "Publora",
+      "category": "MCP-native social publishing API / agent tooling",
+      "url": "https://publora.com",
+      "ph": "#1 on 2026-06-10, 478 upvotes",
+      "business_model": "Freemium SaaS; free Starter tier, paid from $2.99/account/mo (billed yearly). Per-account pricing scales with connected social accounts.",
+      "success_factors": [
+        "Rode #1 'agent era' positioning — one HTTPS call posts to ~10-12 platforms; MCP server (18 tools) lets agents draft/schedule/reply/analyze",
+        "Trust/safety wedge praised in comments: uses official sanctioned platform APIs, NOT scraping or browser automation",
+        "Very low $2.99 entry price lowers adoption friction",
+        "MCP-native + npx-installable Skills align with Claude/Cursor developer workflows"
+      ],
+      "core_features": [
+        "Unified publishing API: one call to LinkedIn, X, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon, Telegram",
+        "MCP server with 18 tools for agents to post/comment/react/reply/pull analytics in natural language",
+        "Full engagement loop (read feeds, comment, reply to messages)",
+        "Official-API-only approach (no scraping)",
+        "Google Docs-styled scheduler UI"
+      ],
+      "niche": "Exposing social publishing as an agent-callable surface rather than a human dashboard",
+      "audience": "Developers, AI agent builders, MCP/automation users (Claude Code, Cursor), content studios, social media managers",
+      "design": "Developer-first, 'agent era' framing; clean MCP-native positioning; Google Docs-style editor for the scheduler",
+      "data": {"ph_rank": "#1 (2026-06-10)", "upvotes": 478, "platforms": "10-12", "mcp_tools": 18, "agent_ready_index": "64/100 (xpay.sh, 'Partially Agent-Ready')"},
+      "reviews": "No formal star reviews yet. Positive comment sentiment, especially on official-API safety. Caveat: analytics fully live only for LinkedIn; agent-readiness has room to improve. All figures vendor/PH-stated."
+    },
+    {
+      "name": "Spotlight by Backplanes",
+      "category": "AI coding-agent observability / session reporting",
+      "url": "https://www.backplanes.com",
+      "ph": "#3 on 2026-06-10, ~335 upvotes",
+      "business_model": "Free for individuals & their teams (no seats, no trial clock); planned premium enterprise tier (attribution, volume controls, governance) — sales-led, unpriced.",
+      "success_factors": [
+        "Targets the hottest 2026 pain: visibility into what autonomous coding agents (Claude Code, Codex) actually did",
+        "Privacy-first (local on-device PII/credential redaction; no OAuth into Anthropic/OpenAI) lowers enterprise fear",
+        "Multi-audience reports (engineer, manager, security, finance) broaden the buyer base",
+        "Zero-friction 'install once, level up every session' onboarding; free-for-individuals land-and-expand"
+      ],
+      "core_features": [
+        "Automatic post-session capture (no manual trigger)",
+        "Session reports: files touched, commands run, external services reached, scope drift, what deserves review",
+        "Security findings: flags credential access & unintended file operations",
+        "Multi-audience views (engineering, management, security/CISO, finance/CFO)",
+        "Org-level aggregated reports: security posture, capacity, spend"
+      ],
+      "niche": "The 'what did my agent actually do' audit layer for terminal coding agents",
+      "audience": "Engineers, eng managers (capacity), CISOs (data-access oversight), CFOs (spend/ROI by tool & team)",
+      "design": "Clean, transparency-focused UI; neutral tones; clear report hierarchy. 'See what your agent actually did.'",
+      "data": {"ph_rank": "#3 (2026-06-10)", "upvotes": "~335 (moderate confidence)", "example_report": "47-min session: 4 files, 17 commands, 3 external services"},
+      "reviews": "No formal reviews yet. Strong fit with enterprise governance concerns. Open question: long-term monetization if core stays free."
+    },
+    {
+      "name": "ZeroGPU",
+      "category": "AI inference infrastructure / compute-efficiency layer",
+      "url": "https://zerogpu.ai",
+      "ph": "#2 on 2026-06-09, 345 upvotes",
+      "business_model": "Usage-based pricing (no public rate card; cost calculator on site). Value prop: 50%+ cost reduction vs frontier models for routine/high-volume work.",
+      "success_factors": [
+        "Drop-in OpenAI-compatible API: swap base URL + model name, minimal migration",
+        "Sharp wedge: route high-volume non-reasoning work (classification, moderation, summarization, extraction) off expensive frontier models",
+        "Concrete proof point: first customer Dappier runs ~10x lower latency, ~6x lower cost (vendor-stated)",
+        "Edge-network + small/nano specialized models + cloud fallback reliability story; rides agent-loop cost anxiety"
+      ],
+      "core_features": [
+        "OpenAI-compatible chat completions API (drop-in)",
+        "Catalog of specialized small/nano models (classification, summarization, PII detection, extraction)",
+        "Distributed execution: optimized servers + approved edge devices + cloud fallback",
+        "Analytics: cost reduction, latency, avoided frontier-model calls",
+        "Project-level API keys / usage-based access"
+      ],
+      "niche": "Inference cost/efficiency layer for high-volume, repeatable, non-frontier workloads in apps & agent loops",
+      "audience": "Engineering/platform teams at high-volume AI ops: agents, adtech, doc processing, compliance, fraud, moderation",
+      "design": "Minimal infrastructure-credible aesthetic; 'smarter inference over raw compute scaling'",
+      "data": {"ph_rank": "#2 (2026-06-09)", "upvotes": 345, "comments": 42, "claimed_latency": "10x faster", "claimed_cost": "6x lower (Dappier) / 50%+ general", "claimed_offload": "70-80% of frontier calls"},
+      "reviews": "Performance/cost claims are vendor-stated with 'varies by workload' caveat. No customer counts or ARR beyond the single Dappier reference. No independent benchmarks at gather time."
+    },
+    {
+      "name": "VC Boom",
+      "category": "AI fundraising / investor-matching tool",
+      "url": "https://www.vcboom.com",
+      "ph": "#1 on 2026-06-09, 488 upvotes (highest single-day count of the window)",
+      "business_model": "Free to start; one-time 'pay-once' purchase for access through a raise (no subscription/auto-renew). Positioned to pay for itself from one converting meeting.",
+      "success_factors": [
+        "Highest single-day upvote count of the window (488)",
+        "Fast, tangible value: scores a deck in <90s and names the single fastest fix",
+        "Large matching dataset: 47,000+ investors, each with a one-line fit rationale",
+        "Sends from the founder's own inbox (avoids deliverability/spam stigma of mass tools)",
+        "Anti-subscription pay-once pricing aligned with episodic fundraising need"
+      ],
+      "core_features": [
+        "AI pitch-deck scoring (<90s) with single highest-leverage fix",
+        "Investor matching across 47,000+ investors with per-match rationale",
+        "Personalized cold-email drafting, sent from user's own inbox",
+        "Privacy: Anthropic API, no training on data; encryption at rest"
+      ],
+      "niche": "Early-stage founders running a raise who need deck feedback + targeted investor outreach in one flow",
+      "audience": "Pre-seed / seed / early-stage founders raising capital",
+      "design": "Conversion-focused, founder-empathetic landing: 'Score your deck. Find investors. Raise.'",
+      "data": {"ph_rank": "#1 (2026-06-09)", "upvotes": 488, "comments": 65, "investor_db": "47,000+", "deck_scoring_time": "<90s"},
+      "reviews": "Crowded space (cf. Fundraisly). 47,000+ figure and outcome claims vendor-stated; no independent conversion data. Pay-once model differentiates but unproven on repeat-raise value."
+    },
+    {
+      "name": "agmsg",
+      "category": "Open-source inter-agent messaging for AI coding agents",
+      "url": "https://github.com/fujibee/agmsg",
+      "ph": "#5 on 2026-06-09, 233 upvotes",
+      "business_model": "Open source / free (GitHub). No commercial model — community/OSS play.",
+      "success_factors": [
+        "Solves a relatable annoyance: manual copy-pasting between AI coding agents",
+        "Radically minimal stack: Bash + SQLite only — no daemon, no network, no Python",
+        "Vendor-agnostic: works across Claude Code, Codex, Gemini CLI, Copilot CLI",
+        "Installs as an Agent Skill without patching agents",
+        "Pre-launch traction in Japan (1M+ impressions, 320+ stars in a week)"
+      ],
+      "core_features": [
+        "Persistent messaging via a single shared SQLite file (survives sessions)",
+        "Vendor-agnostic multi-agent 'rooms' (scales to N agents)",
+        "Agent Skill installation (no agent patching)",
+        "Zero heavy dependencies"
+      ],
+      "niche": "Multi-agent orchestration plumbing — heterogeneous coding agents talking directly instead of via human copy-paste",
+      "audience": "Developers running multiple AI coding agents in parallel; agentic-workflow tinkerers",
+      "design": "Developer/OSS minimalism; CLI-first, README-driven, utilitarian hacker brand",
+      "data": {"ph_rank": "#5 (2026-06-09)", "upvotes": 233, "comments": 49, "followers": 387, "github_stars": "320+ in first week", "japan_impressions": "1M+"},
+      "reviews": "Active comment debate on token efficiency, context management, and concurrent SQLite writes (a known SQLite multi-writer weak spot). As OSS with no business model, sustainability is an open question."
+    },
+    {
+      "name": "PgDog",
+      "category": "Database infrastructure (PostgreSQL scaling)",
+      "url": "https://pgdog.dev",
+      "ph": "Hacker News funding announcement (~380 pts)",
+      "business_model": "Open-source core (Rust); commercial/managed offering implied by venture funding — specifics unverified.",
+      "success_factors": [
+        "Solves a real, hard pain: horizontal sharding + connection pooling for Postgres without rewriting the app",
+        "Strong production proof points before raising",
+        "Backed by Basis Set, Y Combinator, Pioneer Fund"
+      ],
+      "core_features": [
+        "PostgreSQL connection pooler",
+        "Load balancer",
+        "Transparent database sharder ('sharding at network speed')",
+        "Works across RDS, Aurora, EC2; OSS distribution"
+      ],
+      "niche": "Teams hitting single-node Postgres limits who want to shard without leaving Postgres",
+      "audience": "Backend / platform / infra engineers at scaling, data-heavy companies",
+      "design": "Not verified",
+      "data": {"funding": "$5.5M (reported ~Jun 2026)", "throughput": ">2M queries/sec in production (reported)", "scale": ">20 TB sharded (reported)", "docker_pulls": ">1.4M (reported)"},
+      "reviews": "HN discussion exists; contents not captured. Metrics reported via pgdog.dev blog, not independently audited."
+    },
+    {
+      "name": "Cosmetically-Elegant 'No White Cast' SPF (K-beauty-led sun care)",
+      "category": "Consumer / beauty (TikTok -> Amazon social commerce)",
+      "url": "https://www.qogita.com/blog/tiktok-beauty-trends-2026/",
+      "business_model": "Brand DTC + Amazon marketplace + TikTok Shop affiliate/creator commerce; K-beauty imports (Beauty of Joseon) and US clean brands (Supergoop) ride creator demos into mass retail.",
+      "success_factors": [
+        "Solves a visible pain (white cast on deeper skin tones)",
+        "Seasonal tailwind (peak summer, June)",
+        "Clean/functional ingredient story (rice water, prebiotics)",
+        "Highly demonstrable on short-form video (no-cast swatch reveals)",
+        "Dermatologist endorsement adds credibility"
+      ],
+      "core_features": [
+        "SPF 50+ broad spectrum, no white cast / transparent finish",
+        "Prebiotic/probiotic or rice-water complex",
+        "Hybrid skincare-primer formats (e.g., Glowscreen SPF 40)",
+        "'Climate-adaptive' formulas reacting to skin temp/environment"
+      ],
+      "niche": "Functional + aesthetic sunscreen for diverse skin tones",
+      "audience": "Gen Z & Millennial skincare-forward, inclusive-finish seekers",
+      "design": "Aesthetic packaging optimized for TikTok algorithm; dewy 'glowy' finish doubles as makeup base",
+      "data": {"discovery_channel": "TikTok primary for ~65% Gen Z / ~55% Millennials (aggregator-reported)", "examples": ["Beauty of Joseon Rice Sunscreen", "Supergoop Glowscreen SPF 40"], "adjacent_viral": ["Biodance Bio-Collagen Mask ~150M TikTok views", "MaryRuth's Liquid Multivitamin >$29.9M TikTok Shop revenue"]},
+      "reviews": "Consistently highlighted across 2026 trend roundups (qogita, furylist, cosmetify) as effective and re-purchased beyond hype. Amazon live BSR was GATED (503/403) — SKU-level BSR not verified; figures aggregator-reported."
+    },
+    {
+      "name": "假日 Citywalk (holiday citywalk, Xiaohongshu)",
+      "category": "Consumer / China social commerce (Xiaohongshu)",
+      "url": "https://m.traveldaily.cn/article/189197",
+      "business_model": "Low-cost micro-travel (微度假) driving local F&B/lodging/experience commerce + creator route-planting (种草) funnels; brands & city tourism boards sponsor themed walks.",
+      "success_factors": [
+        "Genuinely June-fresh signal (search/orders reported up ~1x-5x since June)",
+        "Ultra-low barrier, 松弛感 / slow-pace immersive city experience",
+        "Photogenic, native 种草 fuel; strong in 上海/北京/西安",
+        "Rides 文旅种草 '下半场' + emotional youth spending"
+      ],
+      "core_features": [
+        "Curated walking routes + local discovery",
+        "Pair with 微度假 / 快旅慢游 framing",
+        "Creator route notes + community",
+        "Event-driven city-hopping (为一场演出赴一座城)"
+      ],
+      "niche": "Light urban micro-travel for young urbanites",
+      "audience": "China Gen Z / young urbanites seeking 松弛感 and low-cost weekend escapes",
+      "design": "'活人感' authentic real-person content beats polished ads; aesthetic city-scene imagery",
+      "data": {"order_growth": "~1x-5x since June (unverified)", "hashtag": "#假日citywalk# >5亿 views (unverified)", "hot_cities": ["上海", "北京", "西安"]},
+      "reviews": "Reported via traveldaily / XHS trend summaries as a 2026 文旅种草 breakout. 小红书 login-gated; all figures from public summaries, unverified. Adjacent rising: 拼豆 (maturing since Feb), 桨板 SUP, 飞盘/匹克球/陆冲, 八段锦."
+    }
+  ]
+}

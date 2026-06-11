@@ -1,0 +1,104 @@
+[
+  {
+    "date": "2026-06-11",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  },
+  {
+    "date": "2026-06-12",
+    "name_cn": "CPI 消费者物价指数",
+    "kind": "cpi",
+    "note_cn": "08:30 ET (日期为近似, 请按 BLS 官方日历校准)"
+  },
+  {
+    "date": "2026-06-13",
+    "name_cn": "PPI 生产者物价指数",
+    "kind": "ppi",
+    "note_cn": "08:30 ET (近似)"
+  },
+  {
+    "date": "2026-06-17",
+    "name_cn": "FOMC 议息决议",
+    "kind": "fomc",
+    "note_cn": "14:00 ET 声明; 含经济预测 SEP/点阵图"
+  },
+  {
+    "date": "2026-06-18",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  },
+  {
+    "date": "2026-06-19",
+    "name_cn": "四巫日 (Quad Witching)",
+    "kind": "quad_witching",
+    "note_cn": "期指/期权/个股期权同时到期, 尾盘量能放大"
+  },
+  {
+    "date": "2026-06-25",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  },
+  {
+    "date": "2026-06-26",
+    "name_cn": "养老金/目标日期基金再平衡",
+    "kind": "pension",
+    "note_cn": "季末再平衡 (规模更大)"
+  },
+  {
+    "date": "2026-06-29",
+    "name_cn": "养老金/目标日期基金再平衡",
+    "kind": "pension",
+    "note_cn": "季末再平衡 (规模更大)"
+  },
+  {
+    "date": "2026-06-30",
+    "name_cn": "养老金/目标日期基金再平衡",
+    "kind": "pension",
+    "note_cn": "季末再平衡 (规模更大)"
+  },
+  {
+    "date": "2026-07-02",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  },
+  {
+    "date": "2026-07-03",
+    "name_cn": "非农就业报告 (NFP)",
+    "kind": "nfp",
+    "note_cn": "08:30 ET 发布, 含失业率、时薪"
+  },
+  {
+    "date": "2026-07-09",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  },
+  {
+    "date": "2026-07-12",
+    "name_cn": "CPI 消费者物价指数",
+    "kind": "cpi",
+    "note_cn": "08:30 ET (日期为近似, 请按 BLS 官方日历校准)"
+  },
+  {
+    "date": "2026-07-13",
+    "name_cn": "PPI 生产者物价指数",
+    "kind": "ppi",
+    "note_cn": "08:30 ET (近似)"
+  },
+  {
+    "date": "2026-07-16",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  },
+  {
+    "date": "2026-07-23",
+    "name_cn": "初请/续请失业金",
+    "kind": "claims",
+    "note_cn": "08:30 ET 发布"
+  }
+]

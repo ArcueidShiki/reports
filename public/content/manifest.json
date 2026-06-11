@@ -1,0 +1,253 @@
+{
+  "generatedAt": "2026-06-11T14:57:05.335Z",
+  "sections": {
+    "products": [
+      {
+        "date": "2026-06-11",
+        "analysisJson": "products-analysis.json",
+        "otherFiles": [
+          "raw-data.json",
+          "sources-raw.json"
+        ]
+      },
+      {
+        "date": "2026-06-09",
+        "analysisJson": "products-analysis.json",
+        "otherFiles": [
+          "sources-raw.json"
+        ]
+      }
+    ],
+    "market": [
+      {
+        "date": "2026-06-10",
+        "items": [
+          {
+            "file": "2026-06-10-cpi-hits-4-percent-iran-escalates-dow-loses-50k.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "cpi hits 4 percent iran escalates dow loses 50k"
+          },
+          {
+            "file": "2026-06-10-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-10-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-10-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          },
+          {
+            "file": "2026-06-10-通胀破4美伊冲突升级道指失守5万点.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "通胀破4美伊冲突升级道指失守5万点"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-08",
+        "items": [
+          {
+            "file": "2026-06-08-chip-rebound-meets-hawkish-fed-repricing.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "chip rebound meets hawkish fed repricing"
+          },
+          {
+            "file": "2026-06-08-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          },
+          {
+            "file": "2026-06-08-芯片反弹遭遇鹰派美联储重定价.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "芯片反弹遭遇鹰派美联储重定价"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-05",
+        "items": [
+          {
+            "file": "2026-06-05-AI交易瓦解-万亿市值蒸发.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "AI交易瓦解 万亿市值蒸发"
+          },
+          {
+            "file": "2026-06-05-ai-trade-unwind-trillion-dollar-wipeout.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "ai trade unwind trillion dollar wipeout"
+          },
+          {
+            "file": "2026-06-05-strong-jobs-complicates-fed-chips-under-pressure.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "strong jobs complicates fed chips under pressure"
+          },
+          {
+            "file": "2026-06-05-强劲非农压制降息预期-芯片股持续承压.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "强劲非农压制降息预期 芯片股持续承压"
+          },
+          {
+            "file": "2026-06-05-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-04",
+        "items": [
+          {
+            "file": "2026-06-04-tech-rotation-broadcom-miss-dow-decouples.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "tech rotation broadcom miss dow decouples"
+          },
+          {
+            "file": "2026-06-04-美股日报-科技股杀跌道指独涨芯片板块重挫.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "美股日报 科技股杀跌道指独涨芯片板块重挫"
+          }
+        ]
+      }
+    ],
+    "alpha": [
+      {
+        "id": "readme",
+        "title": "Alpha Factors Overview",
+        "file": "README.md"
+      },
+      {
+        "id": "technical",
+        "title": "Technical Factors",
+        "file": "technical-factors.md"
+      },
+      {
+        "id": "value",
+        "title": "Value Factors",
+        "file": "value-factors.md"
+      },
+      {
+        "id": "sentiment",
+        "title": "Sentiment Factors",
+        "file": "sentiment-factors.md"
+      }
+    ],
+    "signals": [
+      {
+        "date": "2026-06-11",
+        "pdf": "report_2026-06-11.pdf",
+        "signalsMd": "signals_2026-06-11.md",
+        "csv": "signals_2026-06-11.csv",
+        "calendarJson": "calendar_2026-06-11.json",
+        "posters": [
+          "poster_2026-06-11_1.png",
+          "poster_2026-06-11_2.png",
+          "poster_2026-06-11_3.png"
+        ],
+        "sources": null
+      },
+      {
+        "date": "2026-06-10",
+        "pdf": "report_2026-06-10.pdf",
+        "signalsMd": "signals_2026-06-10.md",
+        "csv": "signals_2026-06-10.csv",
+        "calendarJson": "calendar_2026-06-10.json",
+        "posters": [],
+        "sources": {
+          "images": [
+            "continued_claims_fred.png",
+            "core_cpi_fred.png",
+            "cpi_fred.png",
+            "initial_claims_fred.png",
+            "nonfarm_payrolls_fred.png",
+            "ppi_fred.png",
+            "rates_h15.png",
+            "unemployment_rate_fred.png",
+            "vix_cboe.png",
+            "wti_eia.png"
+          ],
+          "provenanceMd": "provenance_2026-06-10.md",
+          "officialJson": "official_2026-06-10.json"
+        }
+      }
+    ],
+    "gallery": {
+      "images": [
+        "ComfyUI_00001_.png",
+        "ComfyUI_00002_.png",
+        "ComfyUI_00003_.png",
+        "yr_detail_hands_mic_00001_.png",
+        "yr_finale_bow_00001_.png",
+        "yr_gallery_backstage_00001_.png",
+        "yr_gallery_crowd_00001_.png",
+        "yr_gallery_dance_00001_.png",
+        "yr_gallery_guitar_00001_.png",
+        "yr_gallery_mic_jump_00001_.png",
+        "yr_gallery_piano_00001_.png",
+        "yr_hero_closeup_00001_.png",
+        "yr_hero_concert_00001_.png",
+        "yr_loop_ballad_011_00001_.png",
+        "yr_loop_ballad_024_00001_.png",
+        "yr_loop_confetti_008_00001_.png",
+        "yr_loop_confetti_021_00001_.png",
+        "yr_loop_dance_002_00001_.png",
+        "yr_loop_dance_015_00001_.png",
+        "yr_loop_dance_028_00001_.png",
+        "yr_loop_duet_mic_006_00001_.png",
+        "yr_loop_duet_mic_019_00001_.png",
+        "yr_loop_keyboard_010_00001_.png",
+        "yr_loop_keyboard_023_00001_.png",
+        "yr_loop_portrait_003_00001_.png",
+        "yr_loop_portrait_016_00001_.png",
+        "yr_loop_portrait_029_00001_.png",
+        "yr_loop_pose_000_00001_.png",
+        "yr_loop_pose_013_00001_.png",
+        "yr_loop_pose_026_00001_.png",
+        "yr_loop_runway_007_00001_.png",
+        "yr_loop_runway_020_00001_.png",
+        "yr_loop_scene_004_00001_.png",
+        "yr_loop_scene_017_00001_.png",
+        "yr_loop_scene_030_00001_.png",
+        "yr_loop_silhouette_009_00001_.png",
+        "yr_loop_silhouette_022_00001_.png",
+        "yr_loop_singing_001_00001_.png",
+        "yr_loop_singing_014_00001_.png",
+        "yr_loop_singing_027_00001_.png",
+        "yr_loop_spotlight_005_00001_.png",
+        "yr_loop_spotlight_018_00001_.png",
+        "yr_loop_wave_012_00001_.png",
+        "yr_loop_wave_025_00001_.png",
+        "yr_mood_emotional_00001_.png",
+        "yr_mood_joyful_00001_.png",
+        "yr_outfit_black_00001_.png",
+        "yr_outfit_white_00001_.png",
+        "yr_portrait_cool_00001_.png",
+        "yr_portrait_smile_00001_.png",
+        "yr_scene_cafe_00001_.png",
+        "yr_scene_neon_city_00001_.png",
+        "yr_scene_studio_00001_.png",
+        "yr_scene_sunset_00001_.png"
+      ]
+    }
+  }
+}

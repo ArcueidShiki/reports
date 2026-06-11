@@ -1,0 +1,111 @@
+{
+  "scrape_date": "2026-06-11",
+  "note": "Raw signals gathered via WebSearch + WebFetch by four parallel research agents. Confidence annotated per block. Login-gated/client-rendered sources (Amazon live BSR, Google Trends /trending, Xiaohongshu, X, LinkedIn) captured via public summaries or authoritative blogs and flagged.",
+  "sources": {
+    "product_hunt": {
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/6/10",
+      "as_of": "2026-06-11",
+      "leaderboard_2026-06-10_top5": [
+        {"rank": 1, "name": "Publora", "tagline": "Social media API for AI agents. MCP-native.", "topics": ["API", "Social Media", "Developer Tools"], "upvotes": 478, "url": "https://www.producthunt.com/products/publora"},
+        {"rank": 2, "name": "TypingMind", "tagline": "Pay per use, no subscription, 18 model providers", "topics": ["Productivity", "AI"], "upvotes": 386, "url": "https://www.producthunt.com/products/typing-mind"},
+        {"rank": 3, "name": "Spotlight by Backplanes", "tagline": "Session reports for Claude Code & Codex", "topics": ["Developer Tools", "AI", "Security"], "upvotes": 335, "url": "https://www.producthunt.com/products/backplanes"},
+        {"rank": 4, "name": "Screen Charm", "tagline": "Give your screen recordings more charm", "topics": ["Mac", "Productivity", "Video"], "upvotes": 253, "url": "https://www.producthunt.com/products/screen-charm"},
+        {"rank": 5, "name": "Gemini 3.5 Live Translate", "tagline": "Live speech-to-speech translation", "topics": ["Android", "Languages", "Audio"], "upvotes": 210, "url": "https://www.producthunt.com/products/gemini-3-5-live-translate"}
+      ],
+      "leaderboard_2026-06-09_top5": [
+        {"rank": 1, "name": "VC Boom", "tagline": "Score your deck, meet investors who fit, and raise more", "topics": ["Venture Capital", "AI", "Fundraising"], "upvotes": 488, "comments": 65},
+        {"rank": 2, "name": "ZeroGPU", "tagline": "The compute efficient layer for AI inference", "topics": ["API", "Developer Tools", "AI"], "upvotes": 345, "comments": 42},
+        {"rank": 3, "name": "prostir zvuku", "tagline": "A spatial nature sound mixer for Mac", "topics": ["Health & Fitness", "Productivity", "Nature"], "upvotes": 275, "comments": 42},
+        {"rank": 4, "name": "Krisp Voice Translation API", "tagline": "Real-time speech-to-speech translation API", "topics": ["API", "Developer Tools", "Audio"], "upvotes": 266, "comments": 27},
+        {"rank": 5, "name": "agmsg", "tagline": "Stop copy-pasting between your AI coding agents", "topics": ["Open Source", "Developer Tools", "AI"], "upvotes": 233, "comments": 49}
+      ],
+      "trending_categories": ["AI coding agents", "Voice agents / realtime speech-to-speech translation", "AI infra & inference optimization", "Agent observability / session reporting (emerging)", "No-code AI agent builders", "AI notetakers"],
+      "trend_narrative": "June 2026 PH dominated by 'agent era' developer infrastructure: tooling that wraps Claude Code/Codex (observability: Spotlight; inter-agent messaging: agmsg; cloud sandboxes: Replicas), efficiency layers (ZeroGPU), and MCP-native APIs (Publora) exposing existing surfaces to agents rather than shipping standalone apps.",
+      "notes": "06-11 leaderboard not yet populated. 06-10 raw fetch had a column-swap (comments>upvotes); upvotes reconciled & cross-checked vs Publora product page (478 #1) at moderate-high confidence; 06-10 comment counts low-confidence. 06-09 internally consistent. Established products (Lovable, Granola, TypingMind, Krisp) noted as still-trending but excluded from deep-dive per task."
+    },
+    "hacker_news": {
+      "url": "https://news.ycombinator.com/front",
+      "june_2026_themes": [
+        "AI market maturation & skepticism: from celebrating capability to scrutinizing governance, reliability, trust",
+        "AI accountability/liability: German court ruling holding Google liable for false AI Overviews answers",
+        "Software supply-chain security: AI lowering cost of believable malicious packages (~8,783 npm, ~3,000 PyPI flagged)",
+        "Tool-reliability / buyer fatigue: frustration over abandoned AI coding tools — 'communities forgive bugs but punish broken trust'",
+        "HTML-first / lightweight web dev resurgence",
+        "Physical/industrial tech (Apple native containers; Mercedes axial-flux motor)"
+      ],
+      "notable_launches": [
+        {"name": "PgDog", "note": "Rust Postgres pooler/sharder; funding announcement (~380 pts), not Show-HN-prefixed"},
+        {"name": "Gamow Labs", "note": "AI genomic-medicine interpretation layer; launch/intro post (~207 pts)"}
+      ],
+      "top_story_samples": [
+        {"title": "macOS Container Machines", "points": 1193, "site": "github.com/apple"},
+        {"title": "German ruling declares Google liable for false answers in AI Overviews", "points": 962, "site": "the-decoder.com"},
+        {"title": "Mercedes-Benz starts large-scale production of electric axial flux motor", "points": 509, "site": "mercedes-benz.com"}
+      ],
+      "caveat": "Front-page titles/points from fast-model summary of /front (~2026-06-10), not confirmed per-story. 'HTML-first doubled our users' article content could NOT be located on cited domain — claim unverified."
+    },
+    "a16z": {
+      "url": "https://a16z.com/news-content/",
+      "big_ideas_2026": [
+        "The Agentic Interface — outcome-based pricing aligning vendor & user incentives",
+        "Infrastructure shock from 'agent-speed' workloads (recursive, bursty, massive) vs human-speed traffic",
+        "AI closing the cybersecurity hiring gap via automation",
+        "Physical AI & the Industrial Stack — software control of the physical world",
+        "Consumer AI shifting from productivity to connectivity (relationships, self-understanding)",
+        "Personalization — 'finding the individual inside the average'",
+        "Prediction markets bigger/broader at the crypto x AI intersection"
+      ],
+      "aum_estimate": "Reported ~$90B-$100B+ (sources conflict); treat as a range.",
+      "caveat": "Big Ideas list & themes from fast-model summaries; no explicit June 2026 article timestamps confirmed."
+    },
+    "macro_funding": {
+      "url": "https://news.crunchbase.com",
+      "biggest_rounds_week_of_2026-06-05": [
+        {"company": "Ramp", "amount": "$750M", "sector": "Fintech / spend mgmt"},
+        {"company": "Impulse Space", "amount": "$500M Series D", "sector": "Space tech"},
+        {"company": "Supabase", "amount": "$500M", "sector": "AI dev tools / OSS backend"},
+        {"company": "Flourish", "amount": "$500M initial", "sector": "Foundational AI (brain-inspired)"},
+        {"company": "Helion", "amount": "$465M Series G", "sector": "Fusion energy"},
+        {"company": "Suno", "amount": "$400M Series D", "sector": "AI music"},
+        {"company": "Generalist AI", "amount": "$400M", "sector": "Robotics (~$2B val, reported)"},
+        {"company": "AlphaSense", "amount": "$350M", "sector": "AI market intelligence (~$7.5B val, reported)"}
+      ],
+      "ai_valuation_signals": "REPORTED, single-source: Anthropic reportedly #1 in private AI valuation after ~$65B Series H at ~$965B (late May 2026), topping OpenAI. Q1 2026 ~$300B global venture record.",
+      "ipo_signals": "REPORTED, forward-looking, single-source: SpaceX IPO priced ~$135/share (~$1.75T, ticker SPCX) targeting ~June 12 2026 debut. Cerebras (CBRS) IPO'd ~May 14 2026, +68% day one.",
+      "caveat": "Crunchbase weekly-rounds confirmed via fetch. Valuation/IPO figures from search summaries — flagged reported, not verified against filings."
+    },
+    "amazon_movers_shakers": {
+      "url": "https://www.amazon.com/gp/movers-and-shakers",
+      "retrieval_status": "GATED — live list NOT retrieved (503/403 on main + beauty sub-pages). Mechanics verified (ranks 24h sales-rank gainers, hourly update). Product names below are contextual Q2-2026 search snippets, NOT today's live BSR.",
+      "contextual_unverified": ["AirPods Pro 3", "Apple Watch Series 11", "sunscreen", "outdoor gear", "allergy-season health"],
+      "cross_category_insight": "TikTok-as-discovery -> Amazon-BSR pipeline is the key beauty mechanic; SKU-level BSR unconfirmed today."
+    },
+    "google_trends": {
+      "url": "https://trends.google.com/trending",
+      "retrieval_status": "Live /trending client-rendered; captured via Google's own blog (blog.google), more authoritative than the gated UI.",
+      "breakout_definition": "Breakout = >5,000% growth in timeframe.",
+      "dominant_theme": "2026 NBA Finals: Knicks vs. Spurs — top US trending query; driving sports-nostalgia + vintage-apparel commerce.",
+      "commerce_breakouts": ["'vintage jersey' all-time high", "1999 NBA finals shirt", "Knicks 1999 finals shirt", "'Rick Brunson 1999 finals' = breakout"],
+      "players": ["Victor Wembanyama (career-high interest)", "Jalen Brunson", "Jeremy Sochan +250%/wk"]
+    },
+    "social_commerce": {
+      "platform_dynamics": "TikTok = primary beauty product-discovery engine 2026: ~65% Gen Z / ~55% Millennials discover before buying (aggregator-reported).",
+      "summer_signals": {
+        "beauty_skincare": ["No-white-cast / clean SPF (Beauty of Joseon Rice Sunscreen, Supergoop Glowscreen)", "Probiotic/'climate-adaptive' sunscreens", "Glass-skin collagen masks (Biodance ~150M views, Medicube)", "Shift toward skin-barrier health over harsh anti-aging"],
+        "supplements": ["Liquid 'visible-result' supplements (MaryRuth's >$29.9M TikTok Shop revenue, aggregator-reported)"]
+      },
+      "counter_trend": "EWG flagged '5 viral but problematic TikTok tanning trends' (June 2026) — risky sun behaviors alongside SPF boom.",
+      "caveat": "Aggregator-reported metrics, not independently audited."
+    },
+    "xiaohongshu": {
+      "url": "https://www.xiaohongshu.com",
+      "retrieval_status": "Login-gated; all figures via public WebSearch summaries (Zhihu/新华网/中新网/traveldaily/CBNData), UNVERIFIED.",
+      "june_fresh_signal": "假日 citywalk: search/orders reported up ~1x-5x since June; #假日citywalk# >5亿 views; hot in 上海/北京/西安.",
+      "maturing_breakout": "拼豆 (fuse beads): hashtag '我染上了拼豆' 31.5亿 OR 61.5亿 (conflicting); Taobao +~500% YoY; in XHS 2025 年度兴趣报告 top-10. Hot since Feb 2026, not a June debut.",
+      "summer_niches": ["桨板 SUP ('桨板+' multi-modal)", "飞盘", "匹克球 / 腰旗橄榄球 / 陆冲", "徒步/骑行/登山", "八段锦 & 疗愈型养生运动"],
+      "platform_mechanics": ["50%+ traffic tilt to <1000-follower 素人 (unverified)", "'活人感' authentic content = new traffic key", "种草 '效果化' era: 热力指数, 搜索转化追踪, measurable 种草->转化", "文旅种草 '下半场' in 2026"]
+    },
+    "x_twitter": {"url": "https://x.com", "note": "Login-gated; product buzz captured indirectly via PH/HN/news."},
+    "linkedin": {"url": "https://linkedin.com", "note": "Login-gated; funding/launch signals via Crunchbase/news."}
+  }
+}
