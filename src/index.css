@@ -36,3 +36,279 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+/* ---------- page layout ---------- */
+
+.page {
+  max-width: 64rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+}
+
+.status-note {
+  color: var(--color-text-muted);
+}
+
+.status-note-error {
+  color: #f85149;
+}
+
+.status-note-detail {
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+}
+
+/* ---------- date selector ---------- */
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.date-selector select {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  padding: 0.35rem 0.6rem;
+  font: inherit;
+}
+
+/* ---------- tabs ---------- */
+
+.tab-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.tab {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font: inherit;
+  cursor: pointer;
+}
+
+.tab:hover {
+  border-color: var(--color-accent);
+}
+
+.tab-active {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.translation-note {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+/* ---------- markdown ---------- */
+
+.markdown-view {
+  overflow-x: auto;
+}
+
+.markdown-view table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.markdown-view th,
+.markdown-view td {
+  border: 1px solid var(--color-border);
+  padding: 0.4rem 0.7rem;
+  text-align: left;
+}
+
+.markdown-view th {
+  background-color: var(--color-surface);
+}
+
+.markdown-view tr:nth-child(even) td {
+  background-color: rgb(255 255 255 / 3%);
+}
+
+.markdown-view img {
+  max-width: 100%;
+}
+
+.markdown-view code {
+  background-color: var(--color-surface);
+  border-radius: 4px;
+  padding: 0.1rem 0.3rem;
+}
+
+/* ---------- embeds ---------- */
+
+.content-frame {
+  width: 100%;
+  min-height: 70vh;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+/* ---------- products ---------- */
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+}
+
+.product-card-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.product-card h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.ph-badge {
+  background-color: rgb(218 84 44 / 18%);
+  color: #f0883e;
+  border: 1px solid #f0883e;
+  border-radius: 999px;
+  padding: 0.1rem 0.6rem;
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.product-category {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  margin: 0.4rem 0;
+}
+
+.product-business-model {
+  font-size: 0.9rem;
+}
+
+.product-success-factors {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- signals ---------- */
+
+.poster-row {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+}
+
+.poster-row img {
+  max-height: 22rem;
+  border-radius: 8px;
+}
+
+.source-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.source-figure {
+  margin: 0;
+}
+
+.source-figure img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.source-figure figcaption {
+  color: var(--color-text-muted);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.download-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+/* ---------- gallery ---------- */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-thumb {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.gallery-thumb img {
+  display: block;
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.gallery-thumb:hover img {
+  transform: scale(1.04);
+}
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgb(0 0 0 / 80%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.lightbox-image {
+  max-width: 92vw;
+  max-height: 92vh;
+  border-radius: 8px;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  background: none;
+  border: none;
+  color: var(--color-text);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+}

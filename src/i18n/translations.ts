@@ -25,6 +25,18 @@ const en: TranslationDictionary = {
   'common.error': 'Something went wrong.',
   'common.selectDate': 'Select date',
   'common.download': 'Download',
+  'common.empty': 'No content available.',
+  'market.noTranslation': 'Translated version unavailable — showing original.',
+  'signals.reportPdf': 'Report PDF',
+  'signals.table': 'Signals',
+  'signals.posters': 'Posters',
+  'signals.sources': 'Source charts',
+  'signals.provenance': 'Provenance',
+  'signals.downloads': 'Downloads',
+  'signals.csv': 'Signals CSV',
+  'signals.calendarJson': 'Calendar JSON',
+  'signals.officialJson': 'Official JSON',
+  'gallery.close': 'Close',
 };
 
 const zh: TranslationDictionary = {
@@ -42,6 +54,18 @@ const zh: TranslationDictionary = {
   'common.error': '出错了。',
   'common.selectDate': '选择日期',
   'common.download': '下载',
+  'common.empty': '暂无内容。',
+  'market.noTranslation': '该语言版本暂缺，显示原文。',
+  'signals.reportPdf': '报告 PDF',
+  'signals.table': '信号一览',
+  'signals.posters': '海报',
+  'signals.sources': '数据来源图表',
+  'signals.provenance': '数据出处',
+  'signals.downloads': '下载',
+  'signals.csv': '信号 CSV',
+  'signals.calendarJson': '日历 JSON',
+  'signals.officialJson': '官方 JSON',
+  'gallery.close': '关闭',
 };
 
 export const translations: TranslationDictionaries = { en, zh };
