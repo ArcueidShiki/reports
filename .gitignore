@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Test coverage
+coverage/
+
+# Wrangler local state
+.wrangler/
+
+# OS files
+.DS_Store
+
+# NOTE: public/content/ is intentionally committed (static deploy content).
