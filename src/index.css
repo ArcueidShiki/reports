@@ -45,6 +45,96 @@ a:hover {
   padding: 1.5rem 1rem 3rem;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+/* ---------- home hero ---------- */
+
+.home-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  min-height: 16rem;
+}
+
+.starfield-hero {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-hero-foreground {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
+}
+
+.intro-player {
+  pointer-events: none;
+}
+
+.home-tagline {
+  margin: 0;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ---------- home section cards ---------- */
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.home-card {
+  display: block;
+  height: 100%;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1.25rem;
+  color: var(--color-text);
+}
+
+.home-card:hover {
+  border-color: var(--color-accent);
+  text-decoration: none;
+}
+
+.home-card-icon {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.home-card-title {
+  display: block;
+  margin: 0.5rem 0 0.25rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.home-card-desc {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
 .status-note {
   color: var(--color-text-muted);
 }

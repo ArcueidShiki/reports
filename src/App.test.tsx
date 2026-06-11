@@ -1,10 +1,20 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import App from './App';
 
+// Heavy media components are mocked: no WebGL or video playback in jsdom.
+vi.mock('./components/StarfieldHero', () => ({
+  default: () => <div data-testid="starfield-hero" />,
+}));
+vi.mock('./components/IntroPlayer', () => ({
+  default: () => <div data-testid="intro-player" />,
+}));
+
 const NAV_LINK_COUNT = 6;
 const FOOTER_LINK_COUNT = 3;
+const HOME_CARD_LINK_COUNT = 5;
 
 describe('App', () => {
   beforeEach(() => {
@@ -23,7 +33,7 @@ describe('App', () => {
     ).toBeInTheDocument();
 
     expect(screen.getAllByRole('link')).toHaveLength(
-      NAV_LINK_COUNT + FOOTER_LINK_COUNT,
+      NAV_LINK_COUNT + FOOTER_LINK_COUNT + HOME_CARD_LINK_COUNT,
     );
     expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
       'href',
