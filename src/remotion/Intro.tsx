@@ -11,8 +11,8 @@ export const INTRO_FPS = 30;
 export const INTRO_WIDTH = 1200;
 export const INTRO_HEIGHT = 400;
 
-const TITLE = 'Arcueid Daily Reports';
-const SUBTITLE = '每日报告';
+export const INTRO_TITLE = 'Arcueid Daily Reports';
+export const INTRO_SUBTITLE = '每日报告';
 const SUBTITLE_DELAY_FRAMES = 18;
 const FADE_OUT_FRAMES = 24;
 const SLIDE_DISTANCE_PX = 48;
@@ -80,7 +80,7 @@ export default function Intro() {
           transform: `translateY(${title.translateY}px)`,
         }}
       >
-        {TITLE}
+        {INTRO_TITLE}
       </div>
       <div
         style={{
@@ -91,7 +91,7 @@ export default function Intro() {
           transform: `translateY(${subtitle.translateY}px)`,
         }}
       >
-        {SUBTITLE}
+        {INTRO_SUBTITLE}
       </div>
     </AbsoluteFill>
   );
