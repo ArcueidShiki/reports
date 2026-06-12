@@ -4,5 +4,6 @@
   "alpha": "/Users/arcueidpeng/github/stay-in-the-market/alpha-factors",
   "signals": "/Users/arcueidpeng/github/signal-calendar/reports",
   "gallery": "/Users/arcueidpeng/comfyui/output",
+  "wisdom": "/Users/arcueidpeng/github/stay-in-the-market/wisdom",
   "outputDir": "public/content"
 }

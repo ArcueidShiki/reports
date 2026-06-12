@@ -1,8 +1,9 @@
 /**
  * Content ingest orchestrator.
  *
- * Reads the five report sources declared in ingest.config.json, copies their
- * publishable files into public/content/{products,market,alpha,signals,gallery}/
+ * Reads the six report sources declared in ingest.config.json, copies their
+ * publishable files into
+ * public/content/{products,market,alpha,signals,gallery,wisdom}/
  * and writes public/content/manifest.json describing what was copied.
  *
  * Usage: node scripts/ingest.mjs [configPath]
@@ -20,10 +21,18 @@ import { buildMarketSection } from './lib/market.mjs';
 import { buildProductsSection } from './lib/products.mjs';
 import { buildSignalsSection } from './lib/signals.mjs';
 import { isJunkFile } from './lib/sort.mjs';
+import { buildWisdomSection } from './lib/wisdom.mjs';
 
 const MANIFEST_FILE = 'manifest.json';
 const SIGNALS_SOURCES_DIR = 'sources';
-const SECTION_NAMES = Object.freeze(['products', 'market', 'alpha', 'signals', 'gallery']);
+const SECTION_NAMES = Object.freeze([
+  'products',
+  'market',
+  'alpha',
+  'signals',
+  'gallery',
+  'wisdom',
+]);
 
 async function dirExists(absPath) {
   try {
@@ -201,6 +210,16 @@ async function ingestGallery(sourceRoot, outDir, warn) {
   return section;
 }
 
+async function ingestWisdom(sourceRoot, outDir, warn) {
+  if (!(await dirExists(sourceRoot))) {
+    warn(`wisdom source dir missing, emitting empty section: ${sourceRoot}`);
+    return [];
+  }
+  const section = buildWisdomSection(await listFileNames(sourceRoot));
+  await copyAll(sourceRoot, outDir, section.map((entry) => entry.file));
+  return section;
+}
+
 /**
  * Runs the full ingest.
  *
@@ -225,6 +244,7 @@ export async function runIngest(rawConfig, { baseDir, log = console.log, warn = 
     alpha: await ingestAlpha(config.alpha, path.join(outputRoot, 'alpha'), warn),
     signals: await ingestSignals(config.signals, path.join(outputRoot, 'signals'), warn),
     gallery: await ingestGallery(config.gallery, path.join(outputRoot, 'gallery'), warn),
+    wisdom: await ingestWisdom(config.wisdom, path.join(outputRoot, 'wisdom'), warn),
   };
 
   const manifest = { generatedAt: new Date().toISOString(), sections };
@@ -235,8 +255,8 @@ export async function runIngest(rawConfig, { baseDir, log = console.log, warn = 
   log(
     `ingest complete: products=${sections.products.length} dates, ` +
       `market=${sections.market.length} dates, alpha=${sections.alpha.length} docs, ` +
-      `signals=${sections.signals.length} dates, gallery=${sections.gallery.images.length} images ` +
-      `-> ${outputRoot}`,
+      `signals=${sections.signals.length} dates, gallery=${sections.gallery.images.length} images, ` +
+      `wisdom=${sections.wisdom.length} docs -> ${outputRoot}`,
   );
   return manifest;
 }

@@ -13,6 +13,7 @@ const ProductsPage = lazy(() => import('./pages/ProductsPage'));
 const MarketPage = lazy(() => import('./pages/MarketPage'));
 const AlphaPage = lazy(() => import('./pages/AlphaPage'));
 const SignalsPage = lazy(() => import('./pages/SignalsPage'));
+const WisdomPage = lazy(() => import('./pages/WisdomPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 
 const PAGE_FADE_DURATION_S = 0.25;
@@ -44,6 +45,7 @@ function AnimatedRoutes() {
             <Route path={ROUTE_PATHS.market} element={<MarketPage />} />
             <Route path={ROUTE_PATHS.alpha} element={<AlphaPage />} />
             <Route path={ROUTE_PATHS.signals} element={<SignalsPage />} />
+            <Route path={ROUTE_PATHS.wisdom} element={<WisdomPage />} />
             <Route path={ROUTE_PATHS.gallery} element={<GalleryPage />} />
           </Routes>
         </Suspense>

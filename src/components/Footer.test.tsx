@@ -44,7 +44,7 @@ describe('Footer', () => {
     renderFooter();
 
     const resumeLink = screen.getByRole('link', { name: 'Resume' });
-    expect(resumeLink).toHaveAttribute('href', 'https://bpcv.arcueidshiki.uk');
+    expect(resumeLink).toHaveAttribute('href', 'https://cv.arcueidshiki.uk/cv2.html');
     expect(resumeLink).toHaveAttribute('target', '_blank');
     expect(resumeLink.getAttribute('rel')).toContain('noopener');
   });
@@ -62,7 +62,7 @@ describe('Footer', () => {
 
     expect(screen.getByRole('link', { name: '简历' })).toHaveAttribute(
       'href',
-      'https://bpcv.arcueidshiki.uk',
+      'https://cv.arcueidshiki.uk/cv2.html',
     );
   });
 });

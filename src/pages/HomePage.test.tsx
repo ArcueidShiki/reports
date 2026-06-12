@@ -18,6 +18,7 @@ const EXPECTED_CARDS = [
   { href: '/market', title: 'US Market Daily' },
   { href: '/alpha', title: 'Alpha Factors' },
   { href: '/signals', title: 'Signal Calendar' },
+  { href: '/wisdom', title: 'Wisdom' },
   { href: '/gallery', title: 'Gallery' },
 ] as const;
 

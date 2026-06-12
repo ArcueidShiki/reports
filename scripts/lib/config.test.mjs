@@ -7,6 +7,7 @@ const VALID_CONFIG = {
   alpha: '/abs/stay-in-the-market/alpha-factors',
   signals: '/abs/signal-calendar/reports',
   gallery: '/abs/comfyui/output',
+  wisdom: '/abs/stay-in-the-market/wisdom',
   outputDir: 'public/content',
 };
 
@@ -21,6 +22,11 @@ describe('validateIngestConfig', () => {
   it('throws a clear error naming the missing key', () => {
     const { signals: _omitted, ...incomplete } = VALID_CONFIG;
     expect(() => validateIngestConfig(incomplete)).toThrow(/signals/);
+  });
+
+  it('requires the wisdom source path', () => {
+    const { wisdom: _omitted, ...incomplete } = VALID_CONFIG;
+    expect(() => validateIngestConfig(incomplete)).toThrow(/wisdom/);
   });
 
   it('throws when a value is not a non-empty string', () => {

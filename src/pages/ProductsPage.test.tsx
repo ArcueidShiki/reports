@@ -101,6 +101,36 @@ describe('ProductsPage', () => {
     );
   });
 
+  it('shows the empty state for a date whose analysis JSON is missing', async () => {
+    // Real manifests can contain an in-progress date dir with raw data only
+    // (analysisJson: null); the page must not crash building a content URL.
+    const fixture = JSON.parse(manifestFixtureJson) as {
+      sections: { products: unknown[] } & Record<string, unknown>;
+    };
+    const withPendingDate = {
+      ...fixture,
+      sections: {
+        ...fixture.sections,
+        products: [
+          { date: '2026-06-12', analysisJson: null, otherFiles: ['raw-data.json'] },
+          ...fixture.sections.products,
+        ],
+      },
+    };
+    stubFetchRoutes({
+      [MANIFEST_URL]: { body: JSON.stringify(withPendingDate) },
+      [LATEST_URL]: { body: ANALYSIS_LATEST },
+    });
+
+    renderPage(<ProductsPage />);
+
+    expect(await screen.findByText('No content available.')).toBeInTheDocument();
+
+    await userEvent.selectOptions(screen.getByRole('combobox'), '2026-06-11');
+
+    expect(await screen.findByRole('link', { name: 'Publora' })).toBeInTheDocument();
+  });
+
   it('shows an error state when the manifest fetch fails', async () => {
     stubFetchRoutes({ [MANIFEST_URL]: { status: 500, body: 'down' } });
 

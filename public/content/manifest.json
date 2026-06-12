@@ -1,7 +1,14 @@
 {
-  "generatedAt": "2026-06-11T18:10:43.804Z",
+  "generatedAt": "2026-06-12T02:46:04.605Z",
   "sections": {
     "products": [
+      {
+        "date": "2026-06-12",
+        "analysisJson": null,
+        "otherFiles": [
+          "raw-data.json"
+        ]
+      },
       {
         "date": "2026-06-11",
         "analysisJson": "products-analysis.json",
@@ -19,6 +26,41 @@
       }
     ],
     "market": [
+      {
+        "date": "2026-06-11",
+        "items": [
+          {
+            "file": "2026-06-11-en-iran-truce-rally-defies-hot-ppi.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en iran truce rally defies hot ppi"
+          },
+          {
+            "file": "2026-06-11-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-11-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-11-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          },
+          {
+            "file": "2026-06-11-特朗普叫停空袭道指暴涨930点.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "特朗普叫停空袭道指暴涨930点"
+          }
+        ]
+      },
       {
         "date": "2026-06-10",
         "items": [
@@ -248,6 +290,13 @@
         "yr_scene_studio_00001_.png",
         "yr_scene_sunset_00001_.png"
       ]
-    }
+    },
+    "wisdom": [
+      {
+        "id": "investing-wisdom",
+        "title": "Investing Wisdom",
+        "file": "investing-wisdom.md"
+      }
+    ]
   }
 }

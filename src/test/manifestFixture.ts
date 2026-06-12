@@ -85,6 +85,13 @@ export const manifestFixture: Manifest = {
     gallery: {
       images: ['yr_hero_concert_00001_.png', 'yr_gallery_piano_00001_.png'],
     },
+    wisdom: [
+      {
+        id: 'investing-wisdom',
+        title: 'Investing Wisdom',
+        file: 'investing-wisdom.md',
+      },
+    ],
   },
 };
 

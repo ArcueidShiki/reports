@@ -4,6 +4,7 @@ export const ROUTE_PATHS = {
   market: '/market',
   alpha: '/alpha',
   signals: '/signals',
+  wisdom: '/wisdom',
   gallery: '/gallery',
 } as const;
 
@@ -20,5 +21,6 @@ export const NAV_ITEMS: readonly NavItem[] = [
   { path: ROUTE_PATHS.market, labelKey: 'nav.market' },
   { path: ROUTE_PATHS.alpha, labelKey: 'nav.alpha' },
   { path: ROUTE_PATHS.signals, labelKey: 'nav.signals' },
+  { path: ROUTE_PATHS.wisdom, labelKey: 'nav.wisdom' },
   { path: ROUTE_PATHS.gallery, labelKey: 'nav.gallery' },
 ];

@@ -5,7 +5,8 @@
 
 export interface ProductsEntry {
   readonly date: string;
-  readonly analysisJson: string;
+  /** null when the source day has raw data but no analysis yet. */
+  readonly analysisJson: string | null;
   readonly otherFiles: readonly string[];
 }
 
@@ -47,12 +48,19 @@ export interface GallerySection {
   readonly images: readonly string[];
 }
 
+export interface WisdomDoc {
+  readonly id: string;
+  readonly title: string;
+  readonly file: string;
+}
+
 export interface ManifestSections {
   readonly products: readonly ProductsEntry[];
   readonly market: readonly MarketEntry[];
   readonly alpha: readonly AlphaDoc[];
   readonly signals: readonly SignalsEntry[];
   readonly gallery: GallerySection;
+  readonly wisdom: readonly WisdomDoc[];
 }
 
 export interface Manifest {
@@ -91,5 +99,19 @@ export function validateManifest(data: unknown): Manifest {
     throw new Error('manifest: sections.gallery.images must be an array');
   }
 
-  return data as unknown as Manifest;
+  // Older cached manifests predate the wisdom section: default it to an
+  // empty list instead of hard-failing, but reject malformed values.
+  const wisdom = sections.wisdom;
+  if (wisdom !== undefined && !Array.isArray(wisdom)) {
+    throw new Error('manifest: sections.wisdom must be an array when present');
+  }
+
+  const base = data as unknown as Manifest;
+  return {
+    ...base,
+    sections: {
+      ...base.sections,
+      wisdom: (wisdom ?? []) as readonly WisdomDoc[],
+    },
+  };
 }

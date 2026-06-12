@@ -12,9 +12,9 @@ vi.mock('./components/IntroPlayer', () => ({
   default: () => <div data-testid="intro-player" />,
 }));
 
-const NAV_LINK_COUNT = 6;
+const NAV_LINK_COUNT = 7;
 const FOOTER_LINK_COUNT = 3;
-const HOME_CARD_LINK_COUNT = 5;
+const HOME_CARD_LINK_COUNT = 6;
 
 describe('App', () => {
   beforeEach(() => {
@@ -37,7 +37,7 @@ describe('App', () => {
     );
     expect(screen.getByRole('link', { name: 'Resume' })).toHaveAttribute(
       'href',
-      'https://bpcv.arcueidshiki.uk',
+      'https://cv.arcueidshiki.uk/cv2.html',
     );
   });
 

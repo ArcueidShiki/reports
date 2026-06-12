@@ -1,0 +1,132 @@
+{
+  "date": "2026-06-12",
+  "collection_method": "WebSearch (web_fetch blocked by network allowlist; direct fetch of news.ycombinator.com, producthunt.com, a16z.com not permitted in this environment)",
+  "sources": {
+    "product_hunt": {
+      "method": "WebSearch over producthunt.com + hunted.space",
+      "top_launches_week_of_2026-06-08": [
+        {
+          "name": "Honen",
+          "tagline": "Automated teaching + learning infrastructure for any company",
+          "url": "https://www.producthunt.com/products/honen",
+          "upvotes": 318,
+          "comments": 36,
+          "launch_date": "2026-06-08",
+          "notes": "Reads company material, understands subject, builds full course structure; user picks interactivity & depth. #1 of June 8."
+        },
+        {
+          "name": "Browse.sh",
+          "tagline": "Muscle memory for agents automating the web",
+          "url": "https://browse.sh/",
+          "ph_url": "https://hunted.space/history",
+          "upvotes": 311,
+          "comments": 37,
+          "launch_date": "2026-06-08",
+          "notes": "Open catalog of browser automation skills — reusable SKILL.md recipes that teach AI agents to complete tasks online, installable with the browse CLI."
+        },
+        {
+          "name": "Vaani",
+          "tagline": "Lip-synced AI dubbing for creators, brands and studios",
+          "url": "https://www.producthunt.com/products/vaani-2",
+          "upvotes": 245,
+          "comments": 18,
+          "launch_date": "2026-06-08",
+          "notes": "Voice-preserving dubbing in 40+ languages in one go, fraction of traditional dub cost; clones voice, preserves music, frame-accurate lip sync. Targets creators, brands, OTTs, studios."
+        },
+        {
+          "name": "Mina Meeting Assistant",
+          "tagline": "Your AI teammate now responds and executes during your calls",
+          "url": "https://www.producthunt.com/products/mina-meeting-assistant",
+          "site": "https://getmina.ai/",
+          "rating": "4.6 stars / 26 ratings",
+          "notes": "Joins Zoom/Meet/Teams, responds in real time, pulls context from tools, generates summaries/proposals/CRM updates live; files tickets, sends follow-ups, books next step. 200+ integrations. Reactive mode ('Hey Mina') + pricier proactive always-listening mode. Top-voted on monthly chart (hunted.space monthly figure 479,135 likely an aggregation artifact)."
+        },
+        {
+          "name": "Fundraisly",
+          "tagline": "AI fundraising agent that finds investors and books meetings",
+          "url": "https://www.producthunt.com/products/fundraisly",
+          "notes": "Analyzes 300K+ investors and millions of deals, finds active relevant ones, maps warm paths through founder network, covers rest with targeted cold outreach; claims 20-40 qualified investor meetings. Top of June monthly leaderboard on hunted.space."
+        },
+        {
+          "name": "Spotlight by Backplanes",
+          "tagline": "Session reports for Claude Code & Codex to improve your code",
+          "url": "https://www.producthunt.com/products/backplanes",
+          "notes": "Reads Claude Code / Codex sessions and reports what agents actually did; 'session reports that make you a better engineer'. Agent observability for individual devs. Top-5 June monthly chart."
+        }
+      ]
+    },
+    "hacker_news": {
+      "method": "WebSearch summaries (front page not directly fetchable)",
+      "themes_june_2026": [
+        "AI still hot but money shifting to trust, security, controlled workflows over flashy demos",
+        "Strong hiring demand: AI engineers, coding agents, LLM product work, secure dev tools",
+        "Security near center of startup demand: AI-assisted attacks, malicious packages, supply chain risk",
+        "Skepticism about AI coding ROI once hidden costs counted",
+        "Stanford CS336 formally teaching agent CLI workflows via CLAUDE.md (499 points, June 1)",
+        "Uber capping Claude Code/Codex usage — first major company rationing AI coding agent cost",
+        "Agent permission fatigue now a felt UX problem (satirical permission-fatigue game, Codex sudo-bypass story)",
+        "Agent orchestration consolidating around crewAI, n8n (190,993 stars), LangChain; cc-switch desktop switcher 90,859 stars in <10 months"
+      ]
+    },
+    "google_trends": {
+      "method": "WebSearch (trends.google.com is client-rendered; used Glimpse/Shopify/CJ summaries)",
+      "rising_products_2026": [
+        {"term": "mouth tape", "signal": "+340% trend growth since 2022; ~165K monthly US searches (+400% vs 2021); retail sales +22% YoY; 98.8% growth in 24 months"},
+        {"term": "toe spacers", "signal": "market $1.8B (2025) -> $3.1B (2034), 6.2% CAGR; 2.5B+ TikTok views; APAC fastest at 7.8% CAGR"},
+        {"term": "blue light therapy", "signal": "emerging beauty trend, growing at red-light-therapy-like rate from small base"},
+        {"term": "reusable water bottle", "signal": "climbing, boosted by #WaterTok"},
+        {"term": "hair repair mask", "signal": "rising willingness to invest in hair health"},
+        {"term": "wireless earbuds", "signal": "consistent upward trend, seasonal year-end peak"}
+      ]
+    },
+    "a16z": {
+      "method": "WebSearch over a16z.com Big Ideas 2026 + commentary",
+      "key_theses": [
+        "Agent-native infrastructure: human-speed -> agent-speed workloads; recursive fan-out of 5,000 subtasks in ms; cold starts must shrink, concurrency up orders of magnitude",
+        "System of record loses primacy: ITSM/CRM become autonomous workflow engines as AI collapses intent-to-execution distance",
+        "AI strengthens business models by driving revenue, not just cutting cost",
+        "Consumer AI gold rush 2026: OpenAI Apps SDK, Apple mini-apps, ChatGPT group messaging = new distribution channels",
+        "Price of AI dropping faster than Moore's Law; AI chip shortage -> surplus and price collapse expected"
+      ]
+    },
+    "ecommerce": {
+      "method": "WebSearch (amazon.com listing pages blocked)",
+      "signals": [
+        "Q2 2026: AirPods Pro 3 and Apple Watch Series 11 dominate Electronics movers",
+        "Outdoor gear, allergy-season health, sunscreen surging (seasonal)",
+        "Top trending categories 2026: eco-friendly, health & wellness, home office"
+      ]
+    },
+    "x_twitter": {
+      "method": "WebSearch summaries (x.com requires login)",
+      "signals": [
+        "AI shifting from flashy demos to device control, low-cost voice tools, search visibility, support automation",
+        "Voice agents + support automation hot for SMBs (clinics, agencies, restaurants)",
+        "Pika 2.0 viral consumer growth in AI video (vs Runway, Luma)",
+        "What works for founders on X: authentic founder stories, proof-based demos, short videos"
+      ]
+    },
+    "linkedin_funding": {
+      "method": "WebSearch summaries (linkedin.com requires login)",
+      "signals": [
+        "SpaceX IPO: roadshow June 8, priced June 11, first trade June 12 on Nasdaq (SPCX), targeting ~$1.75T valuation / $75B raise — largest IPO in history",
+        "Q1 2026: $300B global VC across 6,000 startups (record); AI = $242B (80%)",
+        "AI Series A average $51.9M; late-May rounds: Hark $700M Series A, Stord $250M F, RADAR $170M B, eleQtron ~$66.6M A"
+      ]
+    },
+    "xiaohongshu": {
+      "method": "WebSearch summaries (xiaohongshu.com requires login)",
+      "signals": [
+        "2026 core direction: away from broad traffic toward precise niche value; >50% traffic tilted to <1K-follower creators in niche interest circles",
+        "3000+ interest circles: 养娃, 盲盒, 拼豆, 钩织, 捏捏乐 etc.",
+        "观鸟 (birdwatching): topic views 120M+ in 90 days, notes +70% — new trendy outdoor hobby for young people",
+        "Travel: interest-driven ('为一场演出赴一座城'); food: 减脂/养生 niches (早八简易减脂餐, 低卡代餐零食)"
+      ]
+    }
+  },
+  "skipped_or_limited": [
+    "Direct page fetches (HN/PH/a16z/Amazon/X/LinkedIn/XHS) blocked by sandbox network allowlist — all data via WebSearch result summaries",
+    "Product logos/screenshots could not be downloaded for embedding (image CDNs not on allowlist); report uses generated charts/cards instead",
+    "Minimi (PH monthly chart) — no reliable public details found; excluded from analysis"
+  ]
+}

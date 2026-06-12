@@ -58,10 +58,10 @@ Worker static assets with SPA fallback, bound to the custom domain
 
 ## Resume backlink / 简历互链
 
-The site footer links back to the resume site at
-[https://bpcv.arcueidshiki.uk](https://bpcv.arcueidshiki.uk) ("Resume" / "简历"),
-which in turn links to this blog.
+The site footer links back to the resume page at
+[https://cv.arcueidshiki.uk/cv2.html](https://cv.arcueidshiki.uk/cv2.html)
+("Resume" / "简历"), which in turn links to this blog.
 
-站点页脚链接到简历站
-[https://bpcv.arcueidshiki.uk](https://bpcv.arcueidshiki.uk)（“Resume” / “简历”），
+站点页脚链接到简历页
+[https://cv.arcueidshiki.uk/cv2.html](https://cv.arcueidshiki.uk/cv2.html)（“Resume” / “简历”），
 简历站也回链到本博客。

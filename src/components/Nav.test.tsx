@@ -11,6 +11,7 @@ const NAV_CASES = [
   { en: 'US Market Daily', zh: '美股日报', href: '/market' },
   { en: 'Alpha Factors', zh: 'Alpha因子', href: '/alpha' },
   { en: 'Signal Calendar', zh: '信号日历', href: '/signals' },
+  { en: 'Wisdom', zh: '投资智慧', href: '/wisdom' },
   { en: 'Gallery', zh: '每日图集', href: '/gallery' },
 ] as const;
 
@@ -29,7 +30,7 @@ describe('Nav', () => {
     window.localStorage.clear();
   });
 
-  it('renders all six section links with English labels and hrefs', () => {
+  it('renders all seven section links with English labels and hrefs', () => {
     renderNav();
 
     expect(screen.getAllByRole('link')).toHaveLength(NAV_CASES.length);

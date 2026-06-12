@@ -9,6 +9,7 @@ export const REQUIRED_CONFIG_KEYS = Object.freeze([
   'alpha',
   'signals',
   'gallery',
+  'wisdom',
   'outputDir',
 ]);
 

@@ -36,6 +36,8 @@ const FIXTURE_FILES = {
   'sources/gallery/b_render.png': 'png',
   'sources/gallery/a_render.png': 'png',
   'sources/gallery/notes.txt': 'not an image',
+  'sources/wisdom/investing-wisdom.md': '## Mindset\n\n- quote · Author · Source',
+  'sources/wisdom/draft-notes.txt': 'not markdown',
 };
 
 async function writeFixtureTree(root) {
@@ -53,6 +55,7 @@ function makeConfig(root) {
     alpha: path.join(root, 'sources/alpha'),
     signals: path.join(root, 'sources/signals'),
     gallery: path.join(root, 'sources/gallery'),
+    wisdom: path.join(root, 'sources/wisdom'),
     outputDir: 'public/content',
   };
 }
@@ -82,7 +85,7 @@ describe('runIngest', () => {
     await rm(root, { recursive: true, force: true });
   });
 
-  it('writes a manifest with all five sections', async () => {
+  it('writes a manifest with all six sections', async () => {
     const manifest = await runIngest(makeConfig(root), { baseDir: root, log, warn });
     const onDisk = JSON.parse(await readFile(path.join(outRoot, 'manifest.json'), 'utf8'));
     expect(onDisk).toEqual(manifest);
@@ -93,6 +96,7 @@ describe('runIngest', () => {
       'market',
       'products',
       'signals',
+      'wisdom',
     ]);
   });
 
@@ -164,6 +168,26 @@ describe('runIngest', () => {
     ]);
     expect(await fileExists(path.join(outRoot, 'alpha/technical-factors.md'))).toBe(true);
     expect(await fileExists(path.join(outRoot, 'alpha/README.md'))).toBe(true);
+  });
+
+  it('copies only markdown files into wisdom, flat', async () => {
+    const manifest = await runIngest(makeConfig(root), { baseDir: root, log, warn });
+    expect(manifest.sections.wisdom).toEqual([
+      {
+        id: 'investing-wisdom',
+        title: 'Investing Wisdom',
+        file: 'investing-wisdom.md',
+      },
+    ]);
+    expect(await fileExists(path.join(outRoot, 'wisdom/investing-wisdom.md'))).toBe(true);
+    expect(await fileExists(path.join(outRoot, 'wisdom/draft-notes.txt'))).toBe(false);
+  });
+
+  it('warns and emits an empty wisdom section when its source dir is missing', async () => {
+    const config = { ...makeConfig(root), wisdom: path.join(root, 'no-wisdom-here') };
+    const manifest = await runIngest(config, { baseDir: root, log, warn });
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('no-wisdom-here'));
+    expect(manifest.sections.wisdom).toEqual([]);
   });
 
   it('copies only png files into gallery, sorted', async () => {

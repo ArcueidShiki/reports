@@ -47,6 +47,12 @@ const HOME_SECTIONS: readonly HomeSection[] = [
     descKey: 'home.desc.signals',
   },
   {
+    path: ROUTE_PATHS.wisdom,
+    icon: '📜',
+    titleKey: 'nav.wisdom',
+    descKey: 'home.desc.wisdom',
+  },
+  {
     path: ROUTE_PATHS.gallery,
     icon: '🖼️',
     titleKey: 'nav.gallery',

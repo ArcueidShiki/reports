@@ -28,6 +28,9 @@ function validManifest(): unknown {
         },
       ],
       gallery: { images: ['a.png'] },
+      wisdom: [
+        { id: 'investing-wisdom', title: 'Investing Wisdom', file: 'investing-wisdom.md' },
+      ],
     },
   };
 }
@@ -38,6 +41,28 @@ describe('validateManifest', () => {
 
     expect(manifest.sections.products[0].date).toBe('2026-06-11');
     expect(manifest.sections.gallery.images).toEqual(['a.png']);
+    expect(manifest.sections.wisdom).toEqual([
+      { id: 'investing-wisdom', title: 'Investing Wisdom', file: 'investing-wisdom.md' },
+    ]);
+  });
+
+  it('defaults sections.wisdom to an empty list when missing (older manifests)', () => {
+    const data = validManifest() as { sections: Record<string, unknown> };
+    const { wisdom: _omitted, ...older } = data.sections;
+
+    const manifest = validateManifest({ ...data, sections: older });
+
+    expect(manifest.sections.wisdom).toEqual([]);
+  });
+
+  it('rejects when sections.wisdom is present but not an array', () => {
+    const data = validManifest() as { sections: Record<string, unknown> };
+    const broken = {
+      ...data,
+      sections: { ...data.sections, wisdom: 'not-an-array' },
+    };
+
+    expect(() => validateManifest(broken)).toThrow(/wisdom.*array/i);
   });
 
   it('rejects non-object input', () => {

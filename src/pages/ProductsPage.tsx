@@ -49,7 +49,8 @@ export default function ProductsPage() {
   const activeDate = selectedDate ?? entries[0]?.date ?? null;
   const activeEntry =
     entries.find((entry) => entry.date === activeDate) ?? null;
-  const analysisUrl = activeEntry
+  // analysisJson is null for an in-progress date dir (raw data only).
+  const analysisUrl = activeEntry?.analysisJson
     ? contentUrl('products', activeEntry.date, activeEntry.analysisJson)
     : null;
 
@@ -67,6 +68,7 @@ export default function ProductsPage() {
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
       {manifest && entries.length === 0 ? <EmptyNote /> : null}
+      {activeEntry && activeEntry.analysisJson === null ? <EmptyNote /> : null}
 
       {activeDate ? (
         <DateSelector

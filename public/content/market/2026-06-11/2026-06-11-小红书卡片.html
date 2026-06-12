@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>美股日报 2026-06-11</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 750px; height: 1334px; }
+  body {
+    width: 750px;
+    height: 1334px;
+    background: linear-gradient(160deg, #0d1117 0%, #131c2e 100%);
+    font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  .header {
+    height: 80px;
+    flex: 0 0 80px;
+    background: #1d3461;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+  .header .title { font-size: 34px; font-weight: 800; color: #ffffff; }
+  .header .date { font-size: 24px; color: #94a3b8; margin-left: 18px; font-weight: 500; }
+  .header .brand { font-size: 20px; color: #94a3b8; letter-spacing: 1px; }
+  .indices {
+    height: 300px;
+    flex: 0 0 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 14px;
+    padding: 20px 24px;
+  }
+  .idx-card {
+    background: #1a2234;
+    border: 1px solid #1d3461;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 18px;
+  }
+  .idx-name { font-size: 20px; color: #94a3b8; margin-bottom: 6px; }
+  .idx-price { font-size: 32px; font-weight: 800; color: #ffffff; margin-bottom: 6px; }
+  .idx-chg { font-size: 20px; font-weight: 700; }
+  .up { color: #00b975; }
+  .down { color: #e64b3b; }
+  .divider { height: 1px; flex: 0 0 1px; background: #1d3461; margin: 0 24px; }
+  .focus {
+    height: 120px;
+    flex: 0 0 120px;
+    padding: 18px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .focus-label { font-size: 24px; color: #00b975; font-weight: 700; margin-bottom: 10px; }
+  .focus-headline { font-size: 30px; font-weight: 800; color: #ffffff; line-height: 1.3; }
+  .body-text {
+    height: 620px;
+    flex: 0 0 620px;
+    padding: 24px 36px 0 36px;
+    position: relative;
+    overflow: hidden;
+  }
+  .body-text p {
+    font-size: 27px;
+    line-height: 1.55;
+    color: #ffffff;
+    margin-bottom: 18px;
+  }
+  .body-text .hl-up { color: #00b975; font-weight: 700; }
+  .body-text .hl-down { color: #e64b3b; font-weight: 700; }
+  .body-text .fade {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 70px;
+    background: linear-gradient(to bottom, rgba(19,28,46,0) 0%, #131c2e 100%);
+  }
+  .tags {
+    height: 80px;
+    flex: 0 0 80px;
+    display: flex;
+    align-items: center;
+    padding: 0 36px;
+    font-size: 22px;
+    color: #00b975;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .footer {
+    height: 80px;
+    flex: 0 0 80px;
+    border-top: 1px solid #1d3461;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+  }
+  .footer .disclaimer { font-size: 18px; color: #94a3b8; }
+  .footer .watermark { font-size: 18px; color: #94a3b8; opacity: 0.7; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div style="display:flex;align-items:baseline;">
+      <span class="title">美股日报</span>
+      <span class="date">2026-06-11 周四</span>
+    </div>
+    <span class="brand">Stay in the Market</span>
+  </div>
+
+  <div class="indices">
+    <div class="idx-card">
+      <div class="idx-name">标普500</div>
+      <div class="idx-price">7,394.16</div>
+      <div class="idx-chg up">▲ +127.17&nbsp;&nbsp;+1.75%</div>
+    </div>
+    <div class="idx-card">
+      <div class="idx-name">纳斯达克</div>
+      <div class="idx-price">25,808.81</div>
+      <div class="idx-chg up">▲ +639.31&nbsp;&nbsp;+2.54%</div>
+    </div>
+    <div class="idx-card">
+      <div class="idx-name">纳指100</div>
+      <div class="idx-price">≈29,220</div>
+      <div class="idx-chg up">▲ 约+2.5%</div>
+    </div>
+    <div class="idx-card">
+      <div class="idx-name">道琼斯</div>
+      <div class="idx-price">50,848.75</div>
+      <div class="idx-chg up">▲ +929.97&nbsp;&nbsp;+1.86%</div>
+    </div>
+    <div class="idx-card">
+      <div class="idx-name">VIX恐慌指数</div>
+      <div class="idx-price">≈19.56</div>
+      <div class="idx-chg down">▼ 约-12%</div>
+    </div>
+    <div class="idx-card">
+      <div class="idx-name">罗素2000</div>
+      <div class="idx-price">2,921.10</div>
+      <div class="idx-chg up">▲ +85.64&nbsp;&nbsp;+3.02%</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="focus">
+    <div class="focus-label">📌 今日焦点</div>
+    <div class="focus-headline">特朗普叫停对伊空袭称协议将签，道指暴涨930点，油价跌4%</div>
+  </div>
+
+  <div class="body-text">
+    <p>💥 一条帖子，930点。特朗普宣布取消今晚空袭、和平协议"即将签署"，道指<span class="hl-up">+1.86%</span>重回50848，纳指<span class="hl-up">+2.54%</span>，WTI油价<span class="hl-down">暴跌4%</span>跌穿87美元。</p>
+    <p>⚠️ 但三个细节要冷静：① 伊朗至今未确认协议；② 早间PPI爆表，环比+1.1%、同比6.5%创2022年来新高；③ 今天跌的是能源和黄金——这是避险盘平仓，不是新钱进场。</p>
+    <p>🏦 下周二三：新主席沃什首次议息会议，CPI 4.2%+PPI 6.5%压阵，点阵图是关键。</p>
+    <p>🚀 明天SpaceX挂牌：定价135美元，估值1.77万亿，史上最大IPO抽水750亿。</p>
+    <p>🎯 散户启示：WTI 90美元是分界线——重回90以上=协议在失败。</p>
+    <div class="fade"></div>
+  </div>
+
+  <div class="tags">
+    <span>#美股</span><span>#投资理财</span><span>#财经</span><span>#散户必看</span><span>#美联储</span><span>#SpaceX</span>
+  </div>
+
+  <div class="footer">
+    <span class="disclaimer">数据来源：市场公开信息 · 非投资建议</span>
+    <span class="watermark">moomoo 风格设计</span>
+  </div>
+
+</body>
+</html>

@@ -2,7 +2,7 @@ import { useLanguage } from '../i18n/LanguageContext';
 
 const GITHUB_URL = 'https://github.com/ArcueidShiki';
 const CONTACT_EMAIL_URL = 'mailto:pjtpengjingtong@gmail.com';
-const RESUME_URL = 'https://bpcv.arcueidshiki.uk';
+const RESUME_URL = 'https://cv.arcueidshiki.uk/cv2.html';
 
 export default function Footer() {
   const { t } = useLanguage();
