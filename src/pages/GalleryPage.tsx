@@ -1,27 +1,26 @@
+import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
 
+import PageHeader from '../components/PageHeader';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
 import { useManifest } from '../hooks/useManifest';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import { useLanguage } from '../i18n/LanguageContext';
 import { contentUrl } from '../lib/contentUrl';
+import { riseVariants, staggerVariants } from '../lib/motion';
 
-const GRID_VARIANTS = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.04 } },
-} as const;
-
-const ITEM_VARIANTS = {
-  hidden: { opacity: 0, y: 14 },
-  show: { opacity: 1, y: 0 },
-} as const;
+const THUMB_STAGGER_S = 0.045;
+const THUMB_RISE_PX = 18;
+const LIGHTBOX_SPRING = { type: 'spring', stiffness: 280, damping: 26 } as const;
+const OVERLAY_FADE_S = 0.2;
 
 interface LightboxProps {
   readonly image: string;
+  readonly reducedMotion: boolean;
   readonly onClose: () => void;
 }
 
-function Lightbox({ image, onClose }: LightboxProps) {
+function Lightbox({ image, reducedMotion, onClose }: LightboxProps) {
   const { t } = useLanguage();
 
   useEffect(() => {
@@ -33,18 +32,28 @@ function Lightbox({ image, onClose }: LightboxProps) {
   }, [onClose]);
 
   return (
-    <div
+    <motion.div
       className="lightbox-overlay"
       role="dialog"
       aria-modal="true"
       aria-label={image}
       onClick={onClose}
+      initial={{ opacity: reducedMotion ? 1 : 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: reducedMotion ? 1 : 0 }}
+      transition={{ duration: reducedMotion ? 0 : OVERLAY_FADE_S }}
     >
-      <img
+      <motion.img
         className="lightbox-image"
         src={contentUrl('gallery', image)}
         alt={image}
         onClick={(event) => event.stopPropagation()}
+        initial={
+          reducedMotion ? { scale: 1, y: 0 } : { scale: 0.88, y: 24 }
+        }
+        animate={{ scale: 1, y: 0 }}
+        exit={reducedMotion ? { scale: 1, y: 0 } : { scale: 0.94, y: 12 }}
+        transition={reducedMotion ? { duration: 0 } : LIGHTBOX_SPRING}
       />
       <button
         type="button"
@@ -54,20 +63,25 @@ function Lightbox({ image, onClose }: LightboxProps) {
       >
         ×
       </button>
-    </div>
+    </motion.div>
   );
 }
 
 export default function GalleryPage() {
   const { t } = useLanguage();
   const { manifest, loading, error } = useManifest();
+  const reducedMotion = usePrefersReducedMotion();
   const [openImage, setOpenImage] = useState<string | null>(null);
 
   const images = manifest?.sections.gallery.images ?? [];
 
   return (
     <main className="page gallery-page">
-      <h1>{t('nav.gallery')}</h1>
+      <PageHeader
+        index={6}
+        kicker={t('page.kicker.gallery')}
+        title={t('nav.gallery')}
+      />
 
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
@@ -76,12 +90,19 @@ export default function GalleryPage() {
       {images.length > 0 ? (
         <motion.ul
           className="gallery-grid"
-          variants={GRID_VARIANTS}
+          variants={staggerVariants(reducedMotion, {
+            staggerS: THUMB_STAGGER_S,
+          })}
           initial="hidden"
-          animate="show"
+          animate="visible"
         >
           {images.map((image) => (
-            <motion.li key={image} variants={ITEM_VARIANTS}>
+            <motion.li
+              key={image}
+              variants={riseVariants(reducedMotion, {
+                distancePx: THUMB_RISE_PX,
+              })}
+            >
               <button
                 type="button"
                 className="gallery-thumb"
@@ -98,9 +119,15 @@ export default function GalleryPage() {
         </motion.ul>
       ) : null}
 
-      {openImage ? (
-        <Lightbox image={openImage} onClose={() => setOpenImage(null)} />
-      ) : null}
+      <AnimatePresence>
+        {openImage ? (
+          <Lightbox
+            image={openImage}
+            reducedMotion={reducedMotion}
+            onClose={() => setOpenImage(null)}
+          />
+        ) : null}
+      </AnimatePresence>
     </main>
   );
 }

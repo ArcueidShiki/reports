@@ -30,10 +30,15 @@ describe('Nav', () => {
     window.localStorage.clear();
   });
 
-  it('renders all seven section links with English labels and hrefs', () => {
+  it('renders the brand link plus all seven section links with English labels and hrefs', () => {
     renderNav();
 
-    expect(screen.getAllByRole('link')).toHaveLength(NAV_CASES.length);
+    // Brand wordmark links home in addition to the section links.
+    expect(screen.getAllByRole('link')).toHaveLength(NAV_CASES.length + 1);
+    expect(screen.getByRole('link', { name: /Arcueid/ })).toHaveAttribute(
+      'href',
+      '/',
+    );
 
     for (const { en, href } of NAV_CASES) {
       expect(screen.getByRole('link', { name: en })).toHaveAttribute(

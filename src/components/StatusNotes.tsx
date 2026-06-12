@@ -1,13 +1,21 @@
 import { useLanguage } from '../i18n/LanguageContext';
 
-/** Localized loading indicator shared by all content pages. */
+const SKELETON_LINE_COUNT = 3;
+
+/**
+ * Localized loading indicator shared by all content pages: shimmering
+ * skeleton lines with the loading text kept for screen readers.
+ */
 export function LoadingNote() {
   const { t } = useLanguage();
 
   return (
-    <p role="status" className="status-note">
-      {t('common.loading')}
-    </p>
+    <div role="status" className="status-note skeleton">
+      <span className="visually-hidden">{t('common.loading')}</span>
+      {Array.from({ length: SKELETON_LINE_COUNT }, (_, line) => (
+        <span key={line} className="skeleton-line" aria-hidden="true" />
+      ))}
+    </div>
   );
 }
 

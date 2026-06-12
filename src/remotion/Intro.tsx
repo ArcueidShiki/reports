@@ -13,10 +13,16 @@ export const INTRO_HEIGHT = 400;
 
 export const INTRO_TITLE = 'Arcueid Daily Reports';
 export const INTRO_SUBTITLE = '每日报告';
+
+const TITLE_DELAY_FRAMES = 0;
 const SUBTITLE_DELAY_FRAMES = 18;
 const FADE_OUT_FRAMES = 24;
 const SLIDE_DISTANCE_PX = 48;
 const SPRING_DAMPING = 14;
+
+const DISPLAY_FONT = "'Fraunces Variable', 'Noto Serif SC', serif";
+const PAPER = '#ece5d8';
+const PAPER_DIM = '#b6ab95';
 
 interface AnimatedLine {
   readonly opacity: number;
@@ -43,8 +49,8 @@ function animateLine(
 }
 
 /**
- * 150-frame looping intro: title and Chinese subtitle fade and slide in
- * with springs, then fade out so the loop restarts cleanly.
+ * 150-frame looping masthead: mono kicker, serif title, and Chinese
+ * subtitle spring in one after another, then fade out for a clean loop.
  */
 export default function Intro() {
   const frame = useCurrentFrame();
@@ -57,7 +63,7 @@ export default function Intro() {
     { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' },
   );
 
-  const title = animateLine(frame, fps, 0, fadeOut);
+  const title = animateLine(frame, fps, TITLE_DELAY_FRAMES, fadeOut);
   const subtitle = animateLine(frame, fps, SUBTITLE_DELAY_FRAMES, fadeOut);
 
   return (
@@ -66,16 +72,16 @@ export default function Intro() {
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'transparent',
-        fontFamily: "system-ui, -apple-system, 'Noto Sans SC', sans-serif",
-        color: '#e6edf3',
+        color: PAPER,
         textAlign: 'center',
       }}
     >
       <div
         style={{
-          fontSize: 72,
-          fontWeight: 700,
-          letterSpacing: '0.02em',
+          fontFamily: DISPLAY_FONT,
+          fontSize: 78,
+          fontWeight: 600,
+          letterSpacing: '-0.015em',
           opacity: title.opacity,
           transform: `translateY(${title.translateY}px)`,
         }}
@@ -84,9 +90,10 @@ export default function Intro() {
       </div>
       <div
         style={{
-          fontSize: 36,
-          marginTop: 24,
-          color: '#8b949e',
+          fontFamily: DISPLAY_FONT,
+          fontSize: 34,
+          marginTop: 22,
+          color: PAPER_DIM,
           opacity: subtitle.opacity,
           transform: `translateY(${subtitle.translateY}px)`,
         }}

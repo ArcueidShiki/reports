@@ -1,16 +1,28 @@
+import { motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
 
 import DateSelector from '../components/DateSelector';
+import PageHeader from '../components/PageHeader';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
+import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
+import { riseVariants, staggerVariants } from '../lib/motion';
 import { useFetchText } from '../hooks/useFetchText';
 import { useManifest } from '../hooks/useManifest';
 import { useLanguage } from '../i18n/LanguageContext';
 import { contentUrl } from '../lib/contentUrl';
 import { parseProductsAnalysis, type Product } from '../lib/products';
 
-function ProductCard({ product }: { readonly product: Product }) {
+interface ProductCardProps {
+  readonly product: Product;
+  readonly reducedMotion: boolean;
+}
+
+function ProductCard({ product, reducedMotion }: ProductCardProps) {
   return (
-    <article className="product-card">
+    <motion.article
+      className="product-card"
+      variants={riseVariants(reducedMotion, { distancePx: 20 })}
+    >
       <header className="product-card-header">
         <h2>
           {product.url ? (
@@ -36,13 +48,14 @@ function ProductCard({ product }: { readonly product: Product }) {
           ))}
         </ul>
       ) : null}
-    </article>
+    </motion.article>
   );
 }
 
 export default function ProductsPage() {
   const { t } = useLanguage();
   const { manifest, loading, error } = useManifest();
+  const reducedMotion = usePrefersReducedMotion();
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
 
   const entries = manifest?.sections.products ?? [];
@@ -63,7 +76,11 @@ export default function ProductsPage() {
 
   return (
     <main className="page products-page">
-      <h1>{t('nav.products')}</h1>
+      <PageHeader
+        index={1}
+        kicker={t('page.kicker.products')}
+        title={t('nav.products')}
+      />
 
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
@@ -83,11 +100,20 @@ export default function ProductsPage() {
       {parsed && !parsed.ok ? <ErrorNote detail={parsed.error} /> : null}
 
       {parsed?.ok ? (
-        <section className="product-grid">
+        <motion.section
+          className="product-grid"
+          variants={staggerVariants(reducedMotion)}
+          initial="hidden"
+          animate="visible"
+        >
           {parsed.value.products.map((product) => (
-            <ProductCard key={product.name} product={product} />
+            <ProductCard
+              key={product.name}
+              product={product}
+              reducedMotion={reducedMotion}
+            />
           ))}
-        </section>
+        </motion.section>
       ) : null}
     </main>
   );

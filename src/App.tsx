@@ -1,11 +1,12 @@
 import { AnimatePresence, motion } from 'framer-motion';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import { usePrefersReducedMotion } from './hooks/usePrefersReducedMotion';
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext';
+import { pageVariants } from './lib/motion';
 import { ROUTE_PATHS } from './routes';
 
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -16,15 +17,28 @@ const SignalsPage = lazy(() => import('./pages/SignalsPage'));
 const WisdomPage = lazy(() => import('./pages/WisdomPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 
-const PAGE_FADE_DURATION_S = 0.25;
-
 function LoadingFallback() {
   const { t } = useLanguage();
 
-  return <p role="status">{t('common.loading')}</p>;
+  return (
+    <p role="status" className="route-loading page">
+      {t('common.loading')}
+    </p>
+  );
 }
 
-/** Routes wrapped in a cross-route fade; disabled under reduced motion. */
+/** Jump back to the top whenever the route changes. */
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'instant' });
+  }, [pathname]);
+
+  return null;
+}
+
+/** Routes wrapped in a rise-in/slip-out transition; static under reduced motion. */
 function AnimatedRoutes() {
   const location = useLocation();
   const reducedMotion = usePrefersReducedMotion();
@@ -33,10 +47,10 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={location.pathname}
-        initial={{ opacity: reducedMotion ? 1 : 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: reducedMotion ? 1 : 0 }}
-        transition={{ duration: reducedMotion ? 0 : PAGE_FADE_DURATION_S }}
+        variants={pageVariants(reducedMotion)}
+        initial="initial"
+        animate="enter"
+        exit="exit"
       >
         <Suspense fallback={<LoadingFallback />}>
           <Routes location={location}>
@@ -58,6 +72,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <Nav />
         <AnimatedRoutes />
         <Footer />

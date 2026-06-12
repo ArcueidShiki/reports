@@ -12,7 +12,8 @@ vi.mock('./components/IntroPlayer', () => ({
   default: () => <div data-testid="intro-player" />,
 }));
 
-const NAV_LINK_COUNT = 7;
+// 7 section links + the brand wordmark linking home.
+const NAV_LINK_COUNT = 8;
 const FOOTER_LINK_COUNT = 3;
 const HOME_CARD_LINK_COUNT = 6;
 

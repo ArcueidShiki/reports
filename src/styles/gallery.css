@@ -1,0 +1,98 @@
+/* ============================================================
+   Gallery: daily renders grid + spring lightbox.
+   ============================================================ */
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+  gap: 0.9rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-thumb {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-s);
+  background: var(--ink-1);
+  cursor: zoom-in;
+  overflow: hidden;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.gallery-thumb:hover {
+  border-color: var(--gold-line);
+  box-shadow: var(--shadow-lift);
+}
+
+.gallery-thumb img {
+  display: block;
+  width: 100%;
+  height: 13rem;
+  object-fit: cover;
+  transition:
+    transform 0.5s var(--ease-ledger),
+    filter 0.5s ease;
+  filter: saturate(0.92) brightness(0.94);
+}
+
+.gallery-thumb:hover img {
+  transform: scale(1.05);
+  filter: saturate(1.05) brightness(1.02);
+}
+
+/* ---------- lightbox ---------- */
+
+.lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem;
+  background-color: rgb(10 9 8 / 88%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.lightbox-image {
+  max-width: 92vw;
+  max-height: 86vh;
+  border-radius: var(--radius-m);
+  border: 1px solid var(--line-strong);
+  box-shadow: var(--shadow-pop);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1.2rem;
+  right: 1.4rem;
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgb(23 21 18 / 80%);
+  color: var(--paper);
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color var(--speed-quick) ease,
+    border-color var(--speed-quick) ease,
+    transform var(--speed-quick) var(--ease-ledger);
+}
+
+.lightbox-close:hover {
+  color: var(--gold-bright);
+  border-color: var(--gold-line);
+  transform: rotate(90deg);
+}

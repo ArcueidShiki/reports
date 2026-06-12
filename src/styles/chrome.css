@@ -1,0 +1,297 @@
+/* ============================================================
+   Site chrome: masthead nav, language toggle, footer.
+   ============================================================ */
+
+/* ---------- masthead ---------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--line);
+  background: rgb(10 9 8 / 78%);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+}
+
+.site-nav {
+  max-width: var(--page-max);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  min-height: var(--header-h);
+  padding: 0 var(--page-pad);
+}
+
+/* ---------- brand ---------- */
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--paper);
+  flex-shrink: 0;
+}
+
+.brand:hover {
+  text-decoration: none;
+  color: var(--paper);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--gold-line);
+  border-radius: var(--radius-s);
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gold-bright);
+  background:
+    linear-gradient(150deg, rgb(216 165 72 / 14%), transparent 70%),
+    var(--ink-1);
+  transition: box-shadow var(--speed-quick) ease;
+}
+
+.brand:hover .brand-mark {
+  box-shadow: 0 0 18px var(--gold-glow);
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  line-height: 1;
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  font-weight: 560;
+  letter-spacing: 0.01em;
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+}
+
+/* ---------- nav links ---------- */
+
+.site-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  list-style: none;
+  margin: 0 0 0 auto;
+  padding: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.site-nav-links::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-link {
+  position: relative;
+  display: block;
+  padding: 0.6rem 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.71rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  white-space: nowrap;
+  transition: color var(--speed-quick) ease;
+}
+
+.nav-link:hover {
+  color: var(--paper);
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: var(--gold-bright);
+}
+
+/* Animated active-link underline (framer layoutId glides it around). */
+.nav-ink {
+  position: absolute;
+  left: 0.65rem;
+  right: 0.65rem;
+  bottom: 0.22rem;
+  height: 1px;
+  background: var(--gold);
+  box-shadow: 0 0 10px rgb(216 165 72 / 70%);
+}
+
+/* ---------- language toggle ---------- */
+
+.lang-toggle {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgb(255 255 255 / 3%);
+  flex-shrink: 0;
+}
+
+.lang-option {
+  position: relative;
+  border: none;
+  background: none;
+  padding: 0.3rem 0.72rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: var(--paper-dim);
+  cursor: pointer;
+  transition: color var(--speed-quick) ease;
+}
+
+.lang-option:hover {
+  color: var(--paper);
+}
+
+.lang-option-active,
+.lang-option-active:hover {
+  color: var(--ink-0);
+}
+
+.lang-pill {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: linear-gradient(120deg, var(--gold-bright), var(--gold));
+  box-shadow: 0 0 14px var(--gold-glow);
+}
+
+.lang-option-label {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- mobile chrome ---------- */
+
+@media (max-width: 56rem) {
+  .site-nav {
+    flex-wrap: wrap;
+    gap: 0.25rem 1rem;
+    padding-top: 0.7rem;
+    padding-bottom: 0.4rem;
+    min-height: 0;
+  }
+
+  .brand {
+    margin-right: auto;
+  }
+
+  .site-nav-links {
+    order: 3;
+    flex-basis: 100%;
+    margin-left: -0.65rem;
+  }
+}
+
+/* ---------- footer ---------- */
+
+.site-footer {
+  position: relative;
+  margin-top: 6rem;
+  border-top: 1px solid var(--line);
+  overflow: hidden;
+  background: linear-gradient(180deg, transparent, rgb(216 165 72 / 3%));
+}
+
+.footer-inner {
+  position: relative;
+  z-index: 1;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 3rem var(--page-pad) 3.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-tagline {
+  margin: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.4rem;
+  font-weight: 480;
+  color: var(--paper);
+  max-width: 28ch;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-links a {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--paper-dim);
+}
+
+.footer-links a:hover {
+  color: var(--gold-bright);
+  text-decoration: none;
+}
+
+.footer-links a::after {
+  content: ' ↗';
+  color: var(--gold-deep);
+}
+
+.footer-meta {
+  flex-basis: 100%;
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+}
+
+/* Oversized ghost wordmark bleeding off the footer edge. */
+.footer-watermark {
+  position: absolute;
+  right: -0.5rem;
+  bottom: -4.2rem;
+  z-index: 0;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 600;
+  font-size: clamp(6rem, 16vw, 11rem);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgb(236 229 216 / 7%);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+}

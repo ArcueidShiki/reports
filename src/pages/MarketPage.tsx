@@ -3,6 +3,8 @@ import { useState } from 'react';
 import ContentFrame from '../components/ContentFrame';
 import DateSelector from '../components/DateSelector';
 import MarkdownView from '../components/MarkdownView';
+import PageHeader from '../components/PageHeader';
+import Reveal from '../components/Reveal';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
 import { useFetchText } from '../hooks/useFetchText';
 import { useManifest } from '../hooks/useManifest';
@@ -69,7 +71,11 @@ export default function MarketPage() {
 
   return (
     <main className="page market-page">
-      <h1>{t('nav.market')}</h1>
+      <PageHeader
+        index={2}
+        kicker={t('page.kicker.market')}
+        title={t('nav.market')}
+      />
 
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
@@ -101,7 +107,9 @@ export default function MarketPage() {
           {markdown.loading ? <LoadingNote /> : null}
           {markdown.error ? <ErrorNote detail={markdown.error} /> : null}
           {markdown.text !== null ? (
-            <MarkdownView markdown={markdown.text} />
+            <Reveal>
+              <MarkdownView markdown={markdown.text} />
+            </Reveal>
           ) : null}
         </>
       ) : null}

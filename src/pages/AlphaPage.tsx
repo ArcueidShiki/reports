@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
 import MarkdownView from '../components/MarkdownView';
+import PageHeader from '../components/PageHeader';
+import Reveal from '../components/Reveal';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
 import { useFetchText } from '../hooks/useFetchText';
 import { useManifest } from '../hooks/useManifest';
@@ -20,7 +22,11 @@ export default function AlphaPage() {
 
   return (
     <main className="page alpha-page">
-      <h1>{t('nav.alpha')}</h1>
+      <PageHeader
+        index={3}
+        kicker={t('page.kicker.alpha')}
+        title={t('nav.alpha')}
+      />
 
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
@@ -44,7 +50,11 @@ export default function AlphaPage() {
 
       {markdown.loading ? <LoadingNote /> : null}
       {markdown.error ? <ErrorNote detail={markdown.error} /> : null}
-      {markdown.text !== null ? <MarkdownView markdown={markdown.text} /> : null}
+      {markdown.text !== null ? (
+        <Reveal>
+          <MarkdownView markdown={markdown.text} />
+        </Reveal>
+      ) : null}
     </main>
   );
 }

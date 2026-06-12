@@ -1,0 +1,53 @@
+/* ============================================================
+   THE MIDNIGHT LEDGER — design tokens
+   Luxury print annual-report meets night trading terminal.
+   Warm ink, paper-cream text, bullion gold, hairline rules.
+   ============================================================ */
+
+:root {
+  /* --- palette: warm ink ------------------------------------ */
+  --ink-0: #0a0908;
+  --ink-1: #11100e;
+  --ink-2: #171512;
+  --ink-3: #1f1c17;
+
+  /* --- palette: paper --------------------------------------- */
+  --paper: #ece5d8;
+  --paper-dim: #b6ab95;
+  --paper-faint: #8a806c;
+
+  /* --- palette: bullion + market ---------------------------- */
+  --gold: #d8a548;
+  --gold-bright: #efc06a;
+  --gold-deep: #8a6420;
+  --up: #7cc9a0;
+  --down: #e0705f;
+
+  /* --- hairlines + glow ------------------------------------- */
+  --line: rgb(236 229 216 / 10%);
+  --line-strong: rgb(236 229 216 / 24%);
+  --gold-line: rgb(216 165 72 / 40%);
+  --gold-glow: rgb(216 165 72 / 14%);
+
+  /* --- typography ------------------------------------------- */
+  --font-display: 'Fraunces Variable', 'Noto Serif SC', 'Songti SC', serif;
+  --font-body: 'Source Serif 4 Variable', 'Noto Serif SC', 'Songti SC', serif;
+  --font-mono: 'IBM Plex Mono', 'Noto Sans SC', 'PingFang SC', monospace;
+
+  /* --- shape + depth ----------------------------------------- */
+  --radius-s: 6px;
+  --radius-m: 12px;
+  --radius-l: 20px;
+  --shadow-lift: 0 24px 48px -20px rgb(0 0 0 / 65%);
+  --shadow-pop: 0 40px 90px -30px rgb(0 0 0 / 85%);
+
+  /* --- layout ------------------------------------------------ */
+  --page-max: 72rem;
+  --page-pad: clamp(1rem, 4vw, 2.5rem);
+  --header-h: 4.25rem;
+
+  /* --- motion ------------------------------------------------ */
+  --ease-ledger: cubic-bezier(0.22, 1, 0.36, 1);
+  --speed-quick: 0.25s;
+  --speed-settle: 0.7s;
+}

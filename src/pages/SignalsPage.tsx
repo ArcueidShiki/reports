@@ -3,6 +3,8 @@ import { useState } from 'react';
 import ContentFrame from '../components/ContentFrame';
 import DateSelector from '../components/DateSelector';
 import MarkdownView from '../components/MarkdownView';
+import PageHeader from '../components/PageHeader';
+import Reveal from '../components/Reveal';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
 import { useFetchText } from '../hooks/useFetchText';
 import { useManifest } from '../hooks/useManifest';
@@ -21,32 +23,34 @@ function SourcesSection({ entry }: { readonly entry: SignalsEntry }) {
   if (!sources) return null;
 
   return (
-    <section className="signals-sources">
-      <h2>{t('signals.sources')}</h2>
-      <div className="source-grid">
-        {sources.images.map((image) => (
-          <figure key={image} className="source-figure">
-            <img
-              src={contentUrl('signals', entry.date, 'sources', image)}
-              alt={image}
-              loading="lazy"
-            />
-            <figcaption>{image}</figcaption>
-          </figure>
-        ))}
-      </div>
+    <Reveal>
+      <section className="signals-sources content-section">
+        <h2>{t('signals.sources')}</h2>
+        <div className="source-grid">
+          {sources.images.map((image) => (
+            <figure key={image} className="source-figure">
+              <img
+                src={contentUrl('signals', entry.date, 'sources', image)}
+                alt={image}
+                loading="lazy"
+              />
+              <figcaption>{image}</figcaption>
+            </figure>
+          ))}
+        </div>
 
-      {provenanceUrl ? (
-        <>
-          <h2>{t('signals.provenance')}</h2>
-          {provenance.loading ? <LoadingNote /> : null}
-          {provenance.error ? <ErrorNote detail={provenance.error} /> : null}
-          {provenance.text !== null ? (
-            <MarkdownView markdown={provenance.text} />
-          ) : null}
-        </>
-      ) : null}
-    </section>
+        {provenanceUrl ? (
+          <>
+            <h2>{t('signals.provenance')}</h2>
+            {provenance.loading ? <LoadingNote /> : null}
+            {provenance.error ? <ErrorNote detail={provenance.error} /> : null}
+            {provenance.text !== null ? (
+              <MarkdownView markdown={provenance.text} />
+            ) : null}
+          </>
+        ) : null}
+      </section>
+    </Reveal>
   );
 }
 
@@ -55,9 +59,10 @@ function DownloadsSection({ entry }: { readonly entry: SignalsEntry }) {
   const officialJson = entry.sources?.officialJson ?? null;
 
   return (
-    <section className="signals-downloads">
-      <h2>{t('signals.downloads')}</h2>
-      <ul className="download-links">
+    <Reveal>
+      <section className="signals-downloads content-section">
+        <h2>{t('signals.downloads')}</h2>
+        <ul className="download-links">
         <li>
           <a href={contentUrl('signals', entry.date, entry.csv)} download>
             {t('signals.csv')}
@@ -71,18 +76,24 @@ function DownloadsSection({ entry }: { readonly entry: SignalsEntry }) {
             {t('signals.calendarJson')}
           </a>
         </li>
-        {officialJson ? (
-          <li>
-            <a
-              href={contentUrl('signals', entry.date, 'sources', officialJson)}
-              download
-            >
-              {t('signals.officialJson')}
-            </a>
-          </li>
-        ) : null}
-      </ul>
-    </section>
+          {officialJson ? (
+            <li>
+              <a
+                href={contentUrl(
+                  'signals',
+                  entry.date,
+                  'sources',
+                  officialJson,
+                )}
+                download
+              >
+                {t('signals.officialJson')}
+              </a>
+            </li>
+          ) : null}
+        </ul>
+      </section>
+    </Reveal>
   );
 }
 
@@ -102,7 +113,11 @@ export default function SignalsPage() {
 
   return (
     <main className="page signals-page">
-      <h1>{t('nav.signals')}</h1>
+      <PageHeader
+        index={4}
+        kicker={t('page.kicker.signals')}
+        title={t('nav.signals')}
+      />
 
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
@@ -118,37 +133,43 @@ export default function SignalsPage() {
 
       {entry ? (
         <>
-          <section className="signals-report">
-            <h2>{t('signals.reportPdf')}</h2>
-            <ContentFrame
-              src={contentUrl('signals', entry.date, entry.pdf)}
-              title={entry.pdf}
-            />
-          </section>
+          <Reveal>
+            <section className="signals-report content-section">
+              <h2>{t('signals.reportPdf')}</h2>
+              <ContentFrame
+                src={contentUrl('signals', entry.date, entry.pdf)}
+                title={entry.pdf}
+              />
+            </section>
+          </Reveal>
 
-          <section className="signals-table">
-            <h2>{t('signals.table')}</h2>
-            {signalsMd.loading ? <LoadingNote /> : null}
-            {signalsMd.error ? <ErrorNote detail={signalsMd.error} /> : null}
-            {signalsMd.text !== null ? (
-              <MarkdownView markdown={signalsMd.text} />
-            ) : null}
-          </section>
+          <Reveal>
+            <section className="signals-table content-section">
+              <h2>{t('signals.table')}</h2>
+              {signalsMd.loading ? <LoadingNote /> : null}
+              {signalsMd.error ? <ErrorNote detail={signalsMd.error} /> : null}
+              {signalsMd.text !== null ? (
+                <MarkdownView markdown={signalsMd.text} />
+              ) : null}
+            </section>
+          </Reveal>
 
           {entry.posters.length > 0 ? (
-            <section className="signals-posters">
-              <h2>{t('signals.posters')}</h2>
-              <div className="poster-row">
-                {entry.posters.map((poster) => (
-                  <img
-                    key={poster}
-                    src={contentUrl('signals', entry.date, poster)}
-                    alt={poster}
-                    loading="lazy"
-                  />
-                ))}
-              </div>
-            </section>
+            <Reveal>
+              <section className="signals-posters content-section">
+                <h2>{t('signals.posters')}</h2>
+                <div className="poster-row">
+                  {entry.posters.map((poster) => (
+                    <img
+                      key={poster}
+                      src={contentUrl('signals', entry.date, poster)}
+                      alt={poster}
+                      loading="lazy"
+                    />
+                  ))}
+                </div>
+              </section>
+            </Reveal>
           ) : null}
 
           <SourcesSection entry={entry} />

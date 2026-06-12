@@ -2,8 +2,6 @@ import { BufferAttribute, BufferGeometry } from 'three';
 
 export const STAR_COUNT = 2000;
 export const STAR_FIELD_RADIUS = 4;
-/** Radians per second for the slow ambient rotation of the starfield. */
-export const STAR_ROTATION_SPEED = 0.02;
 
 const COMPONENTS_PER_POSITION = 3;
 
