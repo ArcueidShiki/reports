@@ -52,6 +52,65 @@ describe('parseWisdomMarkdown', () => {
     expect(section.items).toEqual([{ text: 'Time in the market beats timing.' }]);
   });
 
+  it('strips surrounding markdown emphasis markers from the source field', () => {
+    const [, valueSection] = parseWisdomMarkdown(SAMPLE);
+
+    expect(valueSection.items[0]).toEqual({
+      text: 'Margin of safety is the cornerstone.',
+      author: 'Benjamin Graham',
+      source: 'The Intelligent Investor',
+    });
+  });
+
+  it('strips bold/underscore emphasis from any field and from fallback lines', () => {
+    const [section] = parseWisdomMarkdown(
+      '## A\n\n- Stay calm. · **John Bogle** · _Common Sense on Mutual Funds_\n- *A whole line in italics.*\n',
+    );
+
+    expect(section.items).toEqual([
+      {
+        text: 'Stay calm.',
+        author: 'John Bogle',
+        source: 'Common Sense on Mutual Funds',
+      },
+      { text: 'A whole line in italics.' },
+    ]);
+  });
+
+  it('strips emphasis pairs that wrap only part of a field', () => {
+    const [section] = parseWisdomMarkdown(
+      '## A\n\n- Cut losses fast. · Mark Minervini · *Stock Market Wizards* (Jack Schwager)\n' +
+        '- Low P/E wins. · David Dreman · "The Low-P/E Effect," *Financial Analysts Journal*\n',
+    );
+
+    expect(section.items).toEqual([
+      {
+        text: 'Cut losses fast.',
+        author: 'Mark Minervini',
+        source: 'Stock Market Wizards (Jack Schwager)',
+      },
+      {
+        text: 'Low P/E wins.',
+        author: 'David Dreman',
+        source: '"The Low-P/E Effect," Financial Analysts Journal',
+      },
+    ]);
+  });
+
+  it('leaves unbalanced emphasis markers untouched', () => {
+    const [section] = parseWisdomMarkdown(
+      '## A\n\n- Risk 2 * 3 ratios. · X · *Unclosed source\n',
+    );
+
+    expect(section.items).toEqual([
+      {
+        text: 'Risk 2 * 3 ratios.',
+        author: 'X',
+        source: '*Unclosed source',
+      },
+    ]);
+  });
+
   it('keeps extra separators inside the quote text', () => {
     const [section] = parseWisdomMarkdown('## A\n\n- Buy · hold · repeat. · Someone · Somewhere\n');
 
