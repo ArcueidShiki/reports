@@ -8,6 +8,10 @@ export interface ProductsEntry {
   /** null when the source day has raw data but no analysis yet. */
   readonly analysisJson: string | null;
   readonly otherFiles: readonly string[];
+  /** Trend report markdown file name, when the day has one. */
+  readonly reportMd?: string;
+  /** Trend report HTML card file name, when the day has one. */
+  readonly reportHtml?: string;
 }
 
 export interface MarketItem {
@@ -15,6 +19,8 @@ export interface MarketItem {
   readonly lang: string;
   readonly kind: string;
   readonly title: string;
+  /** Market-agent session id (e.g. "premarket") for session reports. */
+  readonly session?: string;
 }
 
 export interface MarketEntry {
@@ -74,6 +80,47 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === 'object' && value !== null && !Array.isArray(value);
 }
 
+function assertOptionalString(
+  value: unknown,
+  context: string,
+  field: string,
+): void {
+  if (value !== undefined && typeof value !== 'string') {
+    throw new Error(`manifest: ${context}.${field} must be a string when present`);
+  }
+}
+
+/** Checks the per-entry products fields the pages rely on. */
+function validateProductsEntries(entries: readonly unknown[]): void {
+  for (const [index, entry] of entries.entries()) {
+    if (!isRecord(entry)) {
+      throw new Error(`manifest: sections.products[${index}] must be an object`);
+    }
+    const context = `sections.products[${index}]`;
+    if (entry.analysisJson !== null && typeof entry.analysisJson !== 'string') {
+      throw new Error(`manifest: ${context}.analysisJson must be a string or null`);
+    }
+    assertOptionalString(entry.reportMd, context, 'reportMd');
+    assertOptionalString(entry.reportHtml, context, 'reportHtml');
+  }
+}
+
+/** Checks the per-item market fields the pages rely on. */
+function validateMarketEntries(entries: readonly unknown[]): void {
+  for (const [index, entry] of entries.entries()) {
+    if (!isRecord(entry) || !Array.isArray(entry.items)) {
+      throw new Error(`manifest: sections.market[${index}].items must be an array`);
+    }
+    for (const [itemIndex, item] of entry.items.entries()) {
+      const context = `sections.market[${index}].items[${itemIndex}]`;
+      if (!isRecord(item)) {
+        throw new Error(`manifest: ${context} must be an object`);
+      }
+      assertOptionalString(item.session, context, 'session');
+    }
+  }
+}
+
 /**
  * Validates the raw manifest JSON. Throws an Error with a clear message
  * when the shape is wrong instead of letting pages crash on bad data.
@@ -93,6 +140,9 @@ export function validateManifest(data: unknown): Manifest {
       throw new Error(`manifest: sections.${key} must be an array`);
     }
   }
+
+  validateProductsEntries(sections.products as unknown[]);
+  validateMarketEntries(sections.market as unknown[]);
 
   const gallery = sections.gallery;
   if (!isRecord(gallery) || !Array.isArray(gallery.images)) {

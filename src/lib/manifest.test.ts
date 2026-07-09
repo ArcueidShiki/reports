@@ -7,12 +7,28 @@ function validManifest(): unknown {
     generatedAt: '2026-06-11T00:00:00.000Z',
     sections: {
       products: [
+        {
+          date: '2026-07-01',
+          analysisJson: null,
+          otherFiles: [],
+          reportMd: '2026-07-01-product-trends.md',
+          reportHtml: '2026-07-01-product-trends.html',
+        },
         { date: '2026-06-11', analysisJson: 'products-analysis.json', otherFiles: [] },
       ],
       market: [
         {
           date: '2026-06-10',
-          items: [{ file: 'a.md', lang: 'en', kind: 'md', title: 'a' }],
+          items: [
+            { file: 'a.md', lang: 'en', kind: 'md', title: 'a' },
+            {
+              file: '2026-06-10-premarket.md',
+              lang: 'en',
+              kind: 'md',
+              title: 'Pre-Market',
+              session: 'premarket',
+            },
+          ],
         },
       ],
       alpha: [{ id: 'readme', title: 'Overview', file: 'README.md' }],
@@ -39,11 +55,61 @@ describe('validateManifest', () => {
   it('accepts a well-formed manifest and returns it typed', () => {
     const manifest = validateManifest(validManifest());
 
-    expect(manifest.sections.products[0].date).toBe('2026-06-11');
+    expect(manifest.sections.products[1].date).toBe('2026-06-11');
     expect(manifest.sections.gallery.images).toEqual(['a.png']);
     expect(manifest.sections.wisdom).toEqual([
       { id: 'investing-wisdom', title: 'Investing Wisdom', file: 'investing-wisdom.md' },
     ]);
+  });
+
+  it('accepts a report-only products entry (null analysisJson, report files)', () => {
+    const manifest = validateManifest(validManifest());
+    const entry = manifest.sections.products[0];
+
+    expect(entry.analysisJson).toBeNull();
+    expect(entry.reportMd).toBe('2026-07-01-product-trends.md');
+    expect(entry.reportHtml).toBe('2026-07-01-product-trends.html');
+  });
+
+  it('accepts market items with an optional session field', () => {
+    const manifest = validateManifest(validManifest());
+    const items = manifest.sections.market[0].items;
+
+    expect(items[0].session).toBeUndefined();
+    expect(items[1].session).toBe('premarket');
+  });
+
+  it('rejects a products entry whose reportMd is not a string', () => {
+    const data = validManifest() as {
+      sections: { products: Array<Record<string, unknown>> } & Record<string, unknown>;
+    };
+    const broken = {
+      ...data,
+      sections: {
+        ...data.sections,
+        products: [{ ...data.sections.products[0], reportMd: 42 }],
+      },
+    };
+
+    expect(() => validateManifest(broken)).toThrow(/reportMd/i);
+  });
+
+  it('rejects a market item whose session is not a string', () => {
+    const data = validManifest() as {
+      sections: {
+        market: Array<{ items: Array<Record<string, unknown>> } & Record<string, unknown>>;
+      } & Record<string, unknown>;
+    };
+    const [group] = data.sections.market;
+    const broken = {
+      ...data,
+      sections: {
+        ...data.sections,
+        market: [{ ...group, items: [{ ...group.items[1], session: 7 }] }],
+      },
+    };
+
+    expect(() => validateManifest(broken)).toThrow(/session/i);
   });
 
   it('defaults sections.wisdom to an empty list when missing (older manifests)', () => {

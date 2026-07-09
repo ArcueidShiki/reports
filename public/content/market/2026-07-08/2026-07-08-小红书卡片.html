@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=750, initial-scale=1">
+<title>美股日报 2026-07-08</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 750px; height: 1334px; }
+  body {
+    font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(160deg, #0d1117 0%, #131c2e 100%);
+    color: #ffffff;
+    width: 750px; height: 1334px; overflow: hidden;
+  }
+  .card { width: 750px; height: 1334px; display: flex; flex-direction: column; }
+
+  /* 1. Header */
+  .header {
+    height: 80px; flex: 0 0 80px;
+    background: #1d3461;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 32px;
+  }
+  .header .title { font-size: 34px; font-weight: 800; letter-spacing: 1px; }
+  .header .date { font-size: 19px; color: #b9c6e0; margin-left: 14px; font-weight: 500; }
+  .header .left { display: flex; align-items: baseline; }
+  .header .watermark { font-size: 16px; color: #8aa0c8; letter-spacing: 1px; }
+
+  /* 2. Indices grid */
+  .grid {
+    height: 300px; flex: 0 0 300px;
+    display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: 1fr 1fr;
+    gap: 12px; padding: 18px 24px;
+  }
+  .cell {
+    background: #1a2234; border: 1px solid #1d3461; border-radius: 14px;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 20px;
+  }
+  .cell .name { font-size: 19px; color: #94a3b8; margin-bottom: 8px; font-weight: 500; }
+  .cell .px { font-size: 33px; font-weight: 800; line-height: 1.05; }
+  .cell .chg { font-size: 19px; font-weight: 700; margin-top: 7px; }
+  .up { color: #00b975; }
+  .down { color: #e64b3b; }
+
+  /* 3. Divider */
+  .divider { height: 1px; background: #1d3461; margin: 0 24px; }
+
+  /* 4. Focus */
+  .focus {
+    height: 124px; flex: 0 0 124px;
+    padding: 20px 30px 8px; display: flex; flex-direction: column; justify-content: center;
+  }
+  .focus .label { font-size: 22px; color: #00b975; font-weight: 800; margin-bottom: 12px; }
+  .focus .headline { font-size: 29px; font-weight: 800; line-height: 1.32; color: #ffffff; }
+
+  /* 5. Body */
+  .body-wrap { flex: 1 1 auto; position: relative; overflow: hidden; }
+  .body {
+    padding: 8px 30px 0; font-size: 26px; line-height: 1.58; color: #eef2f8;
+  }
+  .body p { margin-bottom: 15px; }
+  .body .em-green { color: #00b975; font-weight: 700; }
+  .body .em-red { color: #e64b3b; font-weight: 700; }
+  .fade {
+    position: absolute; left: 0; right: 0; bottom: 0; height: 90px;
+    background: linear-gradient(to bottom, rgba(15,20,33,0), #101727 90%);
+  }
+
+  /* 6. Tags */
+  .tags {
+    height: 64px; flex: 0 0 64px;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 16px;
+    padding: 0 30px; color: #00b975; font-size: 20px; font-weight: 600;
+  }
+
+  /* 7. Footer */
+  .footer {
+    height: 64px; flex: 0 0 64px;
+    background: #0c1320; border-top: 1px solid #1d3461;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 30px; color: #94a3b8; font-size: 16px;
+  }
+  .footer .wm { color: #5f7299; }
+</style>
+</head>
+<body>
+<div class="card">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="left">
+      <span class="title">美股日报</span>
+      <span class="date">2026年7月8日 · 周三</span>
+    </div>
+    <span class="watermark">Stay in the Market</span>
+  </div>
+
+  <!-- Indices grid -->
+  <div class="grid">
+    <div class="cell">
+      <div class="name">标普500</div>
+      <div class="px">7,465.0</div>
+      <div class="chg down">▼ −0.52%</div>
+    </div>
+    <div class="cell">
+      <div class="name">纳斯达克</div>
+      <div class="px">≈25,870</div>
+      <div class="chg up">▲ +0.20%</div>
+    </div>
+    <div class="cell">
+      <div class="name">纳指100</div>
+      <div class="px">≈29,260</div>
+      <div class="chg up">▲ +0.30%</div>
+    </div>
+    <div class="cell">
+      <div class="name">道琼斯</div>
+      <div class="px">52,348.4</div>
+      <div class="chg down">▼ −1.09%</div>
+    </div>
+    <div class="cell">
+      <div class="name">VIX 恐慌</div>
+      <div class="px">16.13</div>
+      <div class="chg up">▲ +3.6%</div>
+    </div>
+    <div class="cell">
+      <div class="name">罗素2000</div>
+      <div class="px">≈2,995</div>
+      <div class="chg down">▼ −0.90%</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Focus -->
+  <div class="focus">
+    <div class="label">📌 今日焦点</div>
+    <div class="headline">油价突袭道指重挫，苹果博通300亿大单救活芯片</div>
+  </div>
+
+  <!-- Body -->
+  <div class="body-wrap">
+    <div class="body">
+      <p>同一天，<span class="em-red">道指暴跌576点(−1.09%)</span>，<span class="em-green">纳指却逆势涨0.2%</span>——市场被撕成了两半😱</p>
+      <p>砸盘的是原油🔥 特朗普宣布伊朗停火"结束"、威胁封锁海峡，<span class="em-red">WTI飙涨4.4%到73.52</span>、布伦特涨5.2%。油价升→通胀升→10年美债冲上4.573%→道指、小盘、周期股集体杀估值。</p>
+      <p>救场的是一笔大单💰 苹果向博通砸<span class="em-green">超300亿美元、在美国造150亿颗芯片</span>！<span class="em-green">博通暴涨5%</span>。这不是超级周期重启，是"回流"新主线第一次亮相。</p>
+      <p>⚠️但芯片反弹超挑剔：博通涨、英特尔AMD却跌，英伟达趴平。买的不是"芯片"，是有催化剂的那个名字。</p>
+      <p>散户启示💡：别问大盘涨没涨，问"我这条腿今天是被买还是被卖"？</p>
+    </div>
+    <div class="fade"></div>
+  </div>
+
+  <!-- Tags -->
+  <div class="tags">
+    <span>#美股</span><span>#投资理财</span><span>#财经</span><span>#散户必看</span><span>#芯片股</span><span>#原油</span>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span>数据来源：市场公开信息 · 非投资建议</span>
+    <span class="wm">moomoo 风格设计</span>
+  </div>
+
+</div>
+</body>
+</html>

@@ -24,6 +24,11 @@ const HTML_CARD_URL = contentUrl(
   '2026-06-10',
   '2026-06-10-小红书卡片.html',
 );
+const PREMARKET_MD_URL = contentUrl(
+  'market',
+  '2026-06-10',
+  '2026-06-10-premarket.md',
+);
 
 describe('MarketPage', () => {
   beforeEach(() => {
@@ -67,6 +72,46 @@ describe('MarketPage', () => {
     expect(frame).toHaveAttribute('src', HTML_CARD_URL);
     expect(frame).toHaveAttribute('sandbox', 'allow-same-origin');
     expect(HTML_CARD_URL).toContain('%E5%B0%8F%E7%BA%A2%E4%B9%A6');
+  });
+
+  it('lists all md docs for the date, daily doc first, with session labels', async () => {
+    stubFetchRoutes({
+      [MANIFEST_URL]: { body: manifestFixtureJson },
+      [EN_MD_URL]: { body: '# CPI hits 4 percent' },
+    });
+
+    renderPage(<MarketPage />);
+    await screen.findByRole('heading', { name: 'CPI hits 4 percent' });
+
+    const tabs = screen.getAllByRole('button').map((tab) => tab.textContent);
+    expect(tabs).toEqual([
+      'cpi hits 4 percent',
+      'Pre-Market',
+      'Post-Market',
+      '小红书',
+      '小红书卡片',
+    ]);
+  });
+
+  it('switches to a session report when its tab is clicked', async () => {
+    stubFetchRoutes({
+      [MANIFEST_URL]: { body: manifestFixtureJson },
+      [EN_MD_URL]: { body: '# CPI hits 4 percent' },
+      [PREMARKET_MD_URL]: { body: '# Pre-market briefing\n\nFutures up.' },
+    });
+
+    renderPage(<MarketPage />);
+    await screen.findByRole('heading', { name: 'CPI hits 4 percent' });
+
+    await userEvent.click(screen.getByRole('button', { name: 'Pre-Market' }));
+
+    expect(
+      await screen.findByRole('heading', { name: 'Pre-market briefing' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('Futures up.')).toBeInTheDocument();
+    expect(
+      screen.queryByRole('heading', { name: 'CPI hits 4 percent' }),
+    ).not.toBeInTheDocument();
   });
 
   it('falls back to the other language with a note when no translation exists', async () => {

@@ -1,0 +1,30 @@
+PRODUCT HUNT — raw findings (via WebSearch, 2026-06-13)
+=========================================================
+
+WEEK 24 (Jun 8–14, 2026) leaderboard: https://www.producthunt.com/leaderboard/weekly/2026/24
+Featured/leaders named in search results:
+- Wispr Flow — Mac dictation app, "speak naturally, writes in your style, in every application"
+- Framer — websites with enterprise needs at startup speed (design + AI)
+- R0Y OMNI 1.0 — "generates more accurate investment dashboards and reports"
+- Sentinel — "control your robots from anywhere in the world"
+
+JUNE 2026 top launches w/ votes,comments (via hunted.space aggregate; numbers parsed as votes/comments):
+- Fundraisly — ~1,027 upvotes / 261 comments — AI fundraising agent that finds investors and books meetings
+  https://www.producthunt.com/products/fundraisly
+- Honen — ~493 / 108 (no further detail found in search)
+- Minimi — ~485 / 108 (no further detail found in search)
+- Mina Meeting Assistant — ~479 / 135 — "Your AI Teammate now responds and executes during your calls"
+  https://www.producthunt.com/products/mina-meeting-assistant | https://getmina.ai/
+- Leni — 383 upvotes / 62 comments, #3 of day June 5, 2026 — "The world's most accurate AI for investors"
+  https://www.producthunt.com/products/leni | https://leni.co/ | promo: 90% off first month, code PHLENI
+- Log Cam — 76 upvotes / 3 comments, #28 of day June 9, 2026 — log/ProRes video from RAW frames on iPhone
+  https://www.producthunt.com/products/log-cam-open-gate-by-raw-cam
+  App Store: https://apps.apple.com/us/app/log-cam-open-gate-by-raw-cam/id6766185881
+
+PATTERN noted by aggregators: "June 2026 winners cluster around AI coding, automation, note-taking,
+creator, and developer tools because these products are easy to understand in seconds and show value fast."
+(source: blog.mean.ceo/product-hunt-launches-news-june-2026/)
+
+Threshold context: ~1k upvotes on the day ≈ near-certain Product of the Day (appcues.com guide).
+
+Trackers: https://hunted.space/top-products/latest | https://hunted.space/history

@@ -1,6 +1,8 @@
 {
   "products": "/Users/arcueidpeng/github/product-analytics/raw",
+  "productsReport": "/Users/arcueidpeng/github/product-analytics/report",
   "market": "/Users/arcueidpeng/github/stay-in-the-market/daily-reports/2026",
+  "marketAgent": "/Users/arcueidpeng/github/stay-in-the-market/market-agent/reports",
   "alpha": "/Users/arcueidpeng/github/stay-in-the-market/alpha-factors",
   "signals": "/Users/arcueidpeng/github/signal-calendar/reports",
   "gallery": "/Users/arcueidpeng/comfyui/output",

@@ -1,0 +1,36 @@
+{
+  "run_date": "2026-06-14",
+  "method": "WebSearch summaries + direct web_fetch (hunted.space leaderboard fetched successfully this run; producthunt.com/x.com/linkedin.com/xiaohongshu.com remain login/JS-walled and were covered via public search summaries).",
+  "theme": "Agentic execution — agents that ACT in the real world; plus the stack forming around them (infra, hardware, open-source).",
+  "selected": ["Bond", "Asmi AI", "SellerClaw", "Astra Autonomous Pentest", "Publora", "Even Realities Terminal Mode", "OpenClaw (trend)"],
+  "sources": {
+    "product_hunt": [
+      "https://www.producthunt.com/leaderboard/weekly/2026/24",
+      "https://www.producthunt.com/leaderboard/daily/2026/6/13",
+      "https://hunted.space/top-products/latest"
+    ],
+    "products": {
+      "Bond": ["https://www.bondapp.io/", "https://www.producthunt.com/products/bond-12", "https://www.ycombinator.com/companies/bond"],
+      "Asmi AI": ["https://www.producthunt.com/products/asmi-ai"],
+      "SellerClaw": ["https://www.producthunt.com/products/sellerclaw"],
+      "Astra": ["https://www.getastra.com/autonomous-pentesting", "https://www.producthunt.com/products/astra-security"],
+      "Publora": ["https://publora.com/", "https://www.producthunt.com/products/publora"],
+      "Even Realities Terminal Mode": ["https://www.evenrealities.com/terminal", "https://www.producthunt.com/products/terminal-mode-by-even-realities"],
+      "OpenClaw": ["https://openclaw-ai.net/en", "https://www.digitalocean.com/resources/articles/what-is-openclaw"]
+    },
+    "a16z": ["https://a16z.com/category/ai/", "https://blog.mean.ceo/a16z-news-june-2026/", "https://speedrun.substack.com/p/14-big-ideas-for-2026"],
+    "hacker_news": ["https://blog.mean.ceo/hacker-news-trends-june-2026/", "https://news.ycombinator.com/front"],
+    "google_trends": ["https://backlinko.com/google-searches", "https://www.demandsage.com/most-searched-things-on-google/"],
+    "ecommerce": ["https://www.amazon.com/gp/movers-and-shakers/", "https://amzprep.com/best-selling-products-amazon/"]
+  },
+  "key_metrics": {
+    "Bond": {"ph_votes": 665, "ph_comments": 178, "seed_usd": 3000000, "yc": true, "team": 60},
+    "Asmi AI": {"ph_votes": 461, "ph_comments": 142},
+    "SellerClaw": {"ph_votes": 518, "ph_comments": 163},
+    "Astra": {"ph_votes": 400, "ph_comments": 55, "revenue_usd": 9800000, "raised_usd": 2700000, "valuation_usd": 29400000, "vulns_per_month": 30000, "trained_pentests": 4000, "trained_vulns": 10000000},
+    "Publora": {"ph_votes": 597, "ph_comments": 98, "price_usd_per_account_month": 2.99, "platforms": 10, "mcp_tools": 18},
+    "Even Realities Terminal Mode": {"ph_votes": 404, "ph_comments": 88},
+    "OpenClaw": {"github_stars": 347000, "rank": "#1 most-starred repo in GitHub history"},
+    "Fundraisly_for_reference": {"ph_votes": 1027, "ph_comments": 261, "note": "June overall leader; analyzed 06-13"}
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=750, initial-scale=1">
+<title>美股日报 2026-06-16</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 750px; height: 1334px; }
+  body {
+    font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: linear-gradient(160deg, #0d1117 0%, #131c2e 100%);
+    color: #ffffff;
+    width: 750px;
+    height: 1334px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .header {
+    height: 80px;
+    background: #1d3461;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    flex-shrink: 0;
+  }
+  .header .left { display: flex; align-items: baseline; gap: 16px; }
+  .header .title { font-size: 34px; font-weight: 800; color: #ffffff; letter-spacing: 1px; }
+  .header .date { font-size: 22px; color: #94a3b8; }
+  .header .wm { font-size: 18px; color: #94a3b8; font-weight: 600; letter-spacing: 0.5px; }
+
+  .indices {
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 14px;
+    padding: 22px 32px;
+    flex-shrink: 0;
+  }
+  .cell {
+    background: #1a2234;
+    border: 1px solid #1d3461;
+    border-radius: 14px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .cell .name { font-size: 21px; color: #94a3b8; margin-bottom: 8px; }
+  .cell .price { font-size: 36px; font-weight: 800; color: #ffffff; line-height: 1.1; }
+  .cell .chg { font-size: 22px; font-weight: 700; margin-top: 6px; }
+  .up { color: #00b975; }
+  .down { color: #e64b3b; }
+
+  .divider { height: 1px; background: #1d3461; flex-shrink: 0; }
+
+  .focus {
+    height: 120px;
+    padding: 20px 32px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .focus .label { font-size: 22px; color: #00b975; font-weight: 800; margin-bottom: 10px; }
+  .focus .headline { font-size: 29px; font-weight: 800; color: #ffffff; line-height: 1.3; }
+
+  .body {
+    flex: 1 1 auto;
+    padding: 14px 34px 0 34px;
+    position: relative;
+    overflow: hidden;
+  }
+  .body .text { font-size: 31px; line-height: 1.5; color: #ffffff; }
+  .body .text p { margin-bottom: 15px; }
+  .body .fade {
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 90px;
+    background: linear-gradient(to bottom, rgba(13,17,23,0) 0%, #101727 100%);
+  }
+
+  .tags {
+    height: 80px;
+    padding: 0 34px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .tags span { font-size: 22px; color: #00b975; font-weight: 600; }
+
+  .footer {
+    height: 80px;
+    background: #131c2e;
+    border-top: 1px solid #1d3461;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    flex-shrink: 0;
+  }
+  .footer .src { font-size: 18px; color: #94a3b8; }
+  .footer .wm { font-size: 16px; color: #94a3b8; }
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="left">
+      <span class="title">美股日报</span>
+      <span class="date">2026-06-16</span>
+    </div>
+    <span class="wm">Stay in the Market</span>
+  </div>
+
+  <div class="indices">
+    <div class="cell">
+      <div class="name">标普500</div>
+      <div class="price">7,512</div>
+      <div class="chg down">▼ −0.55%</div>
+    </div>
+    <div class="cell">
+      <div class="name">纳斯达克综合</div>
+      <div class="price">26,383</div>
+      <div class="chg down">▼ −1.15%</div>
+    </div>
+    <div class="cell">
+      <div class="name">纳斯达克100</div>
+      <div class="price">29,990</div>
+      <div class="chg down">▼ −1.20%</div>
+    </div>
+    <div class="cell">
+      <div class="name">道琼斯工业</div>
+      <div class="price">52,017</div>
+      <div class="chg up">▲ +0.67%</div>
+    </div>
+    <div class="cell">
+      <div class="name">VIX 恐慌指数</div>
+      <div class="price">15.86</div>
+      <div class="chg down">▼ −2.10%</div>
+    </div>
+    <div class="cell">
+      <div class="name">罗素2000</div>
+      <div class="price">2,960</div>
+      <div class="chg down">▼ −0.17%</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="focus">
+    <div class="label">📌 今日焦点</div>
+    <div class="headline">道指连续第二日新高，科技股集体撤退；SpaceX 600亿美元豪购Cursor暴涨</div>
+  </div>
+
+  <div class="body">
+    <div class="text">
+      <p>💥 道指又破纪录、连涨两天，可纳指却跌1.15%！芯片股一片绿：英特尔−7%、AMD−6%、迈威尔−7.3%。</p>
+      <p>⚠️ 别被道指骗了——今天不是普涨，是"换仓"。钱从高估值科技股，搬进便宜的工业、金融、价值股。为啥偏偏今天搬？因为明天就是新主席沃什的首场议息会！</p>
+      <p>🔑 机构在二元事件前夜，先把久期最长的科技筹码放下。VIX跌到15.86：市场嘴上很淡定，却压根没买保险。</p>
+      <p>🚀 SpaceX上市才一周，600亿美元收购AI工具Cursor，盘中暴涨20%创新高，眼看超亚马逊成全美第五大！</p>
+      <p>💡 散户启示：本周真牌明天FOMC才翻开。换仓日越手痒越要克制——轻仓位、宽止损，敬畏事件、别赌方向。</p>
+    </div>
+    <div class="fade"></div>
+  </div>
+
+  <div class="tags">
+    <span>#美股</span>
+    <span>#投资理财</span>
+    <span>#财经</span>
+    <span>#散户必看</span>
+    <span>#美联储</span>
+    <span>#SpaceX</span>
+  </div>
+
+  <div class="footer">
+    <span class="src">数据来源：市场公开信息 · 非投资建议</span>
+    <span class="wm">moomoo 风格设计</span>
+  </div>
+</body>
+</html>

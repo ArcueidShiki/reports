@@ -12,6 +12,28 @@ import { useLanguage } from '../i18n/LanguageContext';
 import { contentUrl } from '../lib/contentUrl';
 import type { MarketItem } from '../lib/manifest';
 
+/** Canonical trading-day order for market-agent session docs. */
+const SESSION_ORDER: readonly string[] = [
+  'premarket',
+  'in-market',
+  'close-market',
+  'post-market',
+];
+
+function sessionRank(item: MarketItem): number {
+  const rank = SESSION_ORDER.indexOf(item.session ?? '');
+  return rank === -1 ? SESSION_ORDER.length : rank;
+}
+
+/** Daily docs first (manifest order), then session docs in trading order. */
+function orderDocs(items: readonly MarketItem[]): readonly MarketItem[] {
+  const daily = items.filter((item) => item.session === undefined);
+  const sessions = [...items.filter((item) => item.session !== undefined)].sort(
+    (a, b) => sessionRank(a) - sessionRank(b),
+  );
+  return [...daily, ...sessions];
+}
+
 interface TabBarProps {
   readonly tabs: readonly MarketItem[];
   readonly activeFile: string | null;
@@ -49,11 +71,12 @@ export default function MarketPage() {
 
   const items = activeEntry?.items ?? [];
   const mdItems = items.filter((item) => item.kind === 'md');
+  // All md docs stay selectable; docs in the current language lead.
   const preferredMds = mdItems.filter((item) => item.lang === lang);
-  const displayedMds = preferredMds.length > 0 ? preferredMds : mdItems;
+  const otherMds = mdItems.filter((item) => item.lang !== lang);
   const showFallbackNote = preferredMds.length === 0 && mdItems.length > 0;
   const htmlItems = items.filter((item) => item.kind === 'html');
-  const tabs = [...displayedMds, ...htmlItems];
+  const tabs = [...orderDocs(preferredMds), ...orderDocs(otherMds), ...htmlItems];
 
   const activeTab =
     tabs.find((tab) => tab.file === selectedFile) ?? tabs[0] ?? null;

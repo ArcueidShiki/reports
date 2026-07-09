@@ -1,0 +1,53 @@
+PRODUCT DEEP-DIVE NOTES (via WebSearch, 2026-06-13)
+====================================================
+
+1) WISPR FLOW — flowvoice.ai / wisprflow.ai (AI dictation, Mac/Windows/iOS)
+- PH Week 24 featured. Founded 2022. Funding $81M total: $30M Series A (Menlo Ventures, Jun 2025) + $25M extension (Notable Capital, Nov 2025) at $700M post-money valuation.
+- Pricing: Free (Basic, 2,000 words/week cap), Pro $15/mo ($12/mo annual, $143.99/yr), Enterprise contact sales.
+- Data: iOS App Store 4.8/5 (8,500+ ratings); avg of 500 recent iOS reviews 4.14; Trustpilot 2.7/5 (Apr 2026); 1,600+ monthly brand searches early 2026; ~40% MoM search growth.
+- Review themes: + "de facto premium dictation option", style-matching praised; − free-tier "word-count anxiety" (cap hit mid-week), − screenshots-for-context privacy concerns.
+- Competitors: Superwhisper $9.99/mo, spokenly, Voibe.
+- Sources: eesel.ai/blog/wispr-flow-pricing, voicescriber.com/wispr-flow-pricing-review, droidcrunch.com/wispr-flow-review, spokenly.app/blog/wispr-flow-review
+
+2) FUNDRAISLY — AI fundraising agent
+- ~1,027 PH upvotes / 261 comments (top June launch). https://www.producthunt.com/products/fundraisly
+- What: analyzes 300K+ investors & millions of deals → shortlists active relevant investors → maps warm intro paths from founder's network → runs targeted cold outreach + follow-ups → books meetings.
+- Claims: founders average 20–40 qualified investor meetings in first 90 days; "$100M+ raised for founders through the platform."
+- Founder: Anna, ex-investment analyst 2.5 yrs at $600M+ AUM VC fund (portfolio incl. 10 unicorns).
+- Social proof: organic LinkedIn posts about the launch.
+- Sources: producthunt.com/products/fundraisly, poweredbyai.app/project/fundraisly-4, LinkedIn post activity-7467578493275426816
+
+3) MINA MEETING ASSISTANT — getmina.ai
+- ~479 PH upvotes / 135 comments. "Your AI Teammate now responds and executes during your calls."
+- What: joins Zoom/Meet/Teams; answers questions in real time mid-meeting; pulls context from connected tools; generates summaries/proposals/CRM updates LIVE; files tickets, sends follow-ups, books next steps.
+- Segments: Sales (live discovery, MEDDPICC, instant CRM updates), Engineering (AI scrum master, Jira tickets, blocker risk), CS (QBR prep, health scores, renewal forecasting).
+- Differentiator: acts DURING meeting, not after (vs Otter/Fireflies post-hoc notes).
+- Pricing: not found in search results.
+- Sources: producthunt.com/products/mina-meeting-assistant, getmina.ai
+
+4) LENI — leni.co (accuracy-first AI for investment/real-estate teams)
+- 383 upvotes / 62 comments, #3 of day Jun 5 2026. Promo: 90% off first month (PHLENI).
+- What: AI agent for real estate & investment finance. Decision traces (auditable reasoning), context graph + Unified Data Model, retrieval+extraction before generation.
+- Integrations: Yardi, Entrata, ResMan, RealPage, AppFolio + documents/emails.
+- Workflows: underwriting, market research, portfolio reporting, doc extraction, investment memos, investor packages.
+- Data: built on 21,000+ decision traces; processes 100M+ rows daily; claims to outperform GPT/Claude/Manus on accuracy/modeling/valuation benchmarks (independent per company).
+- Sources: leni.co, producthunt.com/products/leni, hunted.space/product/leni, aiagentsdirectory.com/agent/leni
+
+5) SENTINEL (by Avea) — robot teleoperation
+- PH Week 24 featured: "Control your robots from anywhere in the world." YC-associated, 2026.
+- What: "fastest remote teleoperation software on the market"; robotics companies keep robots at 100% uptime; instantly intervene when autonomy breaks down.
+- Why now: humanoid/AMR fleets scaling in 2026; autonomy still fails at edge cases → human-in-the-loop teleop = ops insurance layer.
+- Sources: producthunt.com/products/sentinel-10
+
+6) LOG CAM (RAW Cam family) — iPhone pro-video camera app
+- 76 upvotes / 3 comments, #28 of day Jun 9 2026. One-time purchase, NO subscription.
+- Features: HEVC 4:2:0 / 4:4:4 up to 300 Mbps, ProRes from RAW frames on iPhone 13+ (incl. non-Pro); log curves: Apple Log, Apple Log 2, Fuji F-Log/F-Log2 C, ARRI LogC3, S-Log3, V-Log; false color, zebras, Rec709 assist, RAW linear histogram, LUT preview/bake-in, external USB-C recording, open gate.
+- Context: Apple's Final Cut Camera 2.0 added Open Gate/Apple Log 2/ProRes RAW for iPhone 17 Pro — indie apps extend this to older/non-Pro iPhones.
+- Sources: leadtheway.hr/rawcam/, apps.apple.com id6766185881, toolradar.com/tools/log-cam, cined.com
+
+7) EMOTIONAL-COMFORT PLUSH ECONOMY (seal plush etc.)
+- Seal plush ~25M+ cumulative sales (TikTok-viral); plush market ≈ $12.07B in 2026, CAGR ~5.4%; adults ≈ 1/4 of toy buyers and spend more ("kidult" wellness).
+- Viral traits: simple recognizable silhouette, strong emotional cue (calm/cute/funny), films well on desk/in hand; muted low-saturation palettes (cream/beige/soft gray/pale blue) to blend into adult interiors.
+- 2026 sub-trends: designer blind-box & collectible plush, mini bag-charm keychains, calm comfort animals (capybara, seal), kawaii food plush, sensory squishies.
+- Adjacent e-comm risers: dumpling squishy toys (Amazon Toys M&S), cowhide sandals (700M+/mo units per TikTok data), stylus pens 22M+/mo, K-beauty sets.
+- Sources: stuffedparty.com viral-plush-trends-2026, accio.com top-selling-plushie-2026, aprasi.com kidult wellness, kinwintoys.com 2026 forecast

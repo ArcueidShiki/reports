@@ -3,7 +3,9 @@ import { validateIngestConfig } from './config.mjs';
 
 const VALID_CONFIG = {
   products: '/abs/product-analytics/raw',
+  productsReport: '/abs/product-analytics/report',
   market: '/abs/stay-in-the-market/daily-reports/2026',
+  marketAgent: '/abs/stay-in-the-market/market-agent/reports',
   alpha: '/abs/stay-in-the-market/alpha-factors',
   signals: '/abs/signal-calendar/reports',
   gallery: '/abs/comfyui/output',
@@ -27,6 +29,16 @@ describe('validateIngestConfig', () => {
   it('requires the wisdom source path', () => {
     const { wisdom: _omitted, ...incomplete } = VALID_CONFIG;
     expect(() => validateIngestConfig(incomplete)).toThrow(/wisdom/);
+  });
+
+  it('requires the productsReport source path', () => {
+    const { productsReport: _omitted, ...incomplete } = VALID_CONFIG;
+    expect(() => validateIngestConfig(incomplete)).toThrow(/productsReport/);
+  });
+
+  it('requires the marketAgent source path', () => {
+    const { marketAgent: _omitted, ...incomplete } = VALID_CONFIG;
+    expect(() => validateIngestConfig(incomplete)).toThrow(/marketAgent/);
   });
 
   it('throws when a value is not a non-empty string', () => {

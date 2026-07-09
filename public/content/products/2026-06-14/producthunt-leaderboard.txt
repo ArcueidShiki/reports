@@ -1,0 +1,61 @@
+Product Hunt — June 2026 leaderboard (via hunted.space/top-products/latest, fetched 2026-06-14)
+Format: Product — upvotes / comments — category
+
+=== #1 Artificial Intelligence (118 products) ===
+Fundraisly — 1027 / 261 — AI (June overall leader; covered 06-13)
+Honen — 493 / 108 — AI / Productivity
+VC Boom — 486 / 65 — AI
+Minimi (Shram) — 485 / 108 — AI / Tech
+Mina Meeting Assistant — 479 / 135 — AI (covered 06-13)
+Asmi AI — 461 / 142 — AI / Productivity
+Vokal — 456 / 55 — AI
+Browse.sh — 452 / 49 — AI / Dev Tools
+TypingMind — 450 / 45 — AI
+Respan Gateway (Keywords AI) — 441 / 52 — AI
+
+=== #2 Productivity (86) ===
+Bond — 665 / 178 — Productivity (TOP productivity launch)
+Honen — 493 / 108
+Minimi — 485 / 108
+Mina Meeting Assistant — 479 / 135
+Asmi AI — 461 / 142
+Vokal — 456 / 55
+TypingMind — 450 / 45
+Terminal Mode by Even Realities — 404 / 88 — smart glasses
+Slashspace AI — 374 / 59
+Databox MCP — 343 / 54
+
+=== #3 Developer Tools (72) ===
+Publora — 597 / 98 — social media publishing API
+InsForge Backend Branching — 525 / 186
+Browse.sh — 452 / 49
+Respan Gateway — 441 / 52
+superlog — 431 / 78
+Terminal Mode by Even Realities — 404 / 88
+Spotlight by Backplanes — 403 / 107
+Astra Autonomous Pentest — 400 / 55 — AI security
+ZeroGPU — 345 / 42
+Dune Keypad — 328 / 51 — hardware
+
+=== #6 Design Tools ===
+Ideogram 4.0 — 250 / 10 — image gen
+MAI-Image-2.5 — 237 / 9 — Microsoft image model
+
+=== #9 SaaS ===
+SellerClaw — 518 / 163 — Amazon/e-commerce seller AI (SaaS #1)
+Astra Autonomous Pentest — 400 / 55
+SocialEcho 2.0 — 378 / 130
+Gigacatalyst — 341 / 38 — AI builder for B2B SaaS
+TravelMind — 130 / 16
+
+=== #10 API ===
+Publora — 597 / 98
+Browse.sh — 452 / 49
+Krisp Voice Translation API — 266 / 27
+Tabstack Structured Extraction — 190 / 37
+
+Notes:
+- Week of June 8 = Week 24. Daily winners: Jun 11 = Wispr Flow.
+- Honen vote count appears as "493108" concatenation = 493 votes / 108 comments.
+- Selection for 06-14 (fresh, distinct from 06-13's Fundraisly/Wispr/Mina/Leni/Sentinel/LogCam/Plush):
+  Bond, SellerClaw, Astra Autonomous Pentest, Asmi AI, Publora, Terminal Mode (Even Realities), Honen/VC Boom.

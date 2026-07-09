@@ -30,6 +30,26 @@ const ANALYSIS_OLDER = JSON.stringify({
 
 const LATEST_URL = contentUrl('products', '2026-06-11', 'products-analysis.json');
 const OLDER_URL = contentUrl('products', '2026-06-09', 'products-analysis.json');
+const REPORT_MD = '2026-07-01-product-trends.md';
+const REPORT_HTML = '2026-07-01-product-trends.html';
+const REPORT_MD_URL = contentUrl('products', '2026-07-01', REPORT_MD);
+const REPORT_HTML_URL = contentUrl('products', '2026-07-01', REPORT_HTML);
+
+interface ProductsFixture {
+  readonly sections: { readonly products: readonly unknown[] } & Record<string, unknown>;
+}
+
+/** Returns the shared fixture with extra products entries prepended. */
+function fixtureWithProducts(extraEntries: readonly unknown[]): string {
+  const fixture = JSON.parse(manifestFixtureJson) as ProductsFixture;
+  return JSON.stringify({
+    ...fixture,
+    sections: {
+      ...fixture.sections,
+      products: [...extraEntries, ...fixture.sections.products],
+    },
+  });
+}
 
 describe('ProductsPage', () => {
   beforeEach(() => {
@@ -129,6 +149,78 @@ describe('ProductsPage', () => {
     await userEvent.selectOptions(screen.getByRole('combobox'), '2026-06-11');
 
     expect(await screen.findByRole('link', { name: 'Publora' })).toBeInTheDocument();
+  });
+
+  it('renders the trend report md and html card for a report-only date', async () => {
+    stubFetchRoutes({
+      [MANIFEST_URL]: {
+        body: fixtureWithProducts([
+          {
+            date: '2026-07-01',
+            analysisJson: null,
+            otherFiles: [],
+            reportMd: REPORT_MD,
+            reportHtml: REPORT_HTML,
+          },
+        ]),
+      },
+      [REPORT_MD_URL]: {
+        body: '# July trends\n\nAI tools dominate.\n\n![chart](assets/2026-07-01/chart.png)',
+      },
+    });
+
+    renderPage(<ProductsPage />);
+
+    expect(
+      await screen.findByRole('heading', { name: 'July trends' }),
+    ).toBeInTheDocument();
+    expect(screen.getByText('AI tools dominate.')).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'chart' })).toHaveAttribute(
+      'src',
+      '/content/products/2026-07-01/assets/2026-07-01/chart.png',
+    );
+    expect(
+      screen.getByRole('heading', { name: 'Trend Report' }),
+    ).toBeInTheDocument();
+    expect(screen.getByTitle('Report Card')).toHaveAttribute(
+      'src',
+      REPORT_HTML_URL,
+    );
+    expect(screen.queryByText('No content available.')).not.toBeInTheDocument();
+  });
+
+  it('renders both the trend report and analysis cards when both exist', async () => {
+    stubFetchRoutes({
+      [MANIFEST_URL]: {
+        body: fixtureWithProducts([
+          {
+            date: '2026-07-01',
+            analysisJson: 'products-analysis.json',
+            otherFiles: [],
+            reportMd: REPORT_MD,
+          },
+        ]),
+      },
+      [REPORT_MD_URL]: { body: '# July trends' },
+      [contentUrl('products', '2026-07-01', 'products-analysis.json')]: {
+        body: ANALYSIS_LATEST,
+      },
+    });
+
+    renderPage(<ProductsPage />);
+
+    expect(
+      await screen.findByRole('heading', { name: 'July trends' }),
+    ).toBeInTheDocument();
+    expect(
+      await screen.findByRole('link', { name: 'Publora' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Trend Report' }),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', { name: 'Analysis Cards' }),
+    ).toBeInTheDocument();
   });
 
   it('shows an error state when the manifest fetch fails', async () => {

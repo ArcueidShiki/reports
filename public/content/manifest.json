@@ -1,13 +1,181 @@
 {
-  "generatedAt": "2026-06-12T04:43:53.428Z",
+  "generatedAt": "2026-07-09T15:46:55.923Z",
   "sections": {
     "products": [
+      {
+        "date": "2026-07-09",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-09-product-trends.html",
+        "reportMd": "2026-07-09-product-trends.md"
+      },
+      {
+        "date": "2026-07-08",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-08-product-trends.html",
+        "reportMd": "2026-07-08-product-trends.md"
+      },
+      {
+        "date": "2026-07-07",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-07-product-trends.html",
+        "reportMd": "2026-07-07-product-trends.md"
+      },
+      {
+        "date": "2026-07-06",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-06-product-trends.html",
+        "reportMd": "2026-07-06-product-trends.md"
+      },
+      {
+        "date": "2026-07-05",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-05-product-trends.html",
+        "reportMd": "2026-07-05-product-trends.md"
+      },
+      {
+        "date": "2026-07-04",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-04-product-trends.html",
+        "reportMd": "2026-07-04-product-trends.md"
+      },
+      {
+        "date": "2026-07-03",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-03-product-trends.html",
+        "reportMd": "2026-07-03-product-trends.md"
+      },
+      {
+        "date": "2026-07-02",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-02-product-trends.html",
+        "reportMd": "2026-07-02-product-trends.md"
+      },
+      {
+        "date": "2026-07-01",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-07-01-product-trends.html",
+        "reportMd": "2026-07-01-product-trends.md"
+      },
+      {
+        "date": "2026-06-29",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-06-29-product-trends.html",
+        "reportMd": "2026-06-29-product-trends.md"
+      },
+      {
+        "date": "2026-06-20",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ]
+      },
+      {
+        "date": "2026-06-19",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-06-19-product-trends.html",
+        "reportMd": "2026-06-19-product-trends.md"
+      },
+      {
+        "date": "2026-06-18",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-06-18-product-trends.html",
+        "reportMd": "2026-06-18-product-trends.md"
+      },
+      {
+        "date": "2026-06-17",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-06-17-product-trends.html",
+        "reportMd": "2026-06-17-product-trends.md"
+      },
+      {
+        "date": "2026-06-16",
+        "analysisJson": null,
+        "otherFiles": [
+          "sources.md"
+        ],
+        "reportHtml": "2026-06-16-product-trends.html",
+        "reportMd": "2026-06-16-product-trends.md"
+      },
+      {
+        "date": "2026-06-15",
+        "analysisJson": null,
+        "otherFiles": [
+          "products.json",
+          "raw-data.md"
+        ],
+        "reportHtml": "2026-06-15-product-trends.html",
+        "reportMd": "2026-06-15-product-trends.md"
+      },
+      {
+        "date": "2026-06-14",
+        "analysisJson": null,
+        "otherFiles": [
+          "product-deepdives.txt",
+          "producthunt-leaderboard.txt",
+          "sources.json"
+        ],
+        "reportHtml": "2026-06-14-product-trends.html",
+        "reportMd": "2026-06-14-product-trends.md"
+      },
+      {
+        "date": "2026-06-13",
+        "analysisJson": null,
+        "otherFiles": [
+          "hn-trends-a16z-googletrends.txt",
+          "product-deepdives.txt",
+          "producthunt.txt",
+          "sources.json"
+        ],
+        "reportHtml": "2026-06-13-product-trends.html",
+        "reportMd": "2026-06-13-product-trends.md"
+      },
       {
         "date": "2026-06-12",
         "analysisJson": null,
         "otherFiles": [
           "raw-data.json"
-        ]
+        ],
+        "reportHtml": "2026-06-12-product-trends.html",
+        "reportMd": "2026-06-12-product-trends.md"
       },
       {
         "date": "2026-06-11",
@@ -15,139 +183,713 @@
         "otherFiles": [
           "raw-data.json",
           "sources-raw.json"
-        ]
+        ],
+        "reportHtml": "2026-06-11-product-trends.html",
+        "reportMd": "2026-06-11-product-trends.md"
       },
       {
         "date": "2026-06-09",
         "analysisJson": "products-analysis.json",
         "otherFiles": [
           "sources-raw.json"
-        ]
+        ],
+        "reportHtml": "2026-06-09-product-trends.html",
+        "reportMd": "2026-06-09-product-trends.md"
       }
     ],
     "market": [
       {
-        "date": "2026-06-11",
+        "date": "2026-07-09",
         "items": [
           {
-            "file": "2026-06-11-en-iran-truce-rally-defies-hot-ppi.md",
+            "file": "2026-07-09-premarket.md",
             "lang": "en",
             "kind": "md",
-            "title": "en iran truce rally defies hot ppi"
+            "title": "Pre-Market",
+            "session": "premarket"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-08",
+        "items": [
+          {
+            "file": "2026-07-08-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
           },
           {
-            "file": "2026-06-11-小红书.md",
+            "file": "2026-07-08-en-oil-shock-sinks-dow-broadcom-apple-reshoring-deal-rescues-chips.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en oil shock sinks dow broadcom apple reshoring deal rescues chips"
+          },
+          {
+            "file": "2026-07-08-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-07-08-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-07-08-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-07-08-小红书.md",
             "lang": "zh",
             "kind": "md",
             "title": "小红书"
           },
           {
-            "file": "2026-06-11-小红书卡片.html",
+            "file": "2026-07-08-小红书卡片.html",
             "lang": "zh",
             "kind": "html",
             "title": "小红书卡片"
           },
           {
-            "file": "2026-06-11-提词器-深度解读.md",
+            "file": "2026-07-08-提词器-深度解读.md",
             "lang": "zh",
             "kind": "md",
             "title": "提词器 深度解读"
           },
           {
-            "file": "2026-06-11-特朗普叫停空袭道指暴涨930点.md",
+            "file": "2026-07-08-油价突袭道指重挫-苹果博通300亿芯片大单救场.md",
             "lang": "zh",
             "kind": "md",
-            "title": "特朗普叫停空袭道指暴涨930点"
+            "title": "油价突袭道指重挫 苹果博通300亿芯片大单救场"
           }
         ]
       },
       {
-        "date": "2026-06-10",
+        "date": "2026-07-07",
         "items": [
           {
-            "file": "2026-06-10-cpi-hits-4-percent-iran-escalates-dow-loses-50k.md",
+            "file": "2026-07-07-close-market.md",
             "lang": "en",
             "kind": "md",
-            "title": "cpi hits 4 percent iran escalates dow loses 50k"
+            "title": "Close",
+            "session": "close-market"
           },
           {
-            "file": "2026-06-10-小红书.md",
+            "file": "2026-07-07-en-samsung-record-sells-the-news-hormuz-shock-oil-spikes.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en samsung record sells the news hormuz shock oil spikes"
+          },
+          {
+            "file": "2026-07-07-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-07-07-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-07-07-三星史上最强财报芯片却暴跌-霍尔木兹突袭油价飙升.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "三星史上最强财报芯片却暴跌 霍尔木兹突袭油价飙升"
+          },
+          {
+            "file": "2026-07-07-小红书.md",
             "lang": "zh",
             "kind": "md",
             "title": "小红书"
           },
           {
-            "file": "2026-06-10-小红书卡片.html",
+            "file": "2026-07-07-小红书卡片.html",
             "lang": "zh",
             "kind": "html",
             "title": "小红书卡片"
           },
           {
-            "file": "2026-06-10-提词器-深度解读.md",
+            "file": "2026-07-07-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-06",
+        "items": [
+          {
+            "file": "2026-07-06-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-07-06-en-memory-supercycle-chips-lead-dow-record-tesla-robotaxi.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en memory supercycle chips lead dow record tesla robotaxi"
+          },
+          {
+            "file": "2026-07-06-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-07-06-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-07-06-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-07-06-存储超级周期引爆芯片-道指新高特斯拉飙升.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "存储超级周期引爆芯片 道指新高特斯拉飙升"
+          },
+          {
+            "file": "2026-07-06-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-07-06-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-07-06-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-03",
+        "items": [
+          {
+            "file": "2026-07-03-NO-SESSION-market-holiday.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "NO SESSION market holiday"
+          },
+          {
+            "file": "2026-07-03-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-07-03-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-07-03-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          }
+        ]
+      },
+      {
+        "date": "2026-07-02",
+        "items": [
+          {
+            "file": "2026-07-02-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-07-02-en-soft-jobs-dow-record-tesla-paradox-chips-rotate.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en soft jobs dow record tesla paradox chips rotate"
+          },
+          {
+            "file": "2026-07-02-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-07-02-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-07-02-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-07-02-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-07-02-提词器-深度解读.md",
             "lang": "zh",
             "kind": "md",
             "title": "提词器 深度解读"
           },
           {
-            "file": "2026-06-10-通胀破4美伊冲突升级道指失守5万点.md",
+            "file": "2026-07-02-非农爆冷道指新高特斯拉交付创纪录却暴跌.md",
             "lang": "zh",
             "kind": "md",
-            "title": "通胀破4美伊冲突升级道指失守5万点"
+            "title": "非农爆冷道指新高特斯拉交付创纪录却暴跌"
           }
         ]
       },
       {
-        "date": "2026-06-08",
+        "date": "2026-07-01",
         "items": [
           {
-            "file": "2026-06-08-chip-rebound-meets-hawkish-fed-repricing.md",
-            "lang": "en",
+            "file": "2026-07-01-Meta云业务引爆通信芯片降温市场押注加息.md",
+            "lang": "zh",
             "kind": "md",
-            "title": "chip rebound meets hawkish fed repricing"
+            "title": "Meta云业务引爆通信芯片降温市场押注加息"
           },
           {
-            "file": "2026-06-08-提词器-深度解读.md",
+            "file": "2026-07-01-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-07-01-en-meta-cloud-pivot-lifts-comms-chips-cool-markets-price-a-hike.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en meta cloud pivot lifts comms chips cool markets price a hike"
+          },
+          {
+            "file": "2026-07-01-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-07-01-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-07-01-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-07-01-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-07-01-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-30",
+        "items": [
+          {
+            "file": "2026-06-30-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-06-30-en-chip-rally-caps-best-quarter-dow-record.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en chip rally caps best quarter dow record"
+          },
+          {
+            "file": "2026-06-30-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-06-30-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-06-30-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-30-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-30-提词器-深度解读.md",
             "lang": "zh",
             "kind": "md",
             "title": "提词器 深度解读"
           },
           {
-            "file": "2026-06-08-芯片反弹遭遇鹰派美联储重定价.md",
+            "file": "2026-06-30-芯片狂潮收官最强季度道指再创新高.md",
             "lang": "zh",
             "kind": "md",
-            "title": "芯片反弹遭遇鹰派美联储重定价"
+            "title": "芯片狂潮收官最强季度道指再创新高"
           }
         ]
       },
       {
-        "date": "2026-06-05",
+        "date": "2026-06-29",
         "items": [
           {
-            "file": "2026-06-05-AI交易瓦解-万亿市值蒸发.md",
-            "lang": "zh",
-            "kind": "md",
-            "title": "AI交易瓦解 万亿市值蒸发"
-          },
-          {
-            "file": "2026-06-05-ai-trade-unwind-trillion-dollar-wipeout.md",
+            "file": "2026-06-29-premarket.md",
             "lang": "en",
             "kind": "md",
-            "title": "ai trade unwind trillion dollar wipeout"
-          },
+            "title": "Pre-Market",
+            "session": "premarket"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-26",
+        "items": [
           {
-            "file": "2026-06-05-strong-jobs-complicates-fed-chips-under-pressure.md",
-            "lang": "en",
-            "kind": "md",
-            "title": "strong jobs complicates fed chips under pressure"
-          },
-          {
-            "file": "2026-06-05-强劲非农压制降息预期-芯片股持续承压.md",
+            "file": "2026-06-26-PCE破4AI退潮-纳指五连阴.md",
             "lang": "zh",
             "kind": "md",
-            "title": "强劲非农压制降息预期 芯片股持续承压"
+            "title": "PCE破4AI退潮 纳指五连阴"
           },
           {
-            "file": "2026-06-05-提词器-深度解读.md",
+            "file": "2026-06-26-en-hot-pce-ai-fatigue-nasdaq-fifth-drop.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en hot pce ai fatigue nasdaq fifth drop"
+          },
+          {
+            "file": "2026-06-26-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-26-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-26-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-19",
+        "items": [
+          {
+            "file": "2026-06-19-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-06-19-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-06-19-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-18",
+        "items": [
+          {
+            "file": "2026-06-18-en-relief-rally-chips-lead-oil-craters-iran-blockade-lifted.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en relief rally chips lead oil craters iran blockade lifted"
+          },
+          {
+            "file": "2026-06-18-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-06-18-反弹行情-芯片领涨油价崩盘-埃森哲暴跌.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "反弹行情 芯片领涨油价崩盘 埃森哲暴跌"
+          },
+          {
+            "file": "2026-06-18-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-18-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-18-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-17",
+        "items": [
+          {
+            "file": "2026-06-17-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-06-17-en-warsh-hawkish-hold-rattles-wall-street.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en warsh hawkish hold rattles wall street"
+          },
+          {
+            "file": "2026-06-17-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-06-17-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-06-17-premarket.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Pre-Market",
+            "session": "premarket"
+          },
+          {
+            "file": "2026-06-17-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-17-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-17-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          },
+          {
+            "file": "2026-06-17-沃什鹰派转向-美联储撤掉前瞻指引点阵图指向加息.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "沃什鹰派转向 美联储撤掉前瞻指引点阵图指向加息"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-16",
+        "items": [
+          {
+            "file": "2026-06-16-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-06-16-en-dow-record-rotation-spacex-cursor-pre-fomc.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en dow record rotation spacex cursor pre fomc"
+          },
+          {
+            "file": "2026-06-16-in-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "In-Market",
+            "session": "in-market"
+          },
+          {
+            "file": "2026-06-16-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
+            "file": "2026-06-16-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-16-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-16-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          },
+          {
+            "file": "2026-06-16-道指再创新高科技回调-SpaceX豪购Cursor.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "道指再创新高科技回调 SpaceX豪购Cursor"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-15",
+        "items": [
+          {
+            "file": "2026-06-15-en-peace-premium-stocks-surge-oil-craters.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en peace premium stocks surge oil craters"
+          },
+          {
+            "file": "2026-06-15-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-15-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-15-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
+          },
+          {
+            "file": "2026-06-15-美伊和平协议引爆风险偏好-油价崩盘.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "美伊和平协议引爆风险偏好 油价崩盘"
+          }
+        ]
+      },
+      {
+        "date": "2026-06-12",
+        "items": [
+          {
+            "file": "2026-06-12-SpaceX史诗级IPO与美伊和平协议.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "SpaceX史诗级IPO与美伊和平协议"
+          },
+          {
+            "file": "2026-06-12-en-spacex-historic-ipo-iran-peace-trade.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en spacex historic ipo iran peace trade"
+          },
+          {
+            "file": "2026-06-12-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-06-12-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-06-12-提词器-深度解读.md",
             "lang": "zh",
             "kind": "md",
             "title": "提词器 深度解读"
@@ -292,6 +1034,11 @@
       ]
     },
     "wisdom": [
+      {
+        "id": "MILLIONAIRE_PLAN",
+        "title": "MILLIONAIRE_PLAN",
+        "file": "MILLIONAIRE_PLAN.md"
+      },
       {
         "id": "investing-wisdom",
         "title": "Investing Wisdom",

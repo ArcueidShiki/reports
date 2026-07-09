@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日产品趋势报告 · 2026-06-14</title>
+<style>
+:root{
+  --ink:#1A1A2E; --ink2:#5A5A72; --line:#E6E6EF; --bg:#FBFBFE;
+  --violet:#5B5BD6; --teal:#0EA5A5; --amber:#F59E0B; --coral:#F43F5E; --card:#FFFFFF;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans CJK SC","Noto Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"PingFang SC","Microsoft YaHei",sans-serif;
+  line-height:1.72;font-size:16px;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:980px;margin:0 auto;padding:48px 26px 80px;}
+h1{font-size:34px;line-height:1.22;margin:.2em 0 .35em;letter-spacing:-.01em;}
+h2{font-size:25px;margin:2.2em 0 .7em;padding-top:.7em;border-top:2px solid var(--line);letter-spacing:-.01em;}
+h3{font-size:20px;margin:1.7em 0 .5em;color:var(--violet);}
+h2:first-of-type{border-top:none;padding-top:0;}
+p{margin:.7em 0;}
+a{color:var(--violet);text-decoration:none;border-bottom:1px solid rgba(91,91,214,.28);}
+a:hover{border-bottom-color:var(--violet);}
+strong{color:var(--ink);}
+blockquote{background:#F3F1FE;border-left:4px solid var(--violet);margin:1.2em 0;padding:.85em 1.1em;
+  border-radius:0 10px 10px 0;color:var(--ink2);font-size:14.5px;}
+table{border-collapse:collapse;width:100%;margin:1.1em 0;font-size:14.5px;background:var(--card);
+  border-radius:12px;overflow:hidden;box-shadow:0 1px 3px rgba(20,20,50,.06);}
+th,td{border:1px solid var(--line);padding:10px 13px;vertical-align:top;text-align:left;}
+th{background:#F1F0FB;font-weight:700;color:var(--ink);}
+tr:nth-child(even) td{background:#FAFAFE;}
+td:first-child{font-weight:600;color:var(--ink);white-space:nowrap;}
+img{max-width:100%;height:auto;display:block;margin:1.5em auto;border-radius:12px;
+  box-shadow:0 4px 20px rgba(20,20,50,.10);border:1px solid var(--line);}
+hr{border:none;border-top:1px solid var(--line);margin:2em 0;}
+code{background:#EFEEF8;padding:.12em .4em;border-radius:5px;font-size:.9em;}
+em{color:var(--ink2);}
+@media(max-width:640px){ .wrap{padding:28px 16px 56px} h1{font-size:27px} table{font-size:13px} th,td{padding:7px 9px} }
+</style>
+</head>
+<body><div class="wrap">
+<h1>每日产品趋势报告 · Daily Product Trend Report</h1>
+<p><strong>日期 Date: 2026-06-14（周日 Sunday）</strong><br />
+数据来源 Sources: Product Hunt · Hacker News · Google Trends · a16z · Amazon Movers &amp; Shakers · X · LinkedIn · 小红书（榜单经 hunted.space 直采 + 公开搜索摘要补充 via direct fetch + public search summaries）</p>
+<blockquote>
+<p>⚠️ 方法说明 Methodology note：本次运行 Product Hunt 榜单与票数已通过 hunted.space 成功直采（含逐产品票数/评论数）；producthunt.com、x.com、linkedin.com、xiaohongshu.com 仍为登录墙/客户端渲染，按任务规则未做绕过，相关口碑改用 WebSearch 公开摘要。本期产品均与 06-13 报告不重复（聚焦本周新上榜的"执行型 Agent"）。PH leaderboard + vote counts were fetched directly via hunted.space this run; social platforms remain login-walled and were covered via public search summaries. All products here are distinct from the 06-13 report.</p>
+</blockquote>
+<hr />
+<h2>① 当日概览 · Daily Overview</h2>
+<p><strong>中文</strong>：如果说上周的主线是"AI 从演示走向执行"，本周它更进一步——<strong>Agent 开始亲自动手干现实世界的活</strong>。Product Hunt 六月新榜被一批"会替你做事"的代理霸占：<strong>Bond</strong>（665 票）当你的 AI 幕僚长，把散落的待办变成"自己会完成的清单"；<strong>Asmi AI</strong>（461 票）直接拿起电话，替你打给牙医、银行、保险，过 IVR、等叫号、跟真人沟通；<strong>SellerClaw</strong>（518 票）派出一队 AI 代理替你运营整间电商店铺；连安全也自治化了——<strong>Astra</strong>（400 票）的 AI 红队 5 分钟内自动渗透你的系统。围绕这些代理，一条完整"代理栈"正在成形：<strong>Publora</strong>（597 票）给 Agent 装上社媒"双手"，<strong>Even Realities</strong> 的智能眼镜（404 票）让你随时盯着代理干活，而开源界的 <strong>OpenClaw</strong>（GitHub 史上最高 347K★）则掀起"自己拥有 Agent"的反订阅浪潮。a16z 同期的论点恰好对上：AI 时代赢家卖的是<strong>结果</strong>，把软件+数据+硬件+人力打包成"全栈胖创业"，并把网络安全自动化列为 2026 大命题。</p>
+<p><strong>English</strong>: If last week's through-line was "AI moving from demo to execution," this week goes one step further — <strong>agents start doing real-world work with their own hands.</strong> Product Hunt's fresh June board is dominated by代理 that <em>act for you</em>: <strong>Bond</strong> (665 votes) is your AI chief of staff, turning scattered tasks into "a to-do list that does itself"; <strong>Asmi AI</strong> (461) literally picks up the phone — calling your dentist, bank, insurer, navigating IVR, waiting on hold, talking to a human; <strong>SellerClaw</strong> (518) dispatches a team of AI agents to run your entire e-commerce store; even security goes autonomous — <strong>Astra's</strong> (400) AI red team pentests your systems in under 5 minutes. Around these agents, a full <strong>agent stack</strong> is forming: <strong>Publora</strong> (597) gives agents social-media <em>hands</em>; <strong>Even Realities</strong> smart glasses (404) let you supervise agents ambiently; and open-source <strong>OpenClaw</strong> (347K★, the most-starred repo in GitHub history) drives an "own your agent" anti-subscription wave. a16z's thesis lines up perfectly: in the AI era, winners ship <strong>outcomes</strong> — bundling software + data + hardware + human ops into "fat startups" — and they name automating cybersecurity a defining 2026 problem.</p>
+<p><strong>当日关键信号 Key signals</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>信号 Signal</th>
+<th>数据 Data</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>最热新上榜（生产力）Top new launch (productivity)</td>
+<td>Bond ~665 votes / 178 comments</td>
+</tr>
+<tr>
+<td>2</td>
+<td>电商自治 E-commerce autonomy</td>
+<td>SellerClaw ~518 votes（SaaS #1）/ 163 comments</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Agent 基础设施 Agent infra</td>
+<td>Publora ~597 votes（Dev Tools #1），MCP-native，10 平台</td>
+</tr>
+<tr>
+<td>4</td>
+<td>安全自治化 Autonomous security</td>
+<td>Astra：findings &lt; 5 min，训练于 10M+ 漏洞，~$9.8M 营收</td>
+</tr>
+<tr>
+<td>5</td>
+<td>开源反扑 Open-source revolt</td>
+<td>OpenClaw 347K★（史上最高，超越 React）</td>
+</tr>
+<tr>
+<td>6</td>
+<td>a16z 论点 a16z thesis</td>
+<td>"Fat startups ship outcomes"；democratize $200/hr 服务</td>
+</tr>
+<tr>
+<td>7</td>
+<td>HN 风向 HN mood</td>
+<td>安全移到舞台中央 security to center；常驻个人 Agent</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Google Trends 宏观</td>
+<td>NBA 季后赛登顶 ~193M；YouTube/Amazon 居 US 搜索前二</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="当日精选产品 Product Hunt 票数对比 Selected June launches by upvotes" src="assets/2026-06-14/ph-votes.png" /></p>
+<hr />
+<h2>② 产品深度分析 · Product Deep-Dives</h2>
+<h3>1. Bond — AI 幕僚长 AI Chief of Staff</h3>
+<p>🔗 https://www.bondapp.io/ · PH: https://www.producthunt.com/products/bond-12</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>B2B SaaS（按席位），瞄准 CEO/高管的高价值时间；以"省下状态会"做价值锚</td>
+<td>B2B SaaS (per-seat) anchored to expensive executive time; value prop = "kill status meetings"</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① 拟人助理"Donna"叙事，把工具变同事；② YC 背书 + $3M 种子；③ 连接全公司工具/数据形成上下文壁垒；④ 定位极清晰："会自己完成的待办清单"</td>
+<td>① "Donna" persona turns a tool into a colleague; ② YC + $3M seed; ③ context moat from connecting all company tools/data; ④ razor-clear positioning: "the to-do list that does itself"</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>会前简报、起草跟进与邮件、生成行动项、识别阻塞与风险、向团队派活；始终知道"下一步该做什么"</td>
+<td>Meeting prep, drafts follow-ups &amp; emails, creates action items, flags blockers/risks, delegates to teammates; always knows your next step</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>高管生产力 / AI 幕僚长（Executive productivity）</td>
+<td>Executive productivity / AI chief of staff</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>创始人、CEO、被会议与上下文淹没的高管</td>
+<td>Founders, CEOs, execs drowning in meetings &amp; context</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>命名"Bond"=与你紧密联结；助理人格"Donna"温度感；极简高管审美</td>
+<td>"Bond" = a tight tie to you; warm "Donna" persona; minimalist exec aesthetic</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>PH ~665 票 / 178 评论（6月生产力第一）；YC；$3M 种子（2025-12）；团队约 60 人</td>
+<td>~665 votes / 178 comments (June productivity #1); YC; $3M seed (Dec 2025); ~60 staff</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>PH 讨论："终于不用开状态会了"；对"拟人助理"接受度高</td>
+<td>PH: "finally no more status meetings"; strong reception of the persona framing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：把"高管时间"这一最贵的资源做成订阅——Bond 卖的不是任务管理，是"少开会、永远知道下一步"。<strong>Bond monetizes the most expensive resource in a company — exec attention — and sells calm, not a task list.</strong></p>
+<hr />
+<h3>2. Asmi AI — 会打电话的私人 AI The AI That Makes Real Phone Calls</h3>
+<p>🔗 https://www.producthunt.com/products/asmi-ai</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>消费订阅（自带专属号码与人格）；按"替你完成的现实事务"定价空间大</td>
+<td>Consumer subscription (dedicated number + persona); priced against real-world tasks completed</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① 把"语音 Agent"从演示做成可交付结果（真的把事办成）；② 每天主动来电、零 App 摩擦；③ "只在你明确指示时行动"建立信任；④ 触达线下世界=对手稀少</td>
+<td>① Turns voice-AI from demo into delivered outcomes (the task actually gets done); ② proactive morning call, zero-app friction; ③ "acts only on explicit instruction" builds trust; ④ reaches the offline world where few competitors operate</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>替你致电牙医/银行/保险/水电工等；过 IVR、长时间等待、与真人复杂对话；完成后用 iMessage/WhatsApp 回执</td>
+<td>Calls dentist/bank/insurer/plumber for you; navigates IVR, waits on hold, handles complex human conversations; reports back via iMessage/WhatsApp</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>消费级语音执行 Agent（real-world voice agent）</td>
+<td>Consumer real-world voice agent</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>拖延打电话的忙碌人群、社恐、行政事务繁多者</td>
+<td>Busy people who dread phone tasks, phone-anxious users, admin-heavy lives</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>拟人化到底：自有声音、人格、电话号——"你的助理"而非"你的克隆"</td>
+<td>Fully personified: its own voice, personality, number — "your assistant," not "a clone of you"</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>PH ~461 票 / 142 评论（评论率 ~31%，讨论极热）</td>
+<td>~461 votes / 142 comments (~31% comment ratio — unusually high engagement)</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>"帮我打了拖了三个月的专科医生电话"；用户称赞团队"在意事情有没有真办成，而不只是流程顺"</td>
+<td>"It called a specialist doctor I'd been putting off for 3 months"; users praise the team for caring whether the task <em>actually got done</em></td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：语音 Agent 的胜负手不在"说得像人"，而在"把事办成"。Asmi 把最反人性的杂务——打电话——变成了订阅制结果。<strong>Voice agents win on completion, not on sounding human. Asmi turns the most-dreaded chore into a subscription outcome.</strong></p>
+<hr />
+<h3>3. SellerClaw — 替你运营电商的 AI 代理团队 An AI Agent Team That Runs Your Store</h3>
+<p>🔗 https://www.producthunt.com/products/sellerclaw</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>B2B SaaS（面向电商卖家，按席位/用量）；以"省一整个运营团队"为价值锚</td>
+<td>B2B SaaS for e-commerce sellers (seat/usage); value anchor = "replace an ops team"</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① "Supervisor + 专员代理"编排模型，贴合真实电商分工；② 创始人 Artem 18 岁起卖亚马逊、Zonesmart 服务 1,000+ 卖家并退出，自带可信度；③ 跨渠道+多币种毛利逻辑解决真实痛点</td>
+<td>① "Supervisor + specialist agents" orchestration mirrors real store ops; ② founder Artem's credibility (Amazon at 18; Zonesmart served 1,000+ sellers, exited 2022); ③ multi-channel + multi-currency margin logic solves real pain</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>选品采购、店铺管理、广告投放、客服——多个专员代理由一个"主管代理"统一调度；跨 Shopify/eBay/Amazon；按各自币种核算成本与售价、统一换算保持毛利一致</td>
+<td>Sourcing, store management, ads, support — specialist agents coordinated by one Supervisor; across Shopify/eBay/Amazon; native-currency cost/price with conversion to keep margins consistent</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>自治电商运营（agentic commerce ops）</td>
+<td>Agentic e-commerce operations</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>中小电商卖家、跨境卖家、一人/小团队店主</td>
+<td>SMB &amp; cross-border sellers, solo/small-team store owners</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>"Claw"=爪子，抓取与执行的力量感；"一队替你干活的代理"叙事</td>
+<td>"Claw" connotes grab-and-execute; "a team that runs it for you" narrative</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>PH ~518 票 / 163 评论（SaaS 类目第一）</td>
+<td>~518 votes / 163 comments (SaaS category #1)</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>讨论聚焦"主管代理"模型与多币种毛利处理的实用性</td>
+<td>Discussion centers on the Supervisor model and the practicality of multi-currency margin handling</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：电商 SaaS 的下一形态不是仪表盘，而是"一队会自己干活的员工"。把人类从"看数据"挪到"下指令"。<strong>The next e-commerce SaaS isn't a dashboard — it's a staff of agents. Humans move from reading dashboards to giving orders.</strong></p>
+<hr />
+<h3>4. Astra Autonomous Pentest — 自治攻防安全 Autonomous Offensive Security</h3>
+<p>🔗 https://www.getastra.com/autonomous-pentesting · PH: https://www.producthunt.com/products/astra-security</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>PTaaS / 持续渗透订阅；卖"持续在线的红队"这一结果，而非一次性报告</td>
+<td>PTaaS / continuous-pentest subscription; sells "an always-on red team" as an outcome, not a one-off report</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① 踩中 2026"安全移到舞台中央"与 a16z"自动化网络安全"命题；② 双代理架构（结构化群 + 赏金猎人代理）兼顾覆盖与创造性；③ 8 年积累的数据壁垒（4,000+ 渗透、10M+ 漏洞）；④ 与人类渗透师互补而非取代，降低采购阻力</td>
+<td>① Rides the 2026 "security to center" + a16z "automate cybersecurity" theses; ② dual-agent design (structured swarm + bounty-hunter agent) balances coverage &amp; creativity; ③ 8-yr data moat (4,000+ pentests, 10M+ vulns); ④ complements human pentesters, lowering buying friction</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>AI 代理模拟真实攻击者：侦察、威胁建模、动态用例生成、漏洞链利用、验证；5 分钟出初步结果、每次部署持续运行</td>
+<td>AI agents emulate real attackers: recon, threat modeling, dynamic test-case generation, exploit chaining, validation; initial findings &lt; 5 min, continuous on every deploy</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>自治渗透测试 / 持续威胁暴露管理（CTEM）</td>
+<td>Autonomous pentesting / continuous threat-exposure management</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>工程与安全团队、需持续合规的 SaaS 公司</td>
+<td>Engineering &amp; security teams, compliance-driven SaaS companies</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>"Autonomous Pentest"功能即品牌；"80× 快于人工"做钩子；攻击者视角叙事</td>
+<td>Feature-as-brand naming; "80× faster than manual" hook; attacker's-eye narrative</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>PH ~400 票 / 55 评论；成立 2018；~$9.8M 营收；~$2.7M 融资（Emergent/Blume/Techstars 等），估值约 $29.4M；每月为客户发现 30,000+ 漏洞</td>
+<td>~400 votes / 55 comments; founded 2018; ~$9.8M revenue; ~$2.7M raised (Emergent/Blume/Techstars), ~$29.4M valuation; 30,000+ vulns/month for customers</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>安全圈讨论："自治覆盖广度可观，但深度判断仍需人"；认可&lt;5 分钟反馈速度</td>
+<td>Security community: "impressive autonomous coverage, but深度 judgment still needs humans"; praise for &lt;5-min feedback</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：当攻击者已在用 AI，防守自治就不是选项而是刚需。Astra 卖的是"持续在线的红队"。<strong>When attackers already use AI, autonomous defense is table stakes. Astra sells an always-on red team, not a report.</strong></p>
+<hr />
+<h3>5. Publora — 给 Agent 装上社媒之手 Social-Media Hands for Agents</h3>
+<p>🔗 https://publora.com/ · PH: https://www.producthunt.com/products/publora</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>Freemium + API/席位：免费 Starter → 付费 $2.99/账号/月（年付）；PH 码 PH20THANKU 首付 8 折</td>
+<td>Freemium + API/seat: free Starter → $2.99/account/mo (yearly); PH code PH20THANKU = 20% off first payment</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① 从"Google Docs 式排版器"升级为"代理时代发布 API"，卡位 agent-native 基建；② 原生 MCP（18 个工具）让 Claude/Cursor 直接发帖；③ 极低价 + 免费档快速获客；④ 一次接入十大平台</td>
+<td>① Pivoted from "Google-Docs-style scheduler" to "publishing API for the agent era," claiming agent-native infra; ② native MCP (18 tools) lets Claude/Cursor post directly; ③ ultra-low price + free tier for fast adoption; ④ one integration → 10 platforms</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>从代码或 AI 助手直接排期/发布到 LinkedIn、X、Instagram、Threads、TikTok、YouTube、Facebook、Bluesky、Mastodon、Telegram；MCP 提供完整互动闭环</td>
+<td>Schedule/publish from code or your AI assistant to LinkedIn, X, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon, Telegram; MCP provides a full engagement loop</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>社媒发布 API / Agent 原生基础设施</td>
+<td>Social publishing API / agent-native infrastructure</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>独立开发者、AI Agent 构建者、内容自动化团队、营销技术栈</td>
+<td>Indie devs, AI-agent builders, content-automation teams, martech stacks</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>开发者友好叙事："The Publishing API for the Agent Era"；定价透明、亲民</td>
+<td>Dev-friendly positioning: "The Publishing API for the Agent Era"; transparent, low pricing</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>PH ~597 票 / 98 评论（开发者工具 &amp; API 类目第一）；10 平台、18 个 MCP 工具</td>
+<td>~597 votes / 98 comments (Dev Tools &amp; API #1); 10 platforms, 18 MCP tools</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>开发者称赞"终于能让 Agent 自己发帖"；对低价与 MCP 原生支持反响积极</td>
+<td>Devs praise "finally my agent can post itself"; positive on low price &amp; native MCP</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：当人人都在造 Agent，卖"铲子"最稳——Publora 把"发帖"这个动作变成 Agent 可调用的能力。<strong>In a gold rush, sell shovels. Publora turns "posting" into a callable agent capability.</strong></p>
+<hr />
+<h3>6. Terminal Mode（Even Realities）— 盯着 Agent 干活的智能眼镜 Smart Glasses to Watch Your Agents</h3>
+<p>🔗 https://www.evenrealities.com/terminal · PH: https://www.producthunt.com/products/terminal-mode-by-even-realities</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>硬件销售（Even G2 眼镜 + R1 指环）——软件+硬件捆绑的"胖创业"样本</td>
+<td>Hardware sales (Even G2 glasses + R1 ring) — a "fat startup" software+hardware bundle</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① 抓住"长时自治代理需要环境化监督"的新需求；② 无摄像头设计规避隐私顾虑；③ 视线内 HUD + 语音指令 + 指环点按，交互极轻；④ 把"等代理跑完"变成可离开工位的自由</td>
+<td>① Captures the new need to <em>supervise</em> long-running agents ambiently; ② camera-free design sidesteps privacy worries; ③ in-view HUD + voice + ring-tap = ultra-light interaction; ④ turns "waiting on an agent" into freedom to walk away</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>在视线内显示各编码代理的运行/阻塞/待输入状态；语音下短指令；点按指环批准关键步骤；跨多会话监看，无需切屏</td>
+<td>Shows which coding agent is running/blocked/waiting in your line of sight; short voice instructions; tap-to-approve key steps via the ring; multi-session supervision with no screen-switching</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>AI 代理的环境化监督层 / 可穿戴开发工具</td>
+<td>Ambient supervision layer for AI agents / wearable dev tool</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>同时跑多个编码代理的开发者、重度 AI 工作流用户</td>
+<td>Developers running multiple coding agents, heavy AI-workflow users</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>"Terminal Mode"开发者隐喻；极简无摄像头眼镜，主打"信息而非拍摄"</td>
+<td>"Terminal Mode" dev metaphor; minimalist camera-free glasses — "information, not capture"</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>PH ~404 票 / 88 评论；2026 年 4 月底上线；配套 R1 指环</td>
+<td>~404 votes / 88 comments; launched late April 2026; paired R1 companion ring</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>开发者："多代理并行时终于不用一直盯屏"；也有人质疑眼镜佩戴门槛</td>
+<td>Devs: "finally I don't have to babysit screens across parallel agents"; some question the wear barrier</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：代理越自治、越长时运行，人类越需要一个"环境化"的监督界面。眼镜不是噱头，是 Agent 时代的新仪表盘。<strong>The more autonomous and long-running agents get, the more humans need an <em>ambient</em> place to watch them. The glasses aren't a gimmick — they're the agent era's dashboard.</strong></p>
+<hr />
+<h3>7. OpenClaw — 自己拥有的开源 Agent The Open-Source Agent You Own（趋势 Trend）</h3>
+<p>🔗 https://openclaw-ai.net/en · 解析 explainer: https://www.digitalocean.com/resources/articles/what-is-openclaw</p>
+<table>
+<thead>
+<tr>
+<th>维度 Dimension</th>
+<th>中文</th>
+<th>English</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>商业模式 Business model</td>
+<td>开源、无订阅；商业化在托管/部署层（如 OneClaw 等）形成生态</td>
+<td>Open-source, no subscription; monetization lives in the hosting/deployment layer (e.g. OneClaw-style services)</td>
+</tr>
+<tr>
+<td>成功因素 Key success factors</td>
+<td>① "自己拥有 Agent"对冲 SaaS 锁定与隐私焦虑；② 本地运行+长期记忆+自写技能，能力随用随长；③ 名人创始人（PSPDFKit 的 Peter Steinberger）带社区势能；④ 接 WhatsApp/Discord/本地文件，落到日常</td>
+<td>① "Own your agent" hedges SaaS lock-in &amp; privacy fears; ② local + long-term memory + self-authored skills that grow with use; ③ celebrity founder (Peter Steinberger of PSPDFKit) brings community momentum; ④ hooks into WhatsApp/Discord/local files for daily use</td>
+</tr>
+<tr>
+<td>核心功能 Core features</td>
+<td>本地网关连接模型与你的工具/文件；跨会话记忆偏好；可自主写代码生成新技能；7×24 主动执行任务</td>
+<td>Local gateway connects models to your tools/files; cross-session memory; autonomously writes code to create new skills; proactive 24/7 task execution</td>
+</tr>
+<tr>
+<td>细分市场 Niche</td>
+<td>开源自托管个人 Agent（own-your-agent）</td>
+<td>Open-source self-hosted personal agent</td>
+</tr>
+<tr>
+<td>目标用户 Target audience</td>
+<td>开发者、隐私敏感者、想摆脱订阅与厂商锁定的高级用户</td>
+<td>Developers, privacy-conscious users, power users escaping subscriptions &amp; vendor lock-in</td>
+</tr>
+<tr>
+<td>设计与品牌 Design &amp; brand</td>
+<td>"Open"=透明可控；社区驱动叙事；反"黑箱 SaaS"的旗帜</td>
+<td>"Open" = transparent &amp; controllable; community-driven; a flag against black-box SaaS</td>
+</tr>
+<tr>
+<td>产品数据 Product data</td>
+<td>GitHub 347,000+ ★（2026-04，史上最高，超越 React）；72 小时破 6 万、首周破 10 万、3 月初破 25 万</td>
+<td>347,000+ GitHub stars (Apr 2026, most-starred repo in history, passed React); 60K in 72h, 100K in week 1, 250K by early March</td>
+</tr>
+<tr>
+<td>代表评价 Reviews</td>
+<td>社区："私有、可扩展、不被任何一家 UI 绑死"；亦有人提醒自托管的安全/维护成本</td>
+<td>Community: "private, extensible, not locked into one company's UI"; others flag self-hosting security/maintenance cost</td>
+</tr>
+</tbody>
+</table>
+<p><strong>点评 Take</strong>：商业 Agent 越强，"自己拥有一个"的渴望就越大。OpenClaw 是 Agent 时代的"反订阅宣言"，也是分发即社区的最佳样本。<strong>The stronger commercial agents get, the more people want to own one. OpenClaw is the agent era's anti-subscription manifesto — and a masterclass in community-as-distribution.</strong></p>
+<p><img alt="OpenClaw GitHub 增星轨迹 OpenClaw star growth" src="assets/2026-06-14/openclaw-growth.png" /></p>
+<hr />
+<h2>③ 横向对比 · Cross-Product Comparison</h2>
+<table>
+<thead>
+<tr>
+<th>产品 Product</th>
+<th>类型 Type</th>
+<th>商业模式 Model</th>
+<th>目标用户 Audience</th>
+<th>关键数据 Key data</th>
+<th>一句话定位 One-liner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://www.bondapp.io/">Bond</a></td>
+<td>AI 幕僚长 Chief of staff</td>
+<td>B2B 席位 Per-seat</td>
+<td>创始人/高管 Founders/execs</td>
+<td>~665 votes；YC；$3M seed</td>
+<td>会自己完成的待办 A to-do list that does itself</td>
+</tr>
+<tr>
+<td><a href="https://www.producthunt.com/products/asmi-ai">Asmi AI</a></td>
+<td>语音执行 Voice agent</td>
+<td>消费订阅 Consumer sub</td>
+<td>忙碌/社恐人群 Busy &amp; phone-shy</td>
+<td>~461 votes / 142 comments</td>
+<td>替你打电话办事 Makes your calls, gets it done</td>
+</tr>
+<tr>
+<td><a href="https://www.producthunt.com/products/sellerclaw">SellerClaw</a></td>
+<td>电商代理 Commerce agents</td>
+<td>B2B SaaS</td>
+<td>电商卖家 Sellers</td>
+<td>~518 votes（SaaS #1）</td>
+<td>一队代理替你开店 A staff of agents runs your store</td>
+</tr>
+<tr>
+<td><a href="https://www.getastra.com/autonomous-pentesting">Astra</a></td>
+<td>安全自治 Security</td>
+<td>PTaaS 订阅</td>
+<td>工程/安全团队 Eng/Sec</td>
+<td>~400 votes；~$9.8M rev；&lt;5 min findings</td>
+<td>持续在线的 AI 红队 An always-on AI red team</td>
+</tr>
+<tr>
+<td><a href="https://publora.com/">Publora</a></td>
+<td>Agent 基建 Agent infra</td>
+<td>Freemium $2.99/acct</td>
+<td>开发者/Agent 构建者 Devs</td>
+<td>~597 votes（Dev Tools #1）；10 平台/18 MCP</td>
+<td>给 Agent 装上社媒手 Social hands for agents</td>
+</tr>
+<tr>
+<td><a href="https://www.evenrealities.com/terminal">Even Realities</a></td>
+<td>硬件监督 HW supervision</td>
+<td>硬件 Hardware</td>
+<td>多代理开发者 Multi-agent devs</td>
+<td>~404 votes；G2 眼镜 + R1 指环</td>
+<td>盯着代理干活的眼镜 Glasses to watch your agents</td>
+</tr>
+<tr>
+<td><a href="https://openclaw-ai.net/en">OpenClaw</a></td>
+<td>开源 Agent OSS agent</td>
+<td>开源 Open-source</td>
+<td>开发者/隐私党 Devs/privacy</td>
+<td>347K★（GitHub #1）</td>
+<td>自己拥有的 Agent The agent you own</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>④ 关键洞察 · Key Insights &amp; Common Patterns</h2>
+<p><strong>1. 从"回答"到"动手" From answering to acting.</strong> 本周每个赢家都跨过了同一道门槛：不再是聊天给建议，而是真的去做事——Bond 替你处理待办、Asmi 替你打电话、SellerClaw 替你运营、Astra 替你渗透。卖的是<strong>完成度</strong>，不是对话。Every winner crossed the same line: from chatting to <em>doing</em> — completion is the product, not conversation.</p>
+<p><img alt="讨论热度：票数 × 评论 Engagement map" src="assets/2026-06-14/engagement-map.png" /></p>
+<p><strong>2. 卖结果=卖信任，信任靠"可控" Selling outcomes means selling trust — and trust comes from control.</strong> 让 Agent 替你行动，最大障碍是信任。本周的解法高度一致：Asmi"只在你明确指示时行动"、Astra"与人类渗透师互补"、Even Realities"点按批准关键步骤"、OpenClaw"本地+开源可审计"。Agents that act must earn trust; the shared answer is <em>human-in-the-loop control</em> (explicit instruction, tap-to-approve, complement-not-replace, local &amp; auditable).</p>
+<p><strong>3. 代理栈正在分层 The agent stack is layering up.</strong> 应用层（Bond/Asmi/SellerClaw）之下，基建层（Publora 给手）、硬件层（Even Realities 给眼睛）、所有权层（OpenClaw 给自主权）同时成形。卖镐铲（Publora/MCP）可能比淘金更稳。Beneath the app layer, an infra layer (Publora = hands), a hardware layer (Even Realities = eyes), and an ownership layer (OpenClaw = autonomy) are forming together. Selling shovels (MCP/infra) may beat mining.</p>
+<p><strong>4. 安全是 Agent 时代的必修课 Security is the agent era's mandatory course.</strong> HN 把安全推到中央、a16z 点名"自动化网络安全"、Astra 用自治红队接住需求——当 AI 既是矛也是盾，攻防都在自治化。HN moved security to center, a16z named "automate cybersecurity," and Astra's autonomous red team catches the demand — when AI is both sword and shield, offense and defense both go autonomous.</p>
+<p><strong>5. 开源是最强分发 Open source is the strongest distribution.</strong> OpenClaw 用 347K★（超越 React）证明：在 Agent 这种"越用越懂你"的产品上，社区信任与可扩展性能击穿商业壁垒。"拥有感"本身就是卖点。OpenClaw's 347K★ (past React) proves community trust + extensibility can punch through commercial moats; "ownership" is itself the value prop.</p>
+<p><strong>6. 人格化降低采用门槛 Personas lower the adoption barrier.</strong> Bond 的"Donna"、Asmi 的专属声音与号码——给 Agent 一个名字和性格，用户更愿意把现实事务交给它。Naming and personifying agents (Bond's "Donna," Asmi's own voice &amp; number) makes users comfortable handing over real-world tasks.</p>
+<p><strong>7. 与上周一脉相承 Continuity with last week.</strong> 06-13 的主线是"AI 从演示走向执行（卖结果）"，本周是它的下一幕——<strong>执行延伸到现实世界与完整代理栈</strong>。同一条曲线，斜率更陡。Last week was "demo → execution (sell outcomes)"; this week is the next act — execution extends into the real world and a full agent stack. Same curve, steeper slope.</p>
+<hr />
+<h2>⑤ 来源与方法 · Sources &amp; Method</h2>
+<ul>
+<li><strong>Product Hunt 榜单/票数</strong>：hunted.space/top-products/latest（本次直采成功，含逐产品票数/评论数）；producthunt.com 周/日榜 weekly/2026/24、daily/2026/6/13</li>
+<li><strong>产品详情 Product pages</strong>：bondapp.io、producthunt.com/products/asmi-ai、producthunt.com/products/sellerclaw、getastra.com、publora.com、evenrealities.com/terminal、openclaw-ai.net</li>
+<li><strong>公司/融资 Company &amp; funding</strong>：Y Combinator（Bond、Asmi 生态）、Crunchbase/Tracxn/PitchBook（Astra、Bond）、inc42 / getlatka（Astra 营收）</li>
+<li><strong>a16z</strong>：a16z.com/category/ai/；speedrun.substack.com（14 Big Ideas 2026）；blog.mean.ceo a16z 6月汇总</li>
+<li><strong>Hacker News</strong>：blog.mean.ceo/hacker-news-trends-june-2026/；news.ycombinator.com/front（当日首页客户端渲染，采用摘要 summary used）</li>
+<li><strong>Google Trends</strong>：backlinko.com/google-searches、demandsage（月度/当日汇总 summaries）</li>
+<li><strong>电商 E-commerce</strong>：amazon.com/gp/movers-and-shakers、amzprep.com（夏季趋势 context：Stanley 保温杯、防晒、户外、防过敏类）</li>
+<li><strong>社媒 Social</strong>：X / LinkedIn / 小红书均登录墙，采用公开摘要 public summaries</li>
+<li><strong>原始数据 Raw data</strong>：<code>raw/2026-06-14/</code>（producthunt-leaderboard.txt、product-deepdives.txt、sources.json）</li>
+</ul>
+<p><em>报告由自动化任务生成 Generated by scheduled task · 2026-06-14</em></p>
+</div></body></html>

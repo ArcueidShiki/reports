@@ -1,8 +1,11 @@
 import { motion } from 'framer-motion';
 import { useMemo, useState } from 'react';
 
+import ContentFrame from '../components/ContentFrame';
 import DateSelector from '../components/DateSelector';
+import MarkdownView from '../components/MarkdownView';
 import PageHeader from '../components/PageHeader';
+import Reveal from '../components/Reveal';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
 import { usePrefersReducedMotion } from '../hooks/usePrefersReducedMotion';
 import { riseVariants, staggerVariants } from '../lib/motion';
@@ -66,8 +69,17 @@ export default function ProductsPage() {
   const analysisUrl = activeEntry?.analysisJson
     ? contentUrl('products', activeEntry.date, activeEntry.analysisJson)
     : null;
+  const reportMdUrl = activeEntry?.reportMd
+    ? contentUrl('products', activeEntry.date, activeEntry.reportMd)
+    : null;
+  const reportHtmlUrl = activeEntry?.reportHtml
+    ? contentUrl('products', activeEntry.date, activeEntry.reportHtml)
+    : null;
+  const hasContent =
+    analysisUrl !== null || reportMdUrl !== null || reportHtmlUrl !== null;
 
   const analysis = useFetchText(analysisUrl);
+  const reportMd = useFetchText(reportMdUrl);
   const parsed = useMemo(
     () =>
       analysis.text === null ? null : parseProductsAnalysis(analysis.text),
@@ -85,7 +97,7 @@ export default function ProductsPage() {
       {loading ? <LoadingNote /> : null}
       {error ? <ErrorNote detail={error} /> : null}
       {manifest && entries.length === 0 ? <EmptyNote /> : null}
-      {activeEntry && activeEntry.analysisJson === null ? <EmptyNote /> : null}
+      {activeEntry && !hasContent ? <EmptyNote /> : null}
 
       {activeDate ? (
         <DateSelector
@@ -95,25 +107,51 @@ export default function ProductsPage() {
         />
       ) : null}
 
+      {reportMdUrl !== null ? (
+        <section className="products-report content-section">
+          <h2>{t('products.trendReport')}</h2>
+          {reportMd.loading ? <LoadingNote /> : null}
+          {reportMd.error ? <ErrorNote detail={reportMd.error} /> : null}
+          {reportMd.text !== null && activeEntry ? (
+            <Reveal>
+              <MarkdownView
+                markdown={reportMd.text}
+                baseUrl={contentUrl('products', activeEntry.date)}
+              />
+            </Reveal>
+          ) : null}
+        </section>
+      ) : null}
+
+      {reportHtmlUrl !== null ? (
+        <section className="products-report-card content-section">
+          <h2>{t('products.reportCard')}</h2>
+          <ContentFrame src={reportHtmlUrl} title={t('products.reportCard')} />
+        </section>
+      ) : null}
+
       {analysis.loading ? <LoadingNote /> : null}
       {analysis.error ? <ErrorNote detail={analysis.error} /> : null}
       {parsed && !parsed.ok ? <ErrorNote detail={parsed.error} /> : null}
 
       {parsed?.ok ? (
-        <motion.section
-          className="product-grid"
-          variants={staggerVariants(reducedMotion)}
-          initial="hidden"
-          animate="visible"
-        >
-          {parsed.value.products.map((product) => (
-            <ProductCard
-              key={product.name}
-              product={product}
-              reducedMotion={reducedMotion}
-            />
-          ))}
-        </motion.section>
+        <section className="products-analysis content-section">
+          <h2>{t('products.analysisCards')}</h2>
+          <motion.div
+            className="product-grid"
+            variants={staggerVariants(reducedMotion)}
+            initial="hidden"
+            animate="visible"
+          >
+            {parsed.value.products.map((product) => (
+              <ProductCard
+                key={product.name}
+                product={product}
+                reducedMotion={reducedMotion}
+              />
+            ))}
+          </motion.div>
+        </section>
       ) : null}
     </main>
   );

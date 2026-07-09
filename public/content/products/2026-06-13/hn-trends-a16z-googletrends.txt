@@ -1,0 +1,55 @@
+HACKER NEWS / A16Z / GOOGLE TRENDS — raw findings (via WebSearch, 2026-06-13)
+==============================================================================
+
+HACKER NEWS (front page list NOT directly retrievable — noted as skipped; monthly digest via aggregators):
+- June 2026 mood: "tech crowd remains obsessed with AI, mood has matured, hardened, become more commercial."
+- Hiring (Ask HN: Who is hiring? June 2026, item id=48357725): real demand for AI engineers, coding agents,
+  LLM product work, secure dev tools, hybrid builders.
+- Show HN historical archive: bestofshowhn.com; weekly top: daemonology.net/hn-weekly-show/
+- Source: blog.mean.ceo/hacker-news-trends-june-2026/
+
+A16Z — June 2026 views:
+- Core thesis: "In the AI era, FAT STARTUPS win — they ship outcomes, not features, bundling software,
+  data, hardware, and human ops into one integrated product."
+- "Software is no longer enough as a standalone category; capital wants software attached to hard
+  consequences, real infrastructure, regulated systems, or powerful network effects."
+- Opportunity areas: AI democratizing $200/hr professional services (travel planning, personal assistance,
+  matchmaking, therapy, tutoring) at scale; AI startups selling to other AI startups (the new Stripe/Ramp/
+  Mercury wedge — embed at formation).
+- Frame shift: model capabilities → SYSTEM capabilities; single-point innovation → redefining infrastructure,
+  workflows, interaction.
+- Sources: a16z.com/category/ai/, blog.mean.ceo/a16z-news-june-2026/, speedrun.substack.com 14 Big Ideas 2026
+
+GOOGLE TRENDS (daily list NOT directly retrievable — noted as skipped; June 2026 macro via SEO trackers):
+- Trending: NBA tops trending searches (playoffs), passing cricket/IPL period peak; IPL biggest global story of the season window.
+- Public health: hantavirus broke into global top 25.
+- Evergreen US: YouTube 104.2M searches, Amazon 80.25M, Facebook, Gmail, Wordle.
+- 2026 search behavior forces: live sports, everyday utility, platform-driven discovery.
+- Sources: similarweb.com top-keywords, backlinko.com/google-searches, demandsage.com
+
+X / TWITTER (login-walled; public summaries):
+- AI shifting from flashy demos → device control, lower-cost voice tools, search visibility, support
+  automation, workflow control. Alexa deeper into cars/TVs/appliances/health; DeepMind + Boston Dynamics
+  pushing industrial robotics.
+- Viral launch view counts: MaveHealth 2.58M, Composio 2.03M, Lica 1.44M views.
+- Platform: Grok iOS added "Extend"/"Upscale" video editing + voice-message image gen; X added
+  "Certified Banger" badge for viral posts.
+- Operators' consensus: voice agents, booking flows, semi-autonomous support cutting repetitive work for
+  clinics, agencies, restaurants, service businesses.
+- Sources: blog.mean.ceo/ai-product-launches-news-june-2026/, socialbee.com twitter-updates
+
+LINKEDIN (login-walled; public post): Fundraisly PH launch buzz — organic founder/operator shares.
+
+XIAOHONGSHU (login-walled; 2026 ecosystem reports):
+- 种草主因: 61.33% "详细的产品介绍和使用体验"; 48.44% "精美的图片或视频展示" → 真实+深度内容为王.
+- 种草+买手双重身份创作者数量 2.1× YoY，收入 3×.
+- 营销从"爆款破圈"→人群/场景/兴趣极致精细化; 旅行用户 >80% 出行前先查小红书.
+- Sources: woshipm.com/share/6360769.html, itopmarketing.com/info22232, m.traveldaily.cn/article/189197
+
+E-COMMERCE:
+- Amazon: AirPods Pro 3, Apple Watch Series 11 dominate electronics; surge: outdoor gear, allergy products,
+  sunscreen; Toys M&S 24h gainers: dumpling squishy toys, LED drawing boards, graduation decor, air-dry clay.
+- Etsy 2026: away from cold minimalism → warmth, craftsmanship, color, meaning.
+- TikTok-viral: seal plush 25M+ sales, cowhide sandals 700M+/mo units, stylus pens 22M+/mo, K-beauty sets,
+  fragrance reviews; UGC-friendly products outperform ad-pushed ones.
+- Sources: amzprep.com, channelsight.com, outfy.com/blog/etsy-trends, printify.com tiktok-trending-products

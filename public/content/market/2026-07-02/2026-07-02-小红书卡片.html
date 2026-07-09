@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=750, initial-scale=1">
+<title>美股日报 2026-07-02</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:750px; height:1334px; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background:#0d1117;
+    color:#ffffff;
+    -webkit-font-smoothing:antialiased;
+  }
+  .card {
+    width:750px; height:1334px;
+    background:linear-gradient(160deg,#0d1117 0%,#0f1626 55%,#131c2e 100%);
+    display:flex; flex-direction:column;
+    overflow:hidden;
+  }
+
+  /* 1. Header */
+  .header {
+    height:80px; flex:0 0 80px;
+    background:linear-gradient(90deg,#16223d 0%,#1d3461 100%);
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 32px;
+    border-bottom:1px solid #24406e;
+  }
+  .header .brand { font-size:30px; font-weight:800; letter-spacing:1px; color:#ffffff; }
+  .header .brand .date { font-size:20px; font-weight:500; color:#94a3b8; margin-left:14px; letter-spacing:0; }
+  .header .wm { font-size:15px; color:#94a3b8; font-weight:500; }
+
+  /* 2. Indices grid */
+  .indices {
+    height:300px; flex:0 0 300px;
+    display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(2,1fr);
+    gap:12px; padding:18px 24px;
+  }
+  .idx {
+    background:#1a2234; border-radius:14px;
+    border:1px solid #1d3461;
+    padding:16px 18px;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .idx .name { font-size:18px; color:#94a3b8; font-weight:600; margin-bottom:8px; }
+  .idx .price { font-size:34px; font-weight:800; color:#ffffff; line-height:1.05; letter-spacing:0.5px; }
+  .idx .chg { font-size:17px; font-weight:700; margin-top:8px; }
+  .up { color:#00b975; }
+  .down { color:#e64b3b; }
+
+  /* 3. Divider */
+  .divider { height:1px; background:#1d3461; margin:0 24px; }
+
+  /* 4. Focus */
+  .focus {
+    height:120px; flex:0 0 120px;
+    padding:20px 30px;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .focus .label { font-size:20px; font-weight:800; color:#00b975; margin-bottom:10px; }
+  .focus .head { font-size:29px; font-weight:800; color:#ffffff; line-height:1.28; }
+  .focus .head .rec { color:#00b975; }
+
+  /* 5. Body */
+  .bodywrap { flex:1 1 auto; position:relative; overflow:hidden; }
+  .body {
+    padding:22px 30px 40px 30px;
+    font-size:32px; line-height:28px;
+    line-height:1.62;
+    color:#e8edf5;
+  }
+  .body p { margin-bottom:14px; }
+  .body b { color:#ffffff; }
+  .body .g { color:#00b975; font-weight:700; }
+  .body .r { color:#e64b3b; font-weight:700; }
+  .fade {
+    position:absolute; left:0; right:0; bottom:0; height:90px;
+    background:linear-gradient(to bottom, rgba(15,22,38,0) 0%, #111a2b 85%);
+  }
+
+  /* 6. Tags */
+  .tags {
+    height:80px; flex:0 0 80px;
+    display:flex; align-items:center; flex-wrap:wrap; gap:10px 18px;
+    padding:0 30px;
+    border-top:1px solid #1d3461;
+  }
+  .tags span { font-size:19px; color:#00b975; font-weight:600; }
+
+  /* 7. Footer */
+  .footer {
+    height:80px; flex:0 0 80px;
+    background:#0b1220;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0 32px;
+    border-top:1px solid #1d3461;
+  }
+  .footer .src { font-size:15px; color:#6b7a90; }
+  .footer .wm { font-size:14px; color:#4d5a70; }
+</style>
+</head>
+<body>
+  <div class="card">
+
+    <!-- Header -->
+    <div class="header">
+      <div class="brand">美股日报<span class="date">2026-07-02</span></div>
+      <div class="wm">Stay in the Market</div>
+    </div>
+
+    <!-- Indices -->
+    <div class="indices">
+      <div class="idx">
+        <div class="name">标普500</div>
+        <div class="price">7,477</div>
+        <div class="chg down">▼ −6　−0.08%</div>
+      </div>
+      <div class="idx">
+        <div class="name">纳斯达克</div>
+        <div class="price">25,880</div>
+        <div class="chg down">▼ −160　−0.61%</div>
+      </div>
+      <div class="idx">
+        <div class="name">纳指100</div>
+        <div class="price">29,760</div>
+        <div class="chg down">▼ −285　−0.95%</div>
+      </div>
+      <div class="idx">
+        <div class="name">道琼斯</div>
+        <div class="price">52,900</div>
+        <div class="chg up">▲ +595　+1.14%</div>
+      </div>
+      <div class="idx">
+        <div class="name">VIX 恐慌</div>
+        <div class="price">17.0</div>
+        <div class="chg up">▲ +0.4　+2.5%</div>
+      </div>
+      <div class="idx">
+        <div class="name">罗素2000</div>
+        <div class="price">2,957</div>
+        <div class="chg down">▼ −23　−0.77%</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Focus -->
+    <div class="focus">
+      <div class="label">📌 今日焦点</div>
+      <div class="head">非农仅5.7万腰斩预期，<span class="rec">道指反创历史新高 52,900</span></div>
+    </div>
+
+    <!-- Body -->
+    <div class="bodywrap">
+      <div class="body">
+        <p>今天美股两个"反常识"👇</p>
+        <p>① 非农只增 <b>5.7万</b>、腰斩预期，道指却<span class="g">创历史新高</span>——现在的美联储想<b>加息</b>，数据越烂加息越没戏，市场越涨，"坏消息=好消息"📈</p>
+        <p>② 特斯拉Q2交付 <b>48万辆</b>、暴超预期+25%，股价却<span class="r">暴跌7%</span>💔——生产45万却交付48万，是<b>清库存</b>不是真需求，毛利率要等7月22日。</p>
+        <p>失业率降到4.2%？其实是一堆人<b>退出劳动力市场</b>造出的幻觉🎭</p>
+        <p>📌 <b>永远别看标题，要看标题之下。</b>道指新高只靠"价值这条腿"，芯片和特斯拉全在跌——你的账户是红是绿，全看你拿的是啥。</p>
+      </div>
+      <div class="fade"></div>
+    </div>
+
+    <!-- Tags -->
+    <div class="tags">
+      <span>#美股</span><span>#投资理财</span><span>#财经</span><span>#散户必看</span><span>#特斯拉</span><span>#非农就业</span><span>#美联储</span>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <div class="src">数据来源：市场公开信息 · 非投资建议</div>
+      <div class="wm">moomoo 风格设计</div>
+    </div>
+
+  </div>
+</body>
+</html>

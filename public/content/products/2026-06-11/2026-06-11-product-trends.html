@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日产品趋势报告 / Daily Product Trend Report · 2026-06-11</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.js" integrity="sha384-dug+JxfBvklEQdJ4AYuBBAIScUz0bVN73xpy273gcAwHjb3qI0fXmuYNaNfdyYJG" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<style>
+  :root{--bg:#0f1117;--card:#181b24;--ink:#e8eaed;--muted:#9aa0aa;--accent:#ff6154;--accent2:#5b8def;--line:#2a2e3a;--green:#3ecf8e;}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,"Segoe UI","PingFang SC","Microsoft YaHei",Roboto,sans-serif;line-height:1.65}
+  .wrap{max-width:1080px;margin:0 auto;padding:32px 20px 80px}
+  header{border-bottom:2px solid var(--accent);padding-bottom:20px;margin-bottom:28px}
+  h1{font-size:30px;margin:0 0 6px}
+  .sub{color:var(--muted);font-size:14px}
+  h2{font-size:22px;margin:40px 0 14px;padding-left:12px;border-left:4px solid var(--accent)}
+  h3{font-size:18px;margin:0 0 4px}
+  .lead{color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin:14px 0}
+  .lead .en{color:var(--muted);font-size:14px;margin-top:10px}
+  .picks{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}
+  .pick{background:#20242f;border:1px solid var(--line);border-radius:20px;padding:6px 14px;font-size:13px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin:18px 0}
+  .concept{background:linear-gradient(180deg,#1b1f2b 0%,#181b24 100%);border:1px solid #34405c}
+  .phead{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+  .phead img{width:44px;height:44px;border-radius:10px;background:#fff;object-fit:contain;flex:none}
+  .badge{display:inline-block;font-size:11px;background:var(--accent);color:#fff;border-radius:6px;padding:2px 8px;margin-left:8px;vertical-align:middle}
+  .badge.blue{background:var(--accent2)}
+  .badge.green{background:var(--green);color:#06281b}
+  a{color:var(--accent2);text-decoration:none}
+  a:hover{text-decoration:underline}
+  p.zh{margin:10px 0 4px}
+  p.en{margin:4px 0 10px;color:var(--muted);font-size:14px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:13.5px}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+  th{background:#20242f;color:var(--ink);font-weight:600;width:22%}
+  .matrix th{width:auto}
+  .matrix td:first-child{font-weight:600;color:var(--accent)}
+  .chartbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}
+  ol{padding-left:20px}
+  ol li{margin:10px 0}
+  .principle{background:#181b24;border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin:10px 0}
+  .principle b{color:var(--green)}
+  .src{font-size:12.5px;color:var(--muted)}
+  .src a{word-break:break-all}
+  footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;text-align:center}
+  .note{font-size:12.5px;color:var(--muted);background:#1c1f29;border:1px dashed var(--line);border-radius:10px;padding:12px 14px;margin:10px 0}
+  .ctag{display:inline-block;font-size:11px;background:#34405c;color:#cdd6ec;border-radius:6px;padding:2px 8px;margin:0 4px 4px 0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <h1>每日产品趋势报告 / Daily Product Trend Report</h1>
+  <div class="sub">2026-06-11 · 中英文双语 Bilingual · 来源 Sources: Product Hunt · Hacker News · a16z · Crunchbase · Amazon · Google Trends · 小红书 · TikTok Shop</div>
+</header>
+
+<div class="note">
+说明 / Note: Product Hunt 2026-06-11 日榜在采集时尚未生成,本报告基于<b>最新已生成的 06-09 / 06-10 日榜</b>。Amazon 实时榜、Google Trends "Trending Now"、小红书、X、LinkedIn 多为登录态/客户端渲染,已改用公开摘要/官方博客并标注。<b>厂商自述数据(融资、降本倍数、浏览量)未经独立核实,文中以"据称/claimed"标注。</b><br>
+PH's 06-11 board had not populated at gather time; this report builds on the latest available <b>06-09 / 06-10</b> boards. Amazon live BSR, Google Trends, Xiaohongshu, X, LinkedIn are login-gated/client-rendered — captured via public summaries/official blogs and flagged. <b>Vendor-stated figures are not independently verified and are labeled "claimed/reported."</b>
+</div>
+
+<h2>① 当日概览 / Overview</h2>
+<div class="lead">
+  <div class="zh">如果说 06-09 的主线是消费侧"为你而造"(Year of Me),那么 06-11 已清晰切换到<b>「Agent 时代的基础设施 + 信任/可观测性即新护城河」</b>。今日 Product Hunt 与 Hacker News 高位几乎被开发者工具与 AI 基础设施占据:把社媒发布封装成 Agent 可调用 MCP 工具的 <b>Publora</b>(06-10 #1)、给 Claude Code/Codex 做"它到底做了什么"审计层的 <b>Spotlight</b>、把例行推理从前沿模型分流的 <b>ZeroGPU</b>、只用 Bash+SQLite 让多 Agent 互通的开源 <b>agmsg</b>,以及为创始人融资提速的 <b>VC Boom</b>。它们共享一组取向——<b>嫁接已有触点、官方/本地优先的信任楔子、自治系统的可审计性</b>。消费侧,TikTok→Amazon 美妆管道与小红书"假日 Citywalk"诠释"可见即可信、低门槛即爆发"。</div>
+  <div class="en">If 06-09's thread was consumer "made-for-you," 06-11 has shifted to <b>"agent-era infrastructure + trust/observability as the new moat."</b> Today's PH and HN tops are dominated by devtools and AI infra: <b>Publora</b> (PH #1, 06-10) exposing social publishing as agent-callable MCP tools; <b>Spotlight</b> giving coding agents a "what did it actually do" audit layer; <b>ZeroGPU</b> routing routine inference off frontier models; OSS <b>agmsg</b> letting agents talk via Bash+SQLite; <b>VC Boom</b> accelerating fundraising. Shared stance — <b>graft onto existing surfaces, an official/local-first trust wedge, auditability of autonomous systems.</b> On the consumer side, the TikTok→Amazon beauty pipeline and Xiaohongshu's citywalk express "demonstrable = trustworthy, low barrier = breakout."</div>
+  <div class="picks">
+    <span class="pick">1 · Publora</span>
+    <span class="pick">2 · Spotlight</span>
+    <span class="pick">3 · ZeroGPU</span>
+    <span class="pick">4 · VC Boom</span>
+    <span class="pick">5 · agmsg</span>
+    <span class="pick">6 · PgDog</span>
+    <span class="pick">7 · 无白印防晒/面膜</span>
+    <span class="pick">8 · 假日 Citywalk</span>
+  </div>
+</div>
+
+<div class="chartbox">
+  <h3>今日精选 Product Hunt 热度 / Today's Picks — Product Hunt Upvotes</h3>
+  <canvas id="phChart" height="120"></canvas>
+  <p class="en">PH upvotes (06-09/06-10 boards): VC Boom 488 (#1, 06-09) · Publora 478 (#1, 06-10) · ZeroGPU 345 · Spotlight ~335 · agmsg 233. Most picks are pre-revenue infra — upvotes are the cleanest cross-comparable signal. PgDog (HN ~380 pts) and consumer trends are not PH-ranked.</p>
+</div>
+
+<h2>② 逐个产品深度分析 / Per-Product Deep Dive</h2>
+
+<!-- 1 Publora -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=publora.com&sz=128" alt="Publora logo">
+    <div><h3>1. Publora <span class="badge">PH #1 (06-10)</span></h3><a href="https://publora.com">publora.com · 478 upvotes</a></div>
+  </div>
+  <p class="zh">不是又一个发帖排程面板,而是把"发布"封装成 <b>18 个可被 AI Agent 调用的 MCP 工具</b>:一次 HTTPS 调用即可发到 10–12 个平台,Agent 还能读 feed、评论、回私信。最被称道的是<b>信任楔子</b>——只接官方授权 API,绝不爬虫,$2.99/账号/月 极低门槛。</p>
+  <p class="en">Not another scheduling dashboard — it wraps publishing into <b>18 agent-callable MCP tools</b>: one HTTPS call posts to 10–12 platforms; agents read feeds, comment, reply to DMs. Most-praised trait is a <b>trust wedge</b> — sanctioned official APIs only, no scraping — with a $2.99/account/mo floor.</p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>Freemium;免费 Starter,付费 $2.99/账号/月起 / Freemium; free Starter, paid from $2.99/account/mo</td></tr>
+    <tr><th>成功因素 / Success</th><td>"Agent 时代"#1 · 官方 API-only 信任楔子 · MCP 原生贴合 Claude/Cursor / "Agent era" #1 · sanctioned-API trust wedge · MCP-native</td></tr>
+    <tr><th>核心功能 / Features</th><td>统一发布 API、18 MCP 工具、完整互动闭环、官方 API-only / Unified API, 18 MCP tools, full engagement loop, official-API-only</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>发布作为"Agent 可调用表面";开发者/Agent 构建者/内容工作室 / Publishing as an agent-callable surface; devs, agent builders, studios</td></tr>
+    <tr><th>数据 / Data</th><td>PH #1 (06-10) · 478 赞 · 10–12 平台 · 18 MCP 工具 · Agent-Ready 64/100(据称)</td></tr>
+    <tr><th>评价 / Reviews</th><td>暂无评分;评论盛赞官方 API 安全;分析仅 LinkedIn 完整。数据均厂商/PH 自述 / No ratings yet; praised for API safety; analytics LinkedIn-only. Figures vendor-stated</td></tr>
+  </table>
+</div>
+
+<!-- 2 Spotlight -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=backplanes.com&sz=128" alt="Backplanes logo">
+    <div><h3>2. Spotlight by Backplanes <span class="badge">PH #3 (06-10)</span></h3><a href="https://www.backplanes.com">backplanes.com · ~335 upvotes</a></div>
+  </div>
+  <p class="zh">当 Claude Code/Codex 自己改文件、跑命令、连外部服务,<b>"它到底做了什么"</b>成了新刚需。Spotlight 会话后自动采集——文件、命令、外部服务、范围漂移、待复审项——并能从<b>同一份采集生成面向工程师/经理/CISO/CFO 的多受众报告</b>。隐私优先:本地脱敏,不向模型商 OAuth。</p>
+  <p class="en">As autonomous coding agents act on their own, <b>"what did it actually do?"</b> becomes a category. Spotlight auto-captures after each session — files, commands, external services, scope drift, what deserves review — and turns <b>one capture into multi-audience reports for engineers/managers/CISOs/CFOs.</b> Privacy-first: local redaction, no provider OAuth.</p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>个人/团队免费;规划企业版(归因、治理),销售制 / Free for individuals & teams; planned enterprise tier, sales-led</td></tr>
+    <tr><th>成功因素 / Success</th><td>直击 2026 最热痛点(Agent 可见性)· 隐私优先 · 多受众报告拓宽买方 / Hits hottest 2026 pain · privacy-first · multi-audience widens buyers</td></tr>
+    <tr><th>核心功能 / Features</th><td>会话后自动采集、安全发现、多受众视图、组织级聚合 / Post-session capture, security findings, multi-audience views, org aggregation</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>编码 Agent 的"它做了什么"审计层;工程师/CISO/CFO / The "what did my agent do" audit layer; engineers, CISOs, CFOs</td></tr>
+    <tr><th>数据 / Data</th><td>PH #3 (06-10) · ~335 赞 · 样例:47 分钟=4 文件/17 命令/3 外部服务</td></tr>
+    <tr><th>评价 / Reviews</th><td>暂无;与企业治理高度契合;长期变现是公开问题 / None yet; strong governance fit; long-term monetization an open question</td></tr>
+  </table>
+</div>
+
+<!-- 3 ZeroGPU -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=zerogpu.ai&sz=128" alt="ZeroGPU logo">
+    <div><h3>3. ZeroGPU <span class="badge blue">PH #2 (06-09)</span></h3><a href="https://zerogpu.ai">zerogpu.ai · 345 upvotes</a></div>
+  </div>
+  <p class="zh">一层推理"降本/效率"中间件:提供 <b>OpenAI 兼容 API</b>,只需换 base URL 和模型名(零迁移),它把高频非推理任务(分类、审核、摘要、抽取)分流到专用小/纳米模型。首客 Dappier <b>据称</b>延时降 10×、成本降 6×。这是"按结果计费"时代的典型架构动作——<b>路由而非升级</b>。</p>
+  <p class="en">An inference cost/efficiency layer: an <b>OpenAI-compatible API</b> where you swap only the base URL + model name (zero migration), routing high-volume non-reasoning work to specialist small/nano models. First customer Dappier <b>claims</b> 10× lower latency, 6× lower cost. The textbook move of the outcome-based-pricing era — <b>route, don't upgrade.</b></p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>用量计费(无公开价目表,站内计算器) / Usage-based (no public rate card; on-site calculator)</td></tr>
+    <tr><th>成功因素 / Success</th><td>即插即用 OpenAI 兼容 · 把例行工作分流出前沿模型 · 边缘+小模型+云回退 / Drop-in compat · route routine off frontier · edge + small models + fallback</td></tr>
+    <tr><th>核心功能 / Features</th><td>OpenAI 兼容 API、专用纳米模型目录、分布式执行、降本/时延分析 / OpenAI-compatible API, nano-model catalog, distributed execution, analytics</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>高频、可重复、非前沿工作负载的推理效率层;高频 AI 平台团队 / Inference-efficiency layer for high-volume non-frontier work; platform teams</td></tr>
+    <tr><th>数据 / Data</th><td>PH #2 (06-09) · 345 赞 · 据称 10× 时延 / 6× 成本(Dappier)/ 50%+ 通用 / 可分流 70–80% 前沿调用</td></tr>
+    <tr><th>评价 / Reviews</th><td>性能/成本均厂商自述,带"随负载而异"免责;除 Dappier 外无客户数;无独立基准 / All vendor-stated; one named customer; no independent benchmarks</td></tr>
+  </table>
+</div>
+
+<!-- 4 VC Boom -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=vcboom.com&sz=128" alt="VC Boom logo">
+    <div><h3>4. VC Boom <span class="badge">PH #1 (06-09)</span></h3><a href="https://www.vcboom.com">vcboom.com · 488 upvotes</a></div>
+  </div>
+  <p class="zh">把融资全流程压进一个工具:<b>90 秒给 BP 打分</b>并指出"最高杠杆的那一处修改",再从 <b>47,000+ 投资人</b>库匹配、每条配"为何契合",最后<b>用创始人本人邮箱</b>起草个性化冷启邮件——既显真实,又规避群发工具的送达/垃圾标记。定价反订阅、<b>一次买断</b>;Anthropic API、不用数据训练。</p>
+  <p class="en">Compresses the raise into one flow: <b>score the deck in &lt;90s</b> and name the single highest-leverage fix, match across <b>47,000+ investors</b> (each with a fit rationale), then draft personalized cold emails <b>from the founder's own inbox.</b> Anti-subscription, <b>pay-once</b>; Anthropic API, no training on data.</p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>免费起步;一次买断覆盖整轮(无订阅) / Free to start; pay-once for the whole raise (no subscription)</td></tr>
+    <tr><th>成功因素 / Success</th><td>本窗口单日最高赞 · 90 秒可见结果 · 47k+ 匹配 · 本人邮箱发送 / Highest single-day upvotes · &lt;90s result · 47k+ matching · own-inbox sending</td></tr>
+    <tr><th>核心功能 / Features</th><td>BP 打分+最优修改、投资人匹配+理由、个性化冷启邮件、隐私 / Deck scoring + top fix, matching + rationale, cold emails, privacy</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>正在融资的早期创始人;Pre-seed/种子 / Early founders mid-raise; pre-seed/seed</td></tr>
+    <tr><th>数据 / Data</th><td>PH #1 (06-09) · 488 赞 · 65 评论 · 47,000+ 投资人 · &lt;90 秒打分</td></tr>
+    <tr><th>评价 / Reviews</th><td>赛道拥挤(对比 Fundraisly);均厂商自述;买断制差异化但留存未验证 / Crowded; vendor-stated; pay-once differentiates but unproven on retention</td></tr>
+  </table>
+</div>
+
+<!-- 5 agmsg -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=github.com&sz=128" alt="GitHub logo">
+    <div><h3>5. agmsg <span class="badge green">OSS · PH #5</span></h3><a href="https://github.com/fujibee/agmsg">github.com/fujibee/agmsg · 233 upvotes</a></div>
+  </div>
+  <p class="zh">解决一个极具体的烦恼:多个 AI 编码 Agent 之间手动复制粘贴。设计极致克制——<b>只用 Bash + SQLite</b>,无守护进程、无网络、无 Python;以 <b>Agent Skill</b> 形式装入而不打补丁,横跨 Claude Code/Codex/Gemini/Copilot。一个共享 SQLite 文件即持久"消息房间"。上线前在日本 <b>1M+ 曝光、一周 320+ star</b>(据称)。</p>
+  <p class="en">Solves a concrete annoyance: copy-pasting between AI coding agents. Radically restrained — <b>Bash + SQLite only</b>, no daemon/network/Python — installed as an <b>Agent Skill</b> without patching any agent, across Claude Code/Codex/Gemini/Copilot. A shared SQLite file persists "rooms." <b>1M+ impressions, 320+ stars in a week</b> in Japan pre-launch (claimed).</p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>开源免费(GitHub);社区/OSS 玩法 / OSS/free; community play</td></tr>
+    <tr><th>成功因素 / Success</th><td>痛点极具体 · 栈极简、信任门槛低 · 厂商无关 · 免打补丁 / Concrete pain · minimal stack · vendor-agnostic · no patching</td></tr>
+    <tr><th>核心功能 / Features</th><td>共享 SQLite 持久消息、厂商无关多 Agent 房间、Skill 安装、零重依赖 / Shared-SQLite messaging, vendor-agnostic rooms, Skill install, zero heavy deps</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>多 Agent 编排管道;并行运行多 Agent 的开发者 / Multi-agent plumbing; devs running parallel agents</td></tr>
+    <tr><th>数据 / Data</th><td>PH #5 (06-09) · 233 赞 · 49 评论 · 387 关注 · 一周 320+ star · 1M+ 曝光(据称)</td></tr>
+    <tr><th>评价 / Reviews</th><td>评论热议 token 效率、上下文管理、SQLite 并发写(已知弱点);OSS 可持续性存疑 / Debate on token efficiency, context mgmt, SQLite concurrent writes; OSS sustainability uncertain</td></tr>
+  </table>
+</div>
+
+<!-- 6 PgDog -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=pgdog.dev&sz=128" alt="PgDog logo">
+    <div><h3>6. PgDog <span class="badge blue">HN ~380 pts</span></h3><a href="https://pgdog.dev">pgdog.dev · funding announcement</a></div>
+  </div>
+  <p class="zh">用 Rust 写的 Postgres <b>连接池 + 负载均衡 + 透明分片</b>,挡在现有 Postgres 前面,"以网络速度分片"而无需改应用代码,兼容 RDS/Aurora/EC2。体现"嫁接已有系统"——不让你换数据库,而是让你现有那套继续扩展。<b>据称</b>生产 >200 万 QPS、>20 TB 分片、>140 万 Docker 拉取;<b>据报道</b>约 6 月融资 $5.5M。</p>
+  <p class="en">A Rust Postgres <b>pooler + load balancer + transparent sharder</b> sitting in front of existing Postgres, "sharding at network speed" with no app rewrite, across RDS/Aurora/EC2. Embodies "graft onto what exists" — scale the DB you have, don't switch. <b>Claimed</b> &gt;2M QPS, &gt;20 TB sharded, &gt;1.4M Docker pulls; <b>reported</b> ~$5.5M raised ~June.</p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>开源核心(Rust);商业/托管版隐含,未核实 / OSS core; commercial/managed implied, unverified</td></tr>
+    <tr><th>成功因素 / Success</th><td>真痛点:不重写即分片 · 融资前已有生产验证 · 知名投资人 / Real pain; production proof pre-raise; credible backers</td></tr>
+    <tr><th>核心功能 / Features</th><td>连接池、负载均衡、透明分片、兼容 RDS/Aurora/EC2 / Pooler, load balancer, transparent sharder, RDS/Aurora/EC2</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>触到单机 Postgres 上限又不想离开的团队;后端/基础设施工程师 / Teams hitting single-node limits; backend/infra engineers</td></tr>
+    <tr><th>数据 / Data</th><td>HN ~380 pts · 据报道 $5.5M · 据称 >2M QPS / >20 TB / >1.4M 拉取</td></tr>
+    <tr><th>评价 / Reviews</th><td>HN 有讨论但未抓取;指标经博客自述,未独立审计 / HN discussion exists, uncaptured; metrics vendor-stated</td></tr>
+  </table>
+</div>
+
+<!-- 7 Beauty -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=tiktok.com&sz=128" alt="TikTok logo">
+    <div><h3>7. 无白印防晒 & 玻璃肌胶原面膜 <span class="badge">TikTok→Amazon</span></h3><a href="https://www.qogita.com/blog/tiktok-beauty-trends-2026/">social-commerce beauty 2026</a></div>
+  </div>
+  <p class="zh">夏季档(6 月)最活跃的两个美妆子赛道:<b>无白印防晒</b>(Beauty of Joseon 大米防晒、Supergoop Glowscreen——深肤色不泛白)与<b>玻璃肌胶原面膜</b>(Biodance 仿生膜<b>据称</b> ~1.5 亿浏览)。共性亮点是<b>"可演示即可传播"</b>:产品高光时刻就是镜头前当场揭晓——一抹无白印、瞬间饱满。<b>TikTok 是发现引擎</b>(<b>据称</b> ~65% Gen Z 购买前先发现),2–4 周后反映到 Amazon BSR。</p>
+  <p class="en">Summer's two most active beauty sub-niches: <b>no-white-cast SPF</b> (Beauty of Joseon, Supergoop Glowscreen — no cast on deeper tones) and <b>glass-skin collagen masks</b> (Biodance <b>claimed</b> ~150M views). Shared highlight: <b>"demonstrable = shareable"</b> — the hero moment <i>is</i> the on-camera reveal. <b>TikTok is the discovery engine</b> (<b>claimed</b> ~65% Gen Z discover before buying), surfacing in Amazon BSR 2–4 weeks later.</p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>品牌 DTC + Amazon + TikTok Shop 达人佣金 / Brand DTC + Amazon + TikTok-Shop affiliate</td></tr>
+    <tr><th>成功因素 / Success</th><td>解决可见痛点(泛白)· 夏季红利 · 清洁成分故事 · 镜头可演示 · 皮肤科背书 / Visible-pain fix · summer tailwind · clean-ingredient story · on-camera demo · derm endorsement</td></tr>
+    <tr><th>核心功能 / Features</th><td>SPF 50+ 无白印、益生元/大米水复合、护肤-妆前二合一、气候自适应 / SPF 50+ no-cast, prebiotic/rice complexes, skincare-primer hybrids</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>兼顾功能与美感的多肤色防晒/可见效果护肤;重护肤 Gen Z/千禧 / Functional + aesthetic multi-tone; skincare-forward Gen Z/Millennials</td></tr>
+    <tr><th>数据 / Data</th><td>据称 ~65% Gen Z / ~55% 千禧以 TikTok 为发现渠道;Biodance ~1.5 亿浏览(聚合商口径)</td></tr>
+    <tr><th>评价 / Reviews</th><td>多份 2026 趋势榜复盘"有效且复购";Amazon 实时榜被封锁(503/403),SKU 级 BSR 未核实 / Cited as effective & repurchased; Amazon live BSR gated — SKU-level BSR unverified</td></tr>
+  </table>
+</div>
+
+<!-- 8 Citywalk -->
+<div class="card">
+  <div class="phead">
+    <img src="https://www.google.com/s2/favicons?domain=xiaohongshu.com&sz=128" alt="Xiaohongshu logo">
+    <div><h3>8. 假日 Citywalk(小红书)<span class="badge">6 月时效</span></h3><a href="https://m.traveldaily.cn/article/189197">#假日citywalk# · 据称 >5 亿浏览</a></div>
+  </div>
+  <p class="zh">本期最具"6 月时效性"的中国消费信号:<b>据称</b>自 6 月起 citywalk 搜索/订单涨约 1–5 倍,#假日citywalk# <b>据称</b>浏览破 5 亿,上海/北京/西安最热。用极低门槛+"松弛感"撬动本地餐饮/住宿/体验消费,并以<b>"活人感"真实笔记</b>(而非精修广告)做创作者种草,呼应小红书 2026"文旅种草下半场"。<i>相邻在涨:拼豆(自 2 月成熟爆款)、桨板 SUP、飞盘/匹克球、八段锦。</i></p>
+  <p class="en">The most June-timely China-consumer signal: citywalk search/orders <b>reportedly</b> up ~1–5× since June, #假日citywalk# <b>reportedly</b> past 500M views, hottest in Shanghai/Beijing/Xi'an. Ultra-low barrier + <i>松弛感</i> (relaxed pace) drives local commerce, with creator route-planting via <b>authentic "real-person" notes</b> over polished ads. <i>Adjacent rising: 拼豆 fuse beads (maturing since Feb), SUP, frisbee/pickleball, baduanjin.</i></p>
+  <table>
+    <tr><th>商业模式 / Model</th><td>低成本微度假带动本地餐饮/住宿/体验 + 创作者种草漏斗 / Low-cost micro-travel → local commerce + creator funnels</td></tr>
+    <tr><th>成功因素 / Success</th><td>6 月真时效 · 极低门槛+松弛感 · 高度可拍、天然种草 · 文旅种草下半场 / June-fresh · low barrier + relaxed pace · photogenic · "second half" of travel 种草</td></tr>
+    <tr><th>核心功能 / Features</th><td>策划步行路线+本地发现、微度假、创作者路线笔记+社区 / Curated routes + local discovery, micro-travel, creator notes + community</td></tr>
+    <tr><th>细分/受众 / Niche & Audience</th><td>都市青年的轻量微度假;寻求松弛感与低成本周末逃离 / Light micro-travel; Gen Z/urbanites seeking 松弛感 & cheap escapes</td></tr>
+    <tr><th>数据 / Data</th><td>据称订单/搜索自 6 月 +1–5×;#假日citywalk# 据称 >5 亿浏览;热城:上海/北京/西安</td></tr>
+    <tr><th>评价 / Reviews</th><td>据 traveldaily/小红书摘要为 2026 文旅种草爆点;小红书登录态,全部数据公开摘要、未核实 / A 2026 breakout per summaries; XHS login-gated, all figures unverified</td></tr>
+  </table>
+</div>
+
+<h2>③ 横向对比表 / Cross-Product Comparison Matrix</h2>
+<table class="matrix">
+  <tr><th>产品 / Product</th><th>类别 / Category</th><th>模式 / Model</th><th>关键数据 / Key data</th><th>受众 / Audience</th><th>核心设计亮点 / Key design highlight</th></tr>
+  <tr><td>Publora</td><td>MCP 社媒 API</td><td>Freemium $2.99/账号</td><td>PH #1 (06-10) · 478 赞 · 18 MCP 工具</td><td>开发者/Agent 构建者</td><td>嫁接触点 + 官方 API 信任楔子</td></tr>
+  <tr><td>Spotlight</td><td>Agent 可观测性</td><td>个人免费→企业</td><td>PH #3 (06-10) · ~335 赞</td><td>工程师/CISO/CFO</td><td>自治系统审计 + 本地脱敏</td></tr>
+  <tr><td>ZeroGPU</td><td>推理效率层</td><td>用量计费</td><td>PH #2 (06-09) · 345 赞 · 据称 6× 降本</td><td>高频 AI 平台团队</td><td>路由而非升级 + 零迁移</td></tr>
+  <tr><td>VC Boom</td><td>AI 融资</td><td>一次买断</td><td>PH #1 (06-09) · 488 赞 · 47k+ 投资人</td><td>早期创始人</td><td>90s 可见结果 + 本人邮箱真实性</td></tr>
+  <tr><td>agmsg</td><td>Agent 间通信</td><td>开源</td><td>PH #5 (06-09) · 233 赞 · 320+ star</td><td>多 Agent 开发者</td><td>极简厂商无关管道</td></tr>
+  <tr><td>PgDog</td><td>Postgres 基础设施</td><td>开源核心</td><td>HN ~380 pts · 据报道 $5.5M</td><td>后端/基础设施工程师</td><td>不重写即扩展已有系统</td></tr>
+  <tr><td>无白印防晒/面膜</td><td>社交电商美妆</td><td>DTC+TikTok Shop+Amazon</td><td>据称 ~65% Gen Z TikTok 发现</td><td>Gen Z/千禧护肤客</td><td>可演示即可传播</td></tr>
+  <tr><td>假日 Citywalk</td><td>中国微度假</td><td>本地体验+种草</td><td>据称 +1–5× / >5 亿浏览</td><td>中国都市青年</td><td>极低门槛 + 活人感</td></tr>
+</table>
+
+<h2>④ 关键洞察与共性总结 / Key Insights & Common Patterns</h2>
+<div class="card">
+<ol>
+  <li><b>主题切换:从"为你而造"到"Agent 时代基础设施" / Theme shift.</b> 8 个精选中 6 个属 devtools/infra。Agent 正从"副驾"变"操作员",围绕它的管道、效率与治理成了新战场。 / 6 of 8 picks are devtools/infra; as agents move from copilot to operator, the plumbing, efficiency, and governance around them become the new battleground.</li>
+  <li><b>信任即护城河,而非功能 / Trust is the moat, not a feature.</b> Publora 只接官方 API、Spotlight 本地脱敏、VC Boom 不训练数据——主动放弃"最莽撞的能力"换来最稳的位置。 / Giving up the most reckless capability buys the most defensible position. Echoes HN: "communities forgive bugs but punish broken trust."</li>
+  <li><b>嫁接已有触点 > 再造独立 App / Graft onto existing surfaces.</b> Publora(MCP)、ZeroGPU(换 URL)、PgDog(挡在 Postgres 前)把"零迁移"做成新的"零到一"。造 App 成本降了 90%+,但"被看见"的成本没降。 / Zero migration is the new zero-to-one. Building an app got 90%+ cheaper; getting noticed didn't.</li>
+  <li><b>自治系统的可观测性是新品类 / Observability of autonomous systems.</b> Agent 自己干活,"它做了什么"必须可审计——Spotlight 把它做成产品。可观测性是采用前提,不是事后补丁。 / Auditability is a precondition for adoption, not an afterthought.</li>
+  <li><b>可见即可传播 / Demonstrable = the unit of virality.</b> 无白印防晒与玻璃肌面膜把"高光时刻"工程化为镜头前当场揭晓;假日 Citywalk 用"活人感"取代精修广告。 / A result you can show beats a benefit you must explain.</li>
+  <li><b>极简、厂商无关的管道更耐久 / Vendor-agnostic plumbing outlives SDKs.</b> agmsg 用 Bash+SQLite 横跨所有 Agent 而不站队——在碎片化生态里,"不绑定任何厂商"本身就是护城河。 / In a fragmenting agent ecosystem, "binding to no vendor" is itself a moat.</li>
+</ol>
+</div>
+
+<h2>⑤ 设计融合:把这些优点拼成新产品 / Design Synthesis</h2>
+<div class="note">本节是今日报告的重点:先把设计亮点提炼成可复用原则,再融合成 3 个全新产品理念。 / The centerpiece: distill design highlights into reusable principles, then fuse them into 3 new product concepts.</div>
+
+<h3 style="margin-top:22px">Part A — 设计亮点提炼 / Design Highlights Extracted</h3>
+<div class="principle"><b>1. 信任即楔子 / Trust as the Wedge.</b> 信任是撬动市场的支点,不是功能清单一行。Publora 只接官方 API、Spotlight 本地脱敏、VC Boom 不训练数据。 / Trust is the lever, not a checkbox — the product that gives up reckless capability wins the defensible position.</div>
+<div class="principle"><b>2. 嫁接已有触点 / Graft onto Existing Surfaces.</b> 寄生在用户已在用的表面:Publora=18 MCP 工具、ZeroGPU=换 base URL、PgDog=挡在 Postgres 前。<b>零迁移是新的零到一。</b> / Zero migration is the new zero-to-one.</div>
+<div class="principle"><b>3. 自治系统的可观测性 / Observability of Autonomous Systems.</b> Agent 自己动手后,"它到底做了什么"成新品类;Spotlight 一次采集生成多受众报告。可审计是采用前提。 / "What did it do?" is a category, not a log file — and auditability precedes adoption.</div>
+<div class="principle"><b>4. 可见即可信、可演示即可传播 / Demonstrable Result as the Unit of Virality.</b> 产品高光时刻本身就是传播素材:无白印一抹、玻璃肌瞬间饱满——为短视频"当场揭晓"而工程化。 / The hero moment <i>is</i> the content.</div>
+<div class="principle"><b>5. 极简、厂商无关、可组合的管道 / Minimal, Vendor-Agnostic Plumbing.</b> 最好的基础设施是隐形的:agmsg 用 Bash+SQLite 横跨所有 Agent 而不打补丁。 / Plumbing that takes no sides outlives any vendor's SDK.</div>
+<div class="principle"><b>6. 路由而非升级 / Route, Don't Upgrade.</b> 把例行工作分流到专用小模型,只在必要时唤醒前沿模型。ZeroGPU 把成本从"厂商谈判"变成"架构决策"。 / Cost becomes an architecture decision, not a negotiation.</div>
+
+<h3 style="margin-top:26px">Part B — 三个全新产品设计理念 / Three New Product Concepts</h3>
+
+<div class="card concept">
+  <h3>概念一 / Concept 1 — <b>Ledger</b></h3>
+  <p class="zh">「让 Agent 的每一步都可被审计、可被定价」/ <i>"Make every agent action auditable — and billable"</i></p>
+  <div style="margin:8px 0"><span class="ctag">Spotlight</span><span class="ctag">ZeroGPU</span><span class="ctag">agmsg</span><span class="ctag">信任即楔子</span></div>
+  <table>
+    <tr><th>它是什么 / What it is</th><td>装在 Agent 与模型商之间的"账本中间件":换一次 base URL,Ledger 在<b>本地</b>记录每次模型调用(模型、token、决策),并自动把例行调用路由到更便宜的小模型;同一份采集生成三种报告——工程师 trace、财务成本分摊、合规脱敏审计。 / A trust-preserving middleware between any agent and any provider: swap one base URL; it locally records every call and auto-routes routine work to cheaper specialists. One capture → engineer trace, finance cost-allocation, redacted compliance audit.</td></tr>
+    <tr><th>为什么现在 / Why now</th><td>Agent 从副驾变操作员,企业第一问是"花了多少、做了什么、能否给审计看"——正是 a16z"Agentic Interface + 按结果计费"落地缺的基础设施。<b>你无法为无法度量的结果计费。</b> / The first enterprise questions are spend/accountability/audit — the gap outcome-based pricing leaves. You can't bill for outcomes you can't measure.</td></tr>
+    <tr><th>护城河 / Moat</th><td>本地脱敏+不向模型商 OAuth=信任楔子;一次接入横跨所有 OpenAI 兼容端点;审计数据越久,迁移成本越高。 / Trusted system of record; one graft spans every OpenAI-compatible endpoint; the longer it logs, the higher the switching cost.</td></tr>
+    <tr><th>风险 / Risk</th><td>模型商可能原生内置成本/审计面板,从下方挤压第三方中间件。 / Providers may bake native cost/audit dashboards in, squeezing middleware from below.</td></tr>
+  </table>
+</div>
+
+<div class="card concept">
+  <h3>概念二 / Concept 2 — <b>Proof</b> <span class="badge blue">跨域融合 / cross-domain</span></h3>
+  <p class="zh">「带可验证产地证明的种草」/ <i>"Plant the seed — with a tamper-proof receipt"</i></p>
+  <div style="margin:8px 0"><span class="ctag">Spotlight 审计</span><span class="ctag">可演示即传播</span><span class="ctag">Publora MCP</span><span class="ctag">活人感</span><span class="ctag">VC Boom 真实性</span></div>
+  <table>
+    <tr><th>它是什么 / What it is</th><td>面向真实创作者与小卖家的"可信种草"工具:用任意 Agent 一键生成短视频脚本并发布,Proof <b>在本地</b>录下创作全过程——素材未换脸、效果是真机实拍非滤镜、数据来自本人账号——给每条内容附一枚可验证的"真实产地证明"徽章,再经 MCP 直发小红书/TikTok。观众扫一眼徽章,即知是活人实拍,而非 AI 量产广告。 / A trust layer for real creators/sellers: author and publish through any agent; Proof locally captures the making-of, attaches a verifiable "authenticity receipt," and ships it via MCP to Xiaohongshu/TikTok. Viewers see the badge and know it's a real reveal, not AI ad-slop.</td></tr>
+    <tr><th>为什么现在 / Why now</th><td>当 AI 把"假种草/合成测评"边际成本压到零,2026 的稀缺品恰是"活人感";平台与消费者都在为"如何分辨真人实拍"焦虑。 / As AI drives fake-review cost to zero, the scarce asset is authentic realness; both platforms and buyers are anxious to tell real from synthetic.</td></tr>
+    <tr><th>护城河 / Moat</th><td>信任徽章是双边网络:创作者要差异化,平台/品牌要反欺诈背书;证明发生在本人账号与本地设备上,抄不走的是积累的真实性记录。 / The badge is a two-sided network; proof happens on the creator's own account/device — the accumulated authenticity record can't be copied.</td></tr>
+    <tr><th>风险 / Risk</th><td>"真实性"难严格定义,徽章一旦被钻空子或刷量,信任反噬比从未有过徽章更严重。 / "Authenticity" is hard to define; a gamed badge backfires worse than no badge.</td></tr>
+  </table>
+</div>
+
+<div class="card concept">
+  <h3>概念三 / Concept 3 — <b>Understudy</b></h3>
+  <p class="zh">「把例行活儿排练好,只在关键处叫醒前沿模型」/ <i>"Rehearse the routine; wake the frontier model only when it matters"</i></p>
+  <div style="margin:8px 0"><span class="ctag">ZeroGPU 路由</span><span class="ctag">PgDog 不重写</span><span class="ctag">agmsg 极简管道</span><span class="ctag">Dreambeans 零提示</span><span class="ctag">Wispr Flow 风格自适应</span></div>
+  <table>
+    <tr><th>它是什么 / What it is</th><td>透明挡在 Agent 工作流前的"替补层":持续观察哪些任务在重复,自动把它们"排练"成可由小/纳米模型执行的专用例程并学习你的风格;只有遇到新情况或高风险决策才"叫醒"前沿模型。零配置——像 PgDog 之于 Postgres,装上即生效。 / A transparent "understudy" in front of your agent workflow: it watches which tasks repeat, rehearses them into specialist small-model routines that adopt your style, and only wakes the frontier model for novel/high-stakes calls. No config — install and it just works.</td></tr>
+    <tr><th>为什么现在 / Why now</th><td>Agent 调用量爆发,但 ~90% 是重复例行工作,在前沿模型上跑既贵又慢;降本靠"把对的工作交给对的模型"。 / Agent call volume is exploding but ~90% is repetitive — expensive on a frontier model; cost control comes from routing the right work to the right model.</td></tr>
+    <tr><th>护城河 / Moat</th><td>嫁接触点(零迁移零配置)+ 越用越懂你的私有"排练库"=切换成本;厂商无关让它不被任一模型商淘汰。 / Graft-onto-surface + a private, improving rehearsal library = switching cost; vendor-agnosticism prevents orphaning.</td></tr>
+    <tr><th>风险 / Risk</th><td>小模型"排练"出错被静默执行,会在无感知处累积质量漂移——可观测性必须内建。 / A silently-executed routine a small model gets subtly wrong accumulates drift unnoticed — observability must be built in.</td></tr>
+  </table>
+</div>
+
+<div class="note" style="border-style:solid;border-color:#34405c">
+<b>三个概念的共同基因 / The shared DNA:</b> 都把<b>信任</b>做成楔子、都<b>嫁接已有触点</b>而非再造独立 App、都内建<b>可观测性</b>——正是 2026 年从"炫技 Demo"转向"可信、可审计、可嵌入"的产品设计范式缩影。 / All three make <b>trust</b> the wedge, <b>graft onto existing surfaces</b>, and build in <b>observability</b> — a microcosm of 2026's shift from flashy demos toward trustworthy, auditable, embeddable design.
+</div>
+
+<h2>来源 / Sources</h2>
+<div class="src">
+• Product Hunt — Daily Leaderboards: <a href="https://www.producthunt.com/leaderboard/daily/2026/6/10">06-10</a> · <a href="https://www.producthunt.com/leaderboard/daily/2026/6/9">06-09</a><br>
+• Publora: <a href="https://publora.com">publora.com</a> · Spotlight: <a href="https://www.backplanes.com">backplanes.com</a> · ZeroGPU: <a href="https://zerogpu.ai">zerogpu.ai</a><br>
+• VC Boom: <a href="https://www.vcboom.com">vcboom.com</a> · agmsg: <a href="https://github.com/fujibee/agmsg">github.com/fujibee/agmsg</a> · PgDog: <a href="https://pgdog.dev">pgdog.dev</a><br>
+• Hacker News Front / June 2026: <a href="https://news.ycombinator.com/front">news.ycombinator.com/front</a><br>
+• a16z Big Ideas 2026: <a href="https://a16z.com/news-content/">a16z.com/news-content</a> · Crunchbase rounds: <a href="https://news.crunchbase.com">news.crunchbase.com</a><br>
+• TikTok→Amazon beauty 2026: <a href="https://www.qogita.com/blog/tiktok-beauty-trends-2026/">qogita.com</a> · <a href="https://furylist.com/18-viral-beauty-products-of-2026-that-tiktok-cant-stop-talking-about/">furylist.com</a><br>
+• Google Trends (NBA Finals): <a href="https://blog.google/products-and-platforms/products/search/nba-finals-trends-2026/">blog.google</a> · Xiaohongshu citywalk: <a href="https://m.traveldaily.cn/article/189197">traveldaily.cn</a>
+</div>
+
+<footer>
+报告由每日产品趋势挖掘任务自动生成 / Auto-generated by the Daily Product Trend Mining task · 2026-06-11<br>
+⚠️ 数据保真 / Data fidelity: 厂商自述指标(融资、降本倍数、浏览量)未经独立核实,文中标注"据称/claimed/reported"。PH 06-11 日榜未生成,基于 06-09/06-10。Amazon 实时榜、小红书等登录态来源为公开摘要。
+</footer>
+</div>
+
+<script>
+new Chart(document.getElementById('phChart'), {
+  type: 'bar',
+  data: {
+    labels: ['VC Boom','Publora','ZeroGPU','Spotlight','agmsg'],
+    datasets: [
+      {label:'Product Hunt upvotes', data:[488,478,345,335,233], backgroundColor:['#ff6154','#ff6154','#5b8def','#5b8def','#3ecf8e']}
+    ]
+  },
+  options: {
+    responsive:true,
+    plugins:{legend:{labels:{color:'#e8eaed'}}},
+    scales:{
+      x:{ticks:{color:'#e8eaed'},grid:{color:'#2a2e3a'}},
+      y:{ticks:{color:'#9aa0aa'},grid:{color:'#2a2e3a'},title:{display:true,text:'Upvotes (06-09 / 06-10 boards)',color:'#9aa0aa'}}
+    }
+  }
+});
+</script>
+</body>
+</html>

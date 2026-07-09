@@ -1,0 +1,67 @@
+PRODUCT DEEP-DIVES — 2026-06-14 (raw research notes via WebSearch + web_fetch)
+Theme: Agentic execution — agents that ACT in the real world (book, call, sell, hack, post), plus the stack forming around them (infra, hardware, open-source).
+
+============================================================
+1) BOND — AI Chief of Staff ("the to-do list that does itself")
+- PH: 665 upvotes / 178 comments — TOP Productivity launch of June 2026
+- URL: https://www.bondapp.io/ · PH: https://www.producthunt.com/products/bond-12
+- What: AI Chief of Staff for CEOs/execs. Connects your tools+data, learns how your company works, turns scattered tasks into a self-managing to-do list. Can prep you for meetings, draft follow-ups, send email, create action items, flag blockers/risks, delegate to teammates. Assistant persona named "Donna."
+- Company: Y Combinator-backed; raised $3M seed (announced Dec 2025); CEO/co-founder Chloe Samaha (@bondwithchloe); ~60 employees (May 2026).
+- Business model: B2B SaaS, per-seat; targets high-value executive time.
+- Reviews: PH discussion praises "kills status meetings"; persona ("Donna") gives it warmth.
+
+============================================================
+2) ASMI AI — AI that handles real-world chores via actual phone calls
+- PH: 461 upvotes / 142 comments (very high comment ratio) — launched ~Jun 13
+- URL: https://www.producthunt.com/products/asmi-ai
+- What: Personal AI with its own voice, personality, and dedicated phone number. Calls every morning at a chosen time; you talk through the day; it then calls services (dentist, salon, plumber, bank, insurance) or people to book/coordinate/resolve. Navigates IVR, waits on hold, handles complex conversations. Updates you via iMessage/WhatsApp. Acts only on explicit instruction.
+- Business model: consumer subscription (assistant + phone number).
+- Reviews (PH): "helped me call a specialist doctor I'd put off for 3 months"; team praised for caring whether the task actually got DONE, not just handled gracefully.
+
+============================================================
+3) SELLERCLAW — a team of AI agents that runs your e-commerce stores
+- PH: 518 upvotes / 163 comments — SaaS #1 (June)
+- URL: https://www.producthunt.com/products/sellerclaw
+- What: "Supervisor" agent coordinates specialist agents — product sourcing, store management, advertising, customer support — across Shopify, eBay, Amazon. Handles supplier cost vs sell price in native currencies, converts for consistent margins. You direct the supervisor; the team executes.
+- Founder: Artem — started selling on Amazon at 18; co-founded Zonesmart (helped 1,000+ sellers scale cross-border; exited 2022). Domain credibility.
+- Business model: B2B SaaS for e-commerce sellers (seat/usage; pricing not public).
+
+============================================================
+4) ASTRA AUTONOMOUS PENTEST — autonomous offensive security (AI red team)
+- PH: 400 upvotes / 55 comments
+- URL: https://www.getastra.com/autonomous-pentesting · PH: https://www.producthunt.com/products/astra-security
+- What: AI agents that emulate real attackers. Dual-agent: (a) Structured Pentest Agents = coordinated swarm doing recon, threat modeling, dynamic test-case generation, exploit chaining, validation — no human babysitting; (b) Bounty Hunter Agent = free exploration like a bug-bounty researcher. Initial findings in <5 min; continuous with every deploy. Trained on 4,000+ real pentests and 10M+ vulnerabilities; claims 80× faster than manual.
+- Company: founded 2018; ~$9.8M revenue; ~$2.7M raised (Emergent Ventures, Blume, PointOne, Neon; Techstars); disclosed valuation ~$29.4M. Uncovers 30,000+ vulns/month for customers.
+- Business model: PTaaS / continuous pentest subscription.
+- Positioning: works alongside human pentesters (depth/judgment), not full replacement.
+
+============================================================
+5) PUBLORA — MCP-native social media API for AI agents
+- PH: 597 upvotes / 98 comments — Developer Tools #1 (June); also API #1
+- URL: https://publora.com/ · PH: https://www.producthunt.com/products/publora
+- What: Started as a "Google Docs-styled" social scheduler; now a publishing API for the agent era. Native MCP server with 18 tools gives agents (Claude, Cursor) a full engagement loop across LinkedIn, X, Instagram, Threads, TikTok, YouTube, Facebook, Bluesky, Mastodon, Telegram (10 platforms).
+- Pricing: free Starter; paid from $2.99/account/month (billed yearly). PH code PH20THANKU = 20% off first payment.
+- Business model: usage/seat SaaS + API; "give your agent hands for social."
+
+============================================================
+6) TERMINAL MODE by EVEN REALITIES — smart glasses to watch your AI agents
+- PH: 404 upvotes / 88 comments
+- URL: https://www.evenrealities.com/terminal · PH: https://www.producthunt.com/products/terminal-mode-by-even-realities
+- What: Ambient terminal layer in your line of sight on Even G2 (camera-free) smart glasses. See which coding agent is running/blocked/waiting across multiple sessions; give short voice instructions; approve key steps with a tap (via Even R1 companion ring). Step away (coffee, walk, workout) and still supervise long-running agents. Launched late April 2026.
+- Business model: hardware (G2 glasses ~$ premium + R1 ring) — "fat startup" hardware+software bundle.
+- Why it matters: as agents run autonomously and long, humans need an ambient "supervision" surface, not another screen.
+
+============================================================
+7) OPENCLAW — open-source, self-hosted personal AI agent (TREND)
+- GitHub: 347,000+ stars (April 2026) = most-starred repo in GitHub history; passed React; hit 60K stars in 72h, 100K in first week (Jan 2026), 250K by Mar 4.
+- Creator: Peter Steinberger (PSPDFKit founder).
+- URL: https://openclaw-ai.net (community) · widely covered (DigitalOcean, freeCodeCamp, etc.)
+- What: True personal agent that runs locally, remembers context across conversations, and actually does things on your machine — fully open-source, no subscription. Local gateway connects models to your tools/files + WhatsApp/Discord; can autonomously write code to create new skills; long-term memory of preferences.
+- Why it matters: the "own your agent" counter-movement to SaaS agents — private, extensible, not locked into one company's UI. Confirms HN June 2026 trend ("always-on personal agents") and a16z "agent-native infrastructure."
+
+============================================================
+SUPPORTING CONTEXT
+- a16z (June 2026): "Fat startups win" — bundle software + data + hardware + human ops and ship OUTCOMES, not features. AI democratizes $200/hr professional services (travel, personal assistance, matchmaking, therapy, tutoring). Big Ideas 2026 include automating cybersecurity + agent-native infra + multimodal data.
+- Hacker News (June 2026): AI discussion "matured/commercialized"; SECURITY moved to the center (AI-assisted attacks, malicious packages, software supply-chain risk); hiring demand for AI/agent engineers; breakout OSS = always-on personal agents (OpenClaw).
+- Google Trends (mid-June 2026): NBA playoffs top trending (~193M); YouTube (104.2M) & Amazon (80.25M) top US searches — live sports + utility + platform discovery.
+- Amazon Movers & Shakers (consumer context, summer 2026): Stanley tumblers, sink-faucet mats, wasp killers, sunscreen, AirPods Pro 3, allergy-season health — functional/seasonal "quirky useful gadget" surge.

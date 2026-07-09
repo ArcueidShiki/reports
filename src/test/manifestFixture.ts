@@ -27,6 +27,20 @@ export const manifestFixture: Manifest = {
             title: 'cpi hits 4 percent',
           },
           {
+            file: '2026-06-10-post-market.md',
+            lang: 'en',
+            kind: 'md',
+            title: 'Post-Market',
+            session: 'post-market',
+          },
+          {
+            file: '2026-06-10-premarket.md',
+            lang: 'en',
+            kind: 'md',
+            title: 'Pre-Market',
+            session: 'premarket',
+          },
+          {
             file: '2026-06-10-小红书.md',
             lang: 'zh',
             kind: 'md',

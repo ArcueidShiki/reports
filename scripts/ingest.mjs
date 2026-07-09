@@ -1,7 +1,9 @@
 /**
  * Content ingest orchestrator.
  *
- * Reads the six report sources declared in ingest.config.json, copies their
+ * Reads the report sources declared in ingest.config.json (raw product
+ * data + product trend reports, daily market reports + market-agent
+ * session reports, alpha, signals, gallery, wisdom), copies their
  * publishable files into
  * public/content/{products,market,alpha,signals,gallery,wisdom}/
  * and writes public/content/manifest.json describing what was copied.
@@ -18,13 +20,16 @@ import { validateIngestConfig } from './lib/config.mjs';
 import { parseDateFromName } from './lib/dates.mjs';
 import { buildGallerySection } from './lib/gallery.mjs';
 import { buildMarketSection } from './lib/market.mjs';
+import { mergeMarketAgentItems } from './lib/marketAgent.mjs';
 import { buildProductsSection } from './lib/products.mjs';
+import { isReportAssetFile, mergeProductsSections } from './lib/productsReport.mjs';
 import { buildSignalsSection } from './lib/signals.mjs';
 import { isJunkFile } from './lib/sort.mjs';
 import { buildWisdomSection } from './lib/wisdom.mjs';
 
 const MANIFEST_FILE = 'manifest.json';
 const SIGNALS_SOURCES_DIR = 'sources';
+const PRODUCTS_REPORT_ASSETS_DIR = 'assets';
 const SECTION_NAMES = Object.freeze([
   'products',
   'market',
@@ -79,7 +84,7 @@ async function copyAll(srcDir, destDir, fileNames) {
   );
 }
 
-async function ingestProducts(sourceRoot, outDir, warn) {
+async function ingestProductsRaw(sourceRoot, outDir, warn) {
   if (!(await dirExists(sourceRoot))) {
     warn(`products source dir missing, emitting empty section: ${sourceRoot}`);
     return [];
@@ -97,6 +102,45 @@ async function ingestProducts(sourceRoot, outDir, warn) {
     await copyAll(path.join(sourceRoot, entry.date), path.join(outDir, entry.date), names);
   }
   return section;
+}
+
+/**
+ * Copies the per-date report asset dir (report/assets/<date>/) next to the
+ * report so its relative "assets/<date>/..." image paths keep resolving.
+ */
+async function copyReportAssets(reportRoot, outDir, date) {
+  const assetsDir = path.join(reportRoot, PRODUCTS_REPORT_ASSETS_DIR, date);
+  if (!(await dirExists(assetsDir))) {
+    return;
+  }
+  const assetFiles = (await listFileNames(assetsDir)).filter(isReportAssetFile);
+  await copyAll(
+    assetsDir,
+    path.join(outDir, date, PRODUCTS_REPORT_ASSETS_DIR, date),
+    assetFiles,
+  );
+}
+
+/** Merges flat trend-report files into the raw section and copies them per date. */
+async function ingestProductsReports(rawSection, reportRoot, outDir, warn) {
+  if (!(await dirExists(reportRoot))) {
+    warn(`products report source dir missing, skipping trend reports: ${reportRoot}`);
+    return rawSection;
+  }
+  const section = mergeProductsSections(rawSection, await listFileNames(reportRoot));
+  for (const entry of section) {
+    const reportFiles = [entry.reportMd, entry.reportHtml].filter((name) => name !== undefined);
+    if (reportFiles.length > 0) {
+      await copyAll(reportRoot, path.join(outDir, entry.date), reportFiles);
+      await copyReportAssets(reportRoot, outDir, entry.date);
+    }
+  }
+  return section;
+}
+
+async function ingestProducts(rawRoot, reportRoot, outDir, warn) {
+  const rawSection = await ingestProductsRaw(rawRoot, outDir, warn);
+  return ingestProductsReports(rawSection, reportRoot, outDir, warn);
 }
 
 /** Collects file names from the market root and its immediate subdirs (months). */
@@ -117,7 +161,7 @@ async function collectMarketFiles(sourceRoot) {
   return [...rootFiles, ...subdirFiles.flat()];
 }
 
-async function ingestMarket(sourceRoot, outDir, warn) {
+async function ingestMarketDaily(sourceRoot, outDir, warn) {
   if (!(await dirExists(sourceRoot))) {
     warn(`market source dir missing, emitting empty section: ${sourceRoot}`);
     return [];
@@ -138,6 +182,47 @@ async function ingestMarket(sourceRoot, outDir, warn) {
     );
   }
   return section;
+}
+
+/** Recursively collects file names (with parent dirs) from the agent YYYY/MM tree. */
+async function collectMarketAgentFiles(root) {
+  const entries = await readdir(root, { withFileTypes: true, recursive: true });
+  return entries
+    .filter((entry) => entry.isFile())
+    .map((entry) => ({ name: entry.name, dir: entry.parentPath }));
+}
+
+/** Merges market-agent session md into the daily section and copies them per date. */
+async function ingestMarketAgent(dailySection, agentRoot, outDir, warn) {
+  if (!(await dirExists(agentRoot))) {
+    warn(`market-agent source dir missing, skipping session reports: ${agentRoot}`);
+    return dailySection;
+  }
+  const found = await collectMarketAgentFiles(agentRoot);
+  const sourceDirByName = new Map(found.map((entry) => [entry.name, entry.dir]));
+  const section = mergeMarketAgentItems(dailySection, found.map((entry) => entry.name));
+  for (const group of section) {
+    const sessionItems = group.items.filter((item) => item.session !== undefined);
+    if (sessionItems.length === 0) {
+      continue;
+    }
+    const destDir = path.join(outDir, group.date);
+    await mkdir(destDir, { recursive: true });
+    await Promise.all(
+      sessionItems.map((item) =>
+        copyFile(
+          path.join(sourceDirByName.get(item.file), item.file),
+          path.join(destDir, item.file),
+        ),
+      ),
+    );
+  }
+  return section;
+}
+
+async function ingestMarket(dailyRoot, agentRoot, outDir, warn) {
+  const dailySection = await ingestMarketDaily(dailyRoot, outDir, warn);
+  return ingestMarketAgent(dailySection, agentRoot, outDir, warn);
 }
 
 async function ingestAlpha(sourceRoot, outDir, warn) {
@@ -239,8 +324,18 @@ export async function runIngest(rawConfig, { baseDir, log = console.log, warn = 
   );
 
   const sections = {
-    products: await ingestProducts(config.products, path.join(outputRoot, 'products'), warn),
-    market: await ingestMarket(config.market, path.join(outputRoot, 'market'), warn),
+    products: await ingestProducts(
+      config.products,
+      config.productsReport,
+      path.join(outputRoot, 'products'),
+      warn,
+    ),
+    market: await ingestMarket(
+      config.market,
+      config.marketAgent,
+      path.join(outputRoot, 'market'),
+      warn,
+    ),
     alpha: await ingestAlpha(config.alpha, path.join(outputRoot, 'alpha'), warn),
     signals: await ingestSignals(config.signals, path.join(outputRoot, 'signals'), warn),
     gallery: await ingestGallery(config.gallery, path.join(outputRoot, 'gallery'), warn),

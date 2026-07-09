@@ -1,0 +1,97 @@
+{
+  "run_date": "2026-06-15",
+  "sources": ["Product Hunt (weekly W24)", "Hacker News (June 2026 trends)", "a16z (Big Ideas 2026)", "Google Trends (US, June 2026)", "Amazon Movers & Shakers", "Xiaohongshu/RED 2026 trends"],
+  "selected": [
+    {
+      "name": "Browserbase (Browse.sh)",
+      "tagline": "Give your agents muscle memory for automating the web",
+      "category": "AI agent infrastructure / Dev tools",
+      "url": "https://www.producthunt.com/products/browserbase",
+      "site": "https://www.browserbase.com",
+      "metrics": {"ph_upvotes": 423, "ph_comments": 55, "ph_rank_week": 2, "funding_usd_m": 67.5, "valuation_usd_m": 300, "customers": "1000+", "sessions": "50M+ yr1"},
+      "business_model": "Usage-based cloud infrastructure / Browser-as-a-Service API; developer self-serve + enterprise",
+      "key_success": "Picks-and-shovels for the AI-agent boom; turns the messy web into reliable APIs; trusted by Perplexity & Vercel",
+      "target": "AI agent builders, vibe coders, automation/data teams",
+      "niche": "Headless browser infra for autonomous web agents",
+      "reviews": "Critical layer for agent stacks; reliability + scale praised"
+    },
+    {
+      "name": "Lightfield",
+      "tagline": "AI-native CRM that builds itself and does work for you",
+      "category": "Vertical SaaS / Sales",
+      "url": "https://www.producthunt.com/products/lightfield",
+      "site": "https://lightfield.app",
+      "metrics": {"ph_comments": 109, "workspaces": "2500+", "funding_usd_m": 81, "valuation_usd_m": 300, "migration_time": "<60 min"},
+      "business_model": "Seat + usage SaaS subscription; HubSpot/Salesforce displacement",
+      "key_success": "Outcomes-over-features: CRM updates itself, no manual data entry; 1-hour migration agent removes switching cost; MCP-native",
+      "target": "High-growth startups (esp. YC) without legacy CRM",
+      "niche": "Self-maintaining, agentic CRM",
+      "reviews": "SaaStr 'AI App of the Week'; fastest-growing CRM in startup ecosystem"
+    },
+    {
+      "name": "Wispr Flow",
+      "tagline": "Stop typing. Start speaking. 4x faster.",
+      "category": "Consumer/prosumer AI productivity",
+      "url": "https://www.producthunt.com/products/wisprflow",
+      "site": "https://wisprflow.ai",
+      "metrics": {"ph_upvotes": 531, "valuation_usd_m": 2000, "raise_in_talks_usd_m": 260, "price_pro_mo": 15, "free_tier": "2000 words/wk", "languages": "100+", "trustpilot": 2.7},
+      "business_model": "Freemium subscription ($15/mo Pro, Enterprise contact)",
+      "key_success": "Found PMF via pivot; works in every app, writes in your style; voice as primary input as models matured",
+      "target": "Knowledge workers, writers, multilingual professionals, accessibility users",
+      "niche": "System-wide AI dictation across OS/apps",
+      "reviews": "Loved for formatting + command mode; 2.7/5 Trustpilot — billing/privacy complaints (balanced)"
+    },
+    {
+      "name": "Vaani",
+      "tagline": "Lip-synced AI dubbing for creators, brands and studios",
+      "category": "AI media / Creator tools",
+      "url": "https://www.producthunt.com/products/vaani-2",
+      "site": "",
+      "metrics": {"ph_upvotes": 319, "ph_comments": 24, "ph_rank_week": 3, "market_price_per_min": "$2-20", "studio_baseline_per_hr": "$5k-15k"},
+      "business_model": "Per-minute / subscription creator tooling (market benchmark)",
+      "key_success": "Lip-sync realism + localization at ~90% cost savings vs studio; rides creator-globalization wave",
+      "target": "Creators, brands, studios localizing video",
+      "niche": "Lip-synced multilingual dubbing",
+      "reviews": "Strong PH debut; competes with HeyGen/Rask/ElevenLabs"
+    },
+    {
+      "name": "Honen",
+      "tagline": "Automated teaching + learning infrastructure for any company",
+      "category": "B2B AI / EdTech / Enablement",
+      "url": "https://www.producthunt.com/products/honen",
+      "site": "",
+      "metrics": {"ph_upvotes": 463, "ph_comments": 95, "ph_rank_week": 1},
+      "business_model": "B2B SaaS, likely seat/workspace + sector programs",
+      "key_success": "Living courses that auto-update with company docs/tools; kills stale generic training",
+      "target": "Enterprise, SMB, government, trades/unions, higher ed L&D",
+      "niche": "Self-updating workforce enablement infrastructure",
+      "reviews": "#1 of the week; resonates with 'AI does the work' enablement thesis"
+    },
+    {
+      "name": "Tamadoggo",
+      "tagline": "A living journal for your pet's life, with AI insights",
+      "category": "Consumer AI / Pets",
+      "url": "https://www.producthunt.com/products/tamadoggo",
+      "site": "",
+      "metrics": {"ph_upvotes": 174, "ph_comments": 24, "ph_rank_week": 6},
+      "business_model": "Consumer iOS app, likely freemium subscription",
+      "key_success": "Emotional 'main-character' angle for pets; AI insight on top of journaling habit; Tamagotchi-flavored branding",
+      "target": "Millennial/Gen-Z pet owners",
+      "niche": "AI pet life-logging & insights",
+      "reviews": "Charming branding; strong consumer engagement"
+    },
+    {
+      "name": "Viral physical goods + RED 'raw & real' wellness (trend)",
+      "tagline": "Low-cost utility/novelty climbing Amazon + authentic wellness content on RED",
+      "category": "Consumer e-commerce trend",
+      "url": "https://www.amazon.com/gp/movers-and-shakers/",
+      "site": "",
+      "metrics": {"examples": "Stanley 40oz Quencher, mini chainsaw, sink faucet mats, chicken shredder", "red_wellness_mau": "140M search health/wellness"},
+      "business_model": "DTC/marketplace impulse retail; creator-seeded demand",
+      "key_success": "Social proof + seasonality + low price = fast rank gains; RED shift to lo-fi authentic 'seeding'",
+      "target": "Mass consumers; Gen-Z/millennial lifestyle shoppers",
+      "niche": "TikTok/RED-made-me-buy-it goods + wellness",
+      "reviews": "Seasonal (allergy/sun/outdoor) + novelty drive Movers & Shakers"
+    }
+  ]
+}

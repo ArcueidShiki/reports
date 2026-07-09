@@ -5,7 +5,9 @@
 
 export const REQUIRED_CONFIG_KEYS = Object.freeze([
   'products',
+  'productsReport',
   'market',
+  'marketAgent',
   'alpha',
   'signals',
   'gallery',

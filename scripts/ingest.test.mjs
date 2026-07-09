@@ -10,6 +10,19 @@ const FIXTURE_FILES = {
   'sources/products/2026-06-11/products-analysis.json': '{"products":[]}',
   'sources/products/2026-06-11/raw-data.json': '{}',
   'sources/products/2026-06-11/sources-raw.json': '{}',
+  'sources/products-report/2026-06-09-product-trends.md': '# trends 06-09',
+  'sources/products-report/2026-06-09-product-trends.html': '<html>trends</html>',
+  'sources/products-report/2026-06-12-product-trends.md': '# trends 06-12',
+  'sources/products-report/build_html.py': 'print("no")',
+  'sources/products-report/build_html_2026-06-12.py': 'print("no")',
+  'sources/products-report/assets/2026-06-09/chart.png': 'png',
+  'sources/products-report/assets/2026-06-09/make_charts.py': 'print("no")',
+  'sources/products-report/assets/2026-01-01/orphan.png': 'png',
+  'sources/market-agent/index.json': '{}',
+  'sources/market-agent/.write_probe': '',
+  'sources/market-agent/2026/06/2026-06-04-premarket.md': '# premarket',
+  'sources/market-agent/2026/06/2026-06-04-premarket.json': '{}',
+  'sources/market-agent/2026/06/2026-06-15-post-market.md': '# post market',
   'sources/market/06/2026-06-04-tech-rotation.md': '# en',
   'sources/market/06/2026-06-04-美股日报.md': '# zh',
   'sources/market/06/2026-06-05-ai-trade-unwind.srt': '1',
@@ -51,7 +64,9 @@ async function writeFixtureTree(root) {
 function makeConfig(root) {
   return {
     products: path.join(root, 'sources/products'),
+    productsReport: path.join(root, 'sources/products-report'),
     market: path.join(root, 'sources/market'),
+    marketAgent: path.join(root, 'sources/market-agent'),
     alpha: path.join(root, 'sources/alpha'),
     signals: path.join(root, 'sources/signals'),
     gallery: path.join(root, 'sources/gallery'),
@@ -103,6 +118,7 @@ describe('runIngest', () => {
   it('copies market md/html nested by date and skips srt/sh', async () => {
     const manifest = await runIngest(makeConfig(root), { baseDir: root, log, warn });
     expect(manifest.sections.market.map((group) => group.date)).toEqual([
+      '2026-06-15',
       '2026-06-10',
       '2026-06-04',
     ]);
@@ -121,6 +137,12 @@ describe('runIngest', () => {
     const manifest = await runIngest(makeConfig(root), { baseDir: root, log, warn });
     expect(manifest.sections.products).toEqual([
       {
+        date: '2026-06-12',
+        analysisJson: null,
+        otherFiles: [],
+        reportMd: '2026-06-12-product-trends.md',
+      },
+      {
         date: '2026-06-11',
         analysisJson: 'products-analysis.json',
         otherFiles: ['raw-data.json', 'sources-raw.json'],
@@ -129,11 +151,99 @@ describe('runIngest', () => {
         date: '2026-06-09',
         analysisJson: 'products-analysis.json',
         otherFiles: ['sources-raw.json'],
+        reportMd: '2026-06-09-product-trends.md',
+        reportHtml: '2026-06-09-product-trends.html',
       },
     ]);
     expect(
       await fileExists(path.join(outRoot, 'products/2026-06-11/products-analysis.json')),
     ).toBe(true);
+  });
+
+  it('copies product trend reports per date and excludes python build scripts', async () => {
+    await runIngest(makeConfig(root), { baseDir: root, log, warn });
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-06-09/2026-06-09-product-trends.md')),
+    ).toBe(true);
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-06-09/2026-06-09-product-trends.html')),
+    ).toBe(true);
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-06-12/2026-06-12-product-trends.md')),
+    ).toBe(true);
+    expect(await fileExists(path.join(outRoot, 'products/build_html.py'))).toBe(false);
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-06-12/build_html_2026-06-12.py')),
+    ).toBe(false);
+  });
+
+  it('copies per-date report assets so relative image paths keep working', async () => {
+    await runIngest(makeConfig(root), { baseDir: root, log, warn });
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-06-09/assets/2026-06-09/chart.png')),
+    ).toBe(true);
+    // asset dirs for dates without a report are not published
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-01-01/assets/2026-01-01/orphan.png')),
+    ).toBe(false);
+    // python helper scripts inside asset dirs are never published
+    expect(
+      await fileExists(path.join(outRoot, 'products/2026-06-09/assets/2026-06-09/make_charts.py')),
+    ).toBe(false);
+  });
+
+  it('warns and keeps the raw products section when the report source dir is missing', async () => {
+    const config = { ...makeConfig(root), productsReport: path.join(root, 'no-reports-here') };
+    const manifest = await runIngest(config, { baseDir: root, log, warn });
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('no-reports-here'));
+    expect(manifest.sections.products.map((entry) => entry.date)).toEqual([
+      '2026-06-11',
+      '2026-06-09',
+    ]);
+    expect(manifest.sections.products[1]).not.toHaveProperty('reportMd');
+  });
+
+  it('merges market-agent session md per date and excludes json/index/dotfiles', async () => {
+    const manifest = await runIngest(makeConfig(root), { baseDir: root, log, warn });
+    const june4 = manifest.sections.market.find((group) => group.date === '2026-06-04');
+    expect(june4.items).toContainEqual({
+      file: '2026-06-04-premarket.md',
+      lang: 'en',
+      kind: 'md',
+      title: 'Pre-Market',
+      session: 'premarket',
+    });
+    const june15 = manifest.sections.market.find((group) => group.date === '2026-06-15');
+    expect(june15.items).toEqual([
+      {
+        file: '2026-06-15-post-market.md',
+        lang: 'en',
+        kind: 'md',
+        title: 'Post-Market',
+        session: 'post-market',
+      },
+    ]);
+    expect(
+      await fileExists(path.join(outRoot, 'market/2026-06-04/2026-06-04-premarket.md')),
+    ).toBe(true);
+    expect(
+      await fileExists(path.join(outRoot, 'market/2026-06-15/2026-06-15-post-market.md')),
+    ).toBe(true);
+    expect(
+      await fileExists(path.join(outRoot, 'market/2026-06-04/2026-06-04-premarket.json')),
+    ).toBe(false);
+    expect(await fileExists(path.join(outRoot, 'market/index.json'))).toBe(false);
+    expect(await fileExists(path.join(outRoot, 'market/.write_probe'))).toBe(false);
+  });
+
+  it('warns and keeps the daily market section when the agent source dir is missing', async () => {
+    const config = { ...makeConfig(root), marketAgent: path.join(root, 'no-agent-here') };
+    const manifest = await runIngest(config, { baseDir: root, log, warn });
+    expect(warn).toHaveBeenCalledWith(expect.stringContaining('no-agent-here'));
+    expect(manifest.sections.market.map((group) => group.date)).toEqual([
+      '2026-06-10',
+      '2026-06-04',
+    ]);
   });
 
   it('copies signals with sources subdir, null sources when absent', async () => {
