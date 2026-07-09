@@ -43,10 +43,13 @@ describe('SignalsPage', () => {
     ).toBeInTheDocument();
 
     const frame = screen.getByTitle('report_2026-06-11.pdf');
+    expect(frame.tagName).toBe('OBJECT');
     expect(frame).toHaveAttribute(
-      'src',
+      'data',
       contentUrl('signals', '2026-06-11', 'report_2026-06-11.pdf'),
     );
+    expect(frame).toHaveAttribute('type', 'application/pdf');
+    expect(frame).not.toHaveAttribute('sandbox');
 
     expect(screen.getByAltText('poster_2026-06-11_1.png')).toHaveAttribute(
       'src',

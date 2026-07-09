@@ -56,6 +56,8 @@ const en: TranslationDictionary = {
   'signals.csv': 'Signals CSV',
   'signals.calendarJson': 'Calendar JSON',
   'signals.officialJson': 'Official JSON',
+  'pdf.fallback': 'Your browser cannot display the PDF inline.',
+  'pdf.open': 'Open the PDF in a new tab',
   'gallery.close': 'Close',
 };
 
@@ -105,6 +107,8 @@ const zh: TranslationDictionary = {
   'signals.csv': '信号 CSV',
   'signals.calendarJson': '日历 JSON',
   'signals.officialJson': '官方 JSON',
+  'pdf.fallback': '浏览器无法内嵌显示 PDF。',
+  'pdf.open': '在新标签页打开 PDF',
   'gallery.close': '关闭',
 };
 

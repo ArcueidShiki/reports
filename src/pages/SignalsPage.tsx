@@ -1,9 +1,9 @@
 import { useState } from 'react';
 
-import ContentFrame from '../components/ContentFrame';
 import DateSelector from '../components/DateSelector';
 import MarkdownView from '../components/MarkdownView';
 import PageHeader from '../components/PageHeader';
+import PdfFrame from '../components/PdfFrame';
 import Reveal from '../components/Reveal';
 import { EmptyNote, ErrorNote, LoadingNote } from '../components/StatusNotes';
 import { useFetchText } from '../hooks/useFetchText';
@@ -136,7 +136,7 @@ export default function SignalsPage() {
           <Reveal>
             <section className="signals-report content-section">
               <h2>{t('signals.reportPdf')}</h2>
-              <ContentFrame
+              <PdfFrame
                 src={contentUrl('signals', entry.date, entry.pdf)}
                 title={entry.pdf}
               />

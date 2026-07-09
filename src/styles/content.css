@@ -348,6 +348,18 @@
   background-color: #fff;
 }
 
+/* <object> ignores min-height for its plugin viewport: set a real height. */
+.content-frame--pdf {
+  display: block;
+  height: 80vh;
+  min-height: 70vh;
+}
+
+.pdf-fallback {
+  padding: 1.2rem 1.4rem;
+  color: var(--ink-1);
+}
+
 /* ---------- products ---------- */
 
 .product-grid {
