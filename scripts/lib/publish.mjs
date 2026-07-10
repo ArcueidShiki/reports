@@ -126,6 +126,29 @@ export function partitionDirtyPaths(porcelainText) {
 }
 
 /**
+ * Partitions `git diff --cached --name-only` output into content-output paths
+ * and everything else. Final guard before `git commit`: the publish script
+ * must never commit staged paths outside CONTENT_DIR, even ones staged by the
+ * user or a prior interrupted session before the script ran.
+ *
+ * @param {string} nameOnlyText - Raw stdout of `git diff --cached --name-only`.
+ * @returns {{contentPaths: string[], otherPaths: string[]}}
+ */
+export function partitionStagedPaths(nameOnlyText) {
+  if (typeof nameOnlyText !== 'string') {
+    throw new TypeError(`partitionStagedPaths expects a string, got ${typeof nameOnlyText}`);
+  }
+  const paths = nameOnlyText
+    .split('\n')
+    .filter((line) => line.trim().length > 0)
+    .map(unquotePorcelainPath);
+  return Object.freeze({
+    contentPaths: paths.filter(isContentPath),
+    otherPaths: paths.filter((filePath) => !isContentPath(filePath)),
+  });
+}
+
+/**
  * Predicate for the post-deploy live check: does the remote manifest carry the
  * same generatedAt as the locally written one? A malformed remote manifest is
  * treated as "not yet in sync" (stale cache) rather than an error, while a

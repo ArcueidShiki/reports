@@ -6,6 +6,7 @@ import {
   manifestGeneratedAtMatches,
   parsePublishArgs,
   partitionDirtyPaths,
+  partitionStagedPaths,
 } from './lib/publish.mjs';
 
 describe('CONTENT_DIR', () => {
@@ -156,6 +157,57 @@ describe('partitionDirtyPaths', () => {
 
   it('throws for non-string input', () => {
     expect(() => partitionDirtyPaths(undefined)).toThrow(TypeError);
+  });
+});
+
+describe('partitionStagedPaths', () => {
+  it('returns empty partitions when nothing is staged', () => {
+    expect(partitionStagedPaths('')).toEqual({ contentPaths: [], otherPaths: [] });
+    expect(partitionStagedPaths('\n')).toEqual({ contentPaths: [], otherPaths: [] });
+  });
+
+  it('classifies staged public/content paths as content', () => {
+    const nameOnly = 'public/content/manifest.json\npublic/content/market/2026-07-10/report.md\n';
+    expect(partitionStagedPaths(nameOnly)).toEqual({
+      contentPaths: [
+        'public/content/manifest.json',
+        'public/content/market/2026-07-10/report.md',
+      ],
+      otherPaths: [],
+    });
+  });
+
+  it('classifies staged paths outside public/content as other', () => {
+    expect(partitionStagedPaths('src/App.tsx\npackage.json\n')).toEqual({
+      contentPaths: [],
+      otherPaths: ['src/App.tsx', 'package.json'],
+    });
+  });
+
+  it('splits mixed staged paths into both partitions', () => {
+    expect(partitionStagedPaths('public/content/manifest.json\nsrc/App.tsx\n')).toEqual({
+      contentPaths: ['public/content/manifest.json'],
+      otherPaths: ['src/App.tsx'],
+    });
+  });
+
+  it('unquotes paths that git wraps in double quotes', () => {
+    const nameOnly = '"public/content/market/2026-07-10/\\345\\215\\241.html"\n';
+    expect(partitionStagedPaths(nameOnly)).toEqual({
+      contentPaths: ['public/content/market/2026-07-10/\\345\\215\\241.html'],
+      otherPaths: [],
+    });
+  });
+
+  it('does not treat sibling prefixes as content paths', () => {
+    expect(partitionStagedPaths('public/contentX.txt\n')).toEqual({
+      contentPaths: [],
+      otherPaths: ['public/contentX.txt'],
+    });
+  });
+
+  it('throws for non-string input', () => {
+    expect(() => partitionStagedPaths(undefined)).toThrow(TypeError);
   });
 });
 

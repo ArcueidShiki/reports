@@ -26,6 +26,7 @@ import {
   manifestGeneratedAtMatches,
   parsePublishArgs,
   partitionDirtyPaths,
+  partitionStagedPaths,
 } from './lib/publish.mjs';
 
 const REPO_ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -87,8 +88,8 @@ function stepStage(dryRun) {
   const { contentPaths, otherPaths } = partitionDirtyPaths(porcelain);
   if (otherPaths.length > 0) {
     warn(
-      `leaving ${otherPaths.length} non-content dirty file(s) unstaged ` +
-        '(commit code changes manually):',
+      `${otherPaths.length} non-content dirty file(s) detected; publish never stages ` +
+        'code changes, and aborts before commit if any are already staged:',
     );
     otherPaths.forEach((filePath) => warn(`  ${filePath}`));
   }
@@ -106,7 +107,14 @@ function stepStage(dryRun) {
 function stepCommit(publishDate) {
   log('step 5/8: commit staged content');
   const staged = runCapture('git diff --cached', 'git', ['diff', '--cached', '--name-only']);
-  if (staged.trim().length === 0) {
+  const { contentPaths, otherPaths } = partitionStagedPaths(staged);
+  if (otherPaths.length > 0) {
+    throw new Error(
+      `refusing to commit: ${otherPaths.length} staged path(s) outside ${CONTENT_DIR} ` +
+        `(unstage with "git restore --staged <path>" and re-run):\n  ${otherPaths.join('\n  ')}`,
+    );
+  }
+  if (contentPaths.length === 0) {
     log('nothing staged, skipping commit');
     return;
   }
