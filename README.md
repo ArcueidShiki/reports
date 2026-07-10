@@ -41,6 +41,21 @@ npm test           # run the vitest suite (scripts + UI) / 运行全部测试
 npm run test:watch # watch mode / 监听模式
 ```
 
+## Publish / 发布
+
+```bash
+npm run publish:content    # one command: ingest + test + build + commit + push + deploy + live verify
+                           # 一条命令：拉取内容 + 测试 + 构建 + 提交 + 推送 + 部署 + 线上校验
+```
+
+Flags: `--dry-run` (no commit/push/deploy), `--skip-deploy` (commit + push only),
+`--date YYYY-MM-DD` (override the commit-message date, defaults to the manifest date).
+Only `public/content/` is ever staged; other dirty files are listed and left alone.
+
+参数：`--dry-run`（不提交/不推送/不部署）、`--skip-deploy`（仅提交和推送）、
+`--date YYYY-MM-DD`（覆盖提交信息中的日期，默认取 manifest 日期）。
+脚本只会暂存 `public/content/`，其他改动会被列出但不做处理。
+
 ## Build & Deploy / 构建与部署
 
 ```bash
