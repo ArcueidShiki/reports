@@ -4,6 +4,7 @@
  */
 
 const JUNK_FILE_NAMES = Object.freeze(new Set(['.DS_Store', '.gitkeep']));
+const JUNK_FILE_EXTENSIONS = Object.freeze(new Set(['.py', '.pyc']));
 
 /**
  * Comparator for ISO "YYYY-MM-DD" date strings, newest first.
@@ -33,8 +34,11 @@ export function compareNamesAsc(a, b) {
 
 /**
  * @param {string} name - File name.
- * @returns {boolean} true when the file is OS/VCS junk to be ignored.
+ * @returns {boolean} true when the file is OS/VCS junk, a dotfile, or a
+ *   build script that must never be published as content.
  */
 export function isJunkFile(name) {
-  return JUNK_FILE_NAMES.has(name);
+  if (JUNK_FILE_NAMES.has(name) || name.startsWith('.')) return true;
+  const dot = name.lastIndexOf('.');
+  return dot > 0 && JUNK_FILE_EXTENSIONS.has(name.slice(dot));
 }

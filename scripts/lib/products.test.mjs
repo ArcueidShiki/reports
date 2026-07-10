@@ -37,6 +37,16 @@ describe('buildProductsSection', () => {
     expect(section[0].otherFiles).toEqual([]);
   });
 
+  it('filters script files and dotfiles out of otherFiles', () => {
+    const section = buildProductsSection([
+      {
+        date: '2026-07-10',
+        files: ['gen_images.py', '.writetest', 'products.json', 'products-analysis.json'],
+      },
+    ]);
+    expect(section[0].otherFiles).toEqual(['products.json']);
+  });
+
   it('returns an empty array for no date dirs', () => {
     expect(buildProductsSection([])).toEqual([]);
   });
