@@ -1,7 +1,18 @@
 {
-  "generatedAt": "2026-07-09T15:46:55.923Z",
+  "generatedAt": "2026-07-10T03:50:40.560Z",
   "sections": {
     "products": [
+      {
+        "date": "2026-07-10",
+        "analysisJson": null,
+        "otherFiles": [
+          "gen_images.py",
+          "products.json",
+          "search-results-by-source.md"
+        ],
+        "reportHtml": "2026-07-10-product-trends.html",
+        "reportMd": "2026-07-10-product-trends.md"
+      },
       {
         "date": "2026-07-09",
         "analysisJson": null,
@@ -202,11 +213,55 @@
         "date": "2026-07-09",
         "items": [
           {
+            "file": "2026-07-09-close-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Close",
+            "session": "close-market"
+          },
+          {
+            "file": "2026-07-09-en-memory-mania-roars-back-sk-hynix-7x-oversubscribed-pepsi-warns-on-consumer.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "en memory mania roars back sk hynix 7x oversubscribed pepsi warns on consumer"
+          },
+          {
+            "file": "2026-07-09-post-market.md",
+            "lang": "en",
+            "kind": "md",
+            "title": "Post-Market",
+            "session": "post-market"
+          },
+          {
             "file": "2026-07-09-premarket.md",
             "lang": "en",
             "kind": "md",
             "title": "Pre-Market",
             "session": "premarket"
+          },
+          {
+            "file": "2026-07-09-存储狂潮回归-海力士7倍超募百事敲响消费警钟.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "存储狂潮回归 海力士7倍超募百事敲响消费警钟"
+          },
+          {
+            "file": "2026-07-09-小红书.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "小红书"
+          },
+          {
+            "file": "2026-07-09-小红书卡片.html",
+            "lang": "zh",
+            "kind": "html",
+            "title": "小红书卡片"
+          },
+          {
+            "file": "2026-07-09-提词器-深度解读.md",
+            "lang": "zh",
+            "kind": "md",
+            "title": "提词器 深度解读"
           }
         ]
       },
