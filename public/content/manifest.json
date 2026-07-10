@@ -1,12 +1,11 @@
 {
-  "generatedAt": "2026-07-10T03:50:40.560Z",
+  "generatedAt": "2026-07-10T04:08:30.865Z",
   "sections": {
     "products": [
       {
         "date": "2026-07-10",
         "analysisJson": null,
         "otherFiles": [
-          "gen_images.py",
           "products.json",
           "search-results-by-source.md"
         ],
